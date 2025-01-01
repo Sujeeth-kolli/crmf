@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic HTML Template</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Optional theme -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/custom.css">
+    <!-- custom font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class=" ">
+        <div class="row banner-1 max-width">
+            <div class="col1 d-flex flex-column justify-content-center">
+                <h2 class="">Step Into a </h2><h3>Universe of Investment</h3><h2> Opportunities</h2>
+                <p>Discover our universe of opportunities and invest for a brighter future.</p>
+                <div class="mt-4 btn-box">
+                    <button class="btn-1 btn-lg me-2 btn-0">Explore Services</button>
+                    <button class="btn-2 btn-lg btn-0">Explore Funds</button>
+                </div>
+            </div>
+            <div class="col2">
+                <div id="investmentCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#investmentCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#investmentCarousel" data-slide-to="1"></li>
+                        <li data-target="#investmentCarousel" data-slide-to="2"></li>
+                        <li data-target="#investmentCarousel" data-slide-to="3"></li>
+                        <li data-target="#investmentCarousel" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/images/b1.svg" class="d-block w-100" alt="Slide 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/b2.svg" class="d-block w-100" alt="Slide 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/b3.svg" class="d-block w-100" alt="Slide 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/b4.svg" class="d-block w-100" alt="Slide 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/b1.svg" class="d-block w-100" alt="Slide 1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-width">
+            <div class="card-section">
+                <div class="title mb-3">Why Choose Us</div>
+                <div class="cards">
+                    <div class="card c1">
+                        <h3>₹0.0 Crores</h3>
+                        <p>Asset Under Management as per RTA records</p>
+                        <small> &#9432; as on 1 July, 2024</small>
+                    </div>
+                    <div class="card c2">
+                        <h3>00 Branches</h3>
+                        <p>A network of 23 points of acceptance/branches across India!</p>
+                    </div>
+                    <div class="card c3">
+                        <h3>0 Decades</h3>
+                        <p>Over 3 decades of rich fund management experience, second oldest in the Indian MF Industry!</p>
+                    </div>
+                    <div class="card c4">
+                        <h3>00.0L Investors</h3>
+                        <p>Managing investment mandates of over lakhs of investors across categories!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-width">
+            <div class="py-5">
+                <h1 class="title">Invest with a Purpose</h1>
+                <p class="sub-title">Choose your path and invest with confidence in what matters most.</p>
+                <ul class="nav nav-tabs" id="investmentTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="learn-tab" data-bs-toggle="tab" data-bs-target="#learn" type="button" role="tab" aria-controls="learn" aria-selected="true">Learn</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="plan-tab" data-bs-toggle="tab" data-bs-target="#plan" type="button" role="tab" aria-controls="plan" aria-selected="false">Plan</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="invest-tab" data-bs-toggle="tab" data-bs-target="#invest" type="button" role="tab" aria-controls="invest" aria-selected="false">Invest</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="investmentTabsContent">
+                    <div class="tab-pane fade show active" id="learn" role="tabpanel" aria-labelledby="learn-tab">
+                        <div class="mt-4">
+                            <p class="sub-text">Start by mastering the basics to build a strong investment foundation.</p>
+                            <div class="d-flex justify-content-around">
+                                <div>
+                                    <div class="box"><img src="assets/images/investp1.svg" alt="Beginner">
+                                    <h4>Beginner</h4>
+                                    <p>Take the first step towards financial growth!</p>
+                                    <p class="hover-text">Take the first step towards financial growth. Start small, learn the basics, and set yourself up for a prosperous future!</p>
+                                    <button class="btn-2 btn-lg btn-0">View More</button>
+                                </div>
+                                    
+                                </div>
+                                <div>
+                                    <div class="box"><img src="assets/images/investp2.svg" alt="Intermediate">
+                                    <h4>Intermediate</h4>
+                                    <p>Take your investments to the next level!</p>
+                                    <p class="hover-text">Take your investments to the next level. Dive deeper, explore new strategies, and watch your portfolio grow with confidence.</p>
+                                    <button class="btn-2 btn-lg btn-0">View More</button>
+                                </div>
+                                    
+                                </div>
+                                <div>
+                                    <div class="box"><img src="assets/images/investp3.svg" alt="Advanced">
+                                    <h4>Advanced</h4>
+                                    <p>Master the market with expert-level strategies!</p>
+                                    <p class="hover-text">Master the market with expert strategies. Leverage your experience to make high-impact decisions and reach new financial heights!</p>
+                                    <button class="btn-2 btn-lg btn-0">View More</button>
+                                </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="view-all">View all &nbsp; &nbsp; →</a>
+                    </div>
+                    <div class="tab-pane fade" id="plan" role="tabpanel" aria-labelledby="plan-tab">
+                        <div class="mt-4">
+                            <p class="sub-text">Create a winning strategy tailored to reach your financial goals.</p>
+                            <div class="d-flex justify-content-around">
+                                <div>
+                                    <div class="box box2"><img src="assets/images/people.png" alt="Retirement">
+                                    <h4>Retirement</h4>
+                                    <p>Early retirement with a solid nest egg—smart planning makes it achievable!</p>
+                                    <p class="hover-text">Every working professional dreams of an early retirement with a substantial nest egg. With well-executed retirement planning, this dream can become a reality, offering the freedom to enjoy life on your terms.</p>
+                                    <small class="line"></small>
+                                    <button class="btn-2 btn-lg btn-0">Plan this Goal</button>
+                                </div>
+                                    
+                                </div>
+                                <div>
+                                    <div class="box box2"><img src="assets/images/vacation.png" alt="Vacation">
+                                    <h4>Vacation</h4>
+                                    <p>An exotic family vacation is a shared dream—smart investing can make it happen!</p>
+                                    <p class="hover-text">An exotic vacation is a dream the whole family looks forward to, filled with countless details to make it truly memorable. With the right financial planning and wise investments, you can turn this dream into a reality for everyone to enjoy.</p>
+                                    <small class="line"></small>
+                                    <button class="btn-2 btn-lg btn-0">Plan this Goal</button>
+                                </div>
+                                    
+                                </div>
+                                <div>
+                                    <div class="box box2"><img src="assets/images/house.png" alt="New House">
+                                    <h4>New House</h4>
+                                    <p>Owning a home is a dream for everyone—plan and invest wisely to make it a reality!</p>
+                                    <p class="hover-text">Buying a home is a cherished dream for many, but reaching this goal requires thoughtful planning and smart investing. By taking the right financial steps, you can make this dream a reality within your desired timeframe.</p>
+                                    <small class="line"></small>
+                                    <button class="btn-2 btn-lg btn-0">Plan this Goal</button>
+                                </div>
+                                    
+                                </div>
+                                <div>
+                                    <div class="box box2"><img src="assets/images/books.png" alt="Education">
+                                    <h4>Education</h4>
+                                    <p>Investing in your child’s education is key to a bright future.</p>
+                                    <p class="hover-text">Children are the heart of every parent's life, and investing in their education is essential to securing their future. Careful financial planning today paves the way for their success tomorrow.</p>
+                                    <small class="line"></small>
+                                    <button class="btn-2 btn-lg btn-0">Plan this Goal</button>
+                                </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="view-all">View all &nbsp; &nbsp; →</a>
+                    </div>
+                    <div class="tab-pane fade" id="invest" role="tabpanel" aria-labelledby="invest-tab">
+                        <div class="mt-4">
+                            <p class="sub-text">Take the next step and watch your money grow over time.</p>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card-api">
+                                        <div class="title">Canara Robeco</div>
+                                        <div class="subtitle">Bluechip Equity Fund<br>Direct • Growth</div>
+                                        
+                                        <div class="nav">
+                                            <div class="value">₹14.91</div>
+                                            <div class="change">▲ ₹1.32 (0.3%)</div>
+                                        </div>
+                                
+                                        <div class="cagr">
+                                            <div class="value">CAGR Returns<br>19.98% <span style="font-size: 12px;">5Y ▼</span></div>
+                                            <div class="risk">Very High Risk</div>
+                                        </div>
+                                
+                                        <div class="buttons">
+                                            <button class="add-to-cart">Add to Cart</button>
+                                            <button class="invest">Invest</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-api">
+                                        <div class="title">Canara Robeco</div>
+                                        <div class="subtitle">Bluechip Equity Fund<br>Direct • Growth</div>
+                                        
+                                        <div class="nav">
+                                            <div class="value">₹14.91</div>
+                                            <div class="change">▲ ₹1.32 (0.3%)</div>
+                                        </div>
+                                
+                                        <div class="cagr">
+                                            <div class="value">CAGR Returns<br>19.98% <span style="font-size: 12px;">5Y ▼</span></div>
+                                            <div class="risk">Very High Risk</div>
+                                        </div>
+                                
+                                        <div class="buttons">
+                                            <button class="add-to-cart">Add to Cart</button>
+                                            <button class="invest">Invest</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-api">
+                                        <div class="title">Canara Robeco</div>
+                                        <div class="subtitle">Bluechip Equity Fund<br>Direct • Growth</div>
+                                        
+                                        <div class="nav">
+                                            <div class="value">₹14.91</div>
+                                            <div class="change">▲ ₹1.32 (0.3%)</div>
+                                        </div>
+                                
+                                        <div class="cagr">
+                                            <div class="value">CAGR Returns<br>19.98% <span style="font-size: 12px;">5Y ▼</span></div>
+                                            <div class="risk">Very High Risk</div>
+                                        </div>
+                                
+                                        <div class="buttons">
+                                            <button class="add-to-cart">Add to Cart</button>
+                                            <button class="invest">Invest</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="view-all">View all &nbsp; &nbsp; →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section4 -->
+        <div class="max-width">
+            <div class="">
+            <h1 class="title">Investor & Distributor Central</h1>
+            <p class="sub-title">Focused hubs for managing investments and distribution strategies.</p>
+        </div>
+    
+        <div class="cards-container">
+            <div class="card-central">
+                <div class="logos"><img src="assets/images/cr_si-box.svg" alt="Growth Icon"></div>
+                <div>
+                    <h3>Grow Your Investments</h3>
+                <ul>
+                    <li>Stay updated on market trends.</li>
+                    <li>Monitor your portfolio effortlessly.</li>
+                    <li>Use real-time analytics for smart decisions.</li>
+                    <li>Maximize returns with intuitive tools.</li>
+                </ul>
+                <button class="btn-2 btn-lg">Explore Now <img src="assets/images/white-arrow.svg" alt="white-arrow"></button>
+            </div>
+            <div><img src="assets/images/3d-money.svg" alt="Growth Icon"></div>
+            </div>
+    
+            <div class="card-central">
+                <div class="logos"><img src="assets/images/smarTMFD-box.svg" alt="Growth Icon"></div>
+                <div>
+                    <h3>Grow Your Investments</h3>
+                <ul>
+                    <li>Stay updated on market trends.</li>
+                    <li>Monitor your portfolio effortlessly.</li>
+                    <li>Use real-time analytics for smart decisions.</li>
+                    <li>Maximize returns with intuitive tools.</li>
+                </ul>
+                <button class="btn-2 btn-lg">Know More <img src="assets/images/white-arrow.svg" alt="white-arrow"></button>
+            </div>
+            <div><img src="assets/images/rocket.svg" alt="Growth Icon"></div>
+            </div>
+        </div>
+        </div>
+        <!-- section4 end -->
+        <!-- universe -->
+        <div class="max-width pt-lg-5 universe-section">
+            <div class="py-lg-5">
+                <h1 class="title">Canara Robeco Universe</h1>
+                <p class="sub-title">Together, we build smarter financial solutions.</p>
+             </div>
+             <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h3>Our platform provides a complete solution with tools to track portfolios, customize investments, and access expert insights, you can stay ahead in your financial journey.</h3>
+                        <div class="left-section-uni active" id="content1">
+                            <h2>For Distributors</h2>
+                            <h1>Enhancing Your Client Engagement!</h1>
+                            <ul>
+                                <li><a href="#">Manage Client Portfolios</a>: Effortlessly oversee client investments and performance insights.</li>
+                                <li><a href="#">Tailored Distribution Tools</a>: Access custom solutions for better engagement with your clients.</li>
+                                <li><a href="#">Reports & Analytics</a>: Utilize detailed reports to track trends and optimize distribution strategies.</li>
+                                <li><a href="#">Seamless Transactions</a>: Simplify client fund buy, switch, or redemption processes with ease.</li>
+                            </ul>
+                            <p>Elevate Your Client Services Now.</p>
+                            <button class="btn-1 btn-lg me-2">Enhance Now</button>
+                        </div>
+                        <div class="left-section-uni" id="content2">
+                            <h2>For Investors</h2>
+                            <h1>Your Gateway to Smarter Investments!</h1>
+                            <ul>
+                                <li><a href="#">Track Your Portfolio</a>: Stay updated on fund performance and market trends.</li>
+                                <li><a href="#">Tailored Investment Plans</a>: Customize your investments based on your goals.</li>
+                                <li><a href="#">Expert Insights</a>: Access the latest market research and recommendations.</li>
+                                <li><a href="#">Quick Transactions</a>: Buy, switch, or redeem funds effortlessly.</li>
+                            </ul>
+                            <p>Take control of your investments today.</p>
+                            <button class="btn-1 btn-lg me-2">Invest Smarter</button>
+                        </div>
+                        <div class="left-section-uni" id="content3">
+                            <h2>SmarTomorrows</h2>
+                            <h1>Empowering You for a Smarter Financial Future!</h1>
+                            <ul>
+                                <li><a href="#">Investor Education</a>: Learn about mutual funds, market trends, and investment strategies.</li>
+                                <li><a href="#">Stay Informed</a>: Keep up with financial trends, risks, and opportunities.</li>
+                                <li><a href="#">Interactive Learning</a>: Use simple tools to understand investment concepts.</li>
+                                <li><a href="#">Quick Transactions</a>: Make informed choices by understanding your investments.</li>
+                            </ul>
+                            <p>Start learning today for a smarter tomorrow.</p>
+                            <button class="btn-1 btn-lg me-2">Learn More</button>
+                        </div>
+                        <div class="left-section-uni" id="content4">
+                            <h2>Smart Link</h2>
+                            <h1>Create Your Customized ARN Link in Minutes!</h1>
+                            <ul>
+                                <li><a href="#">Simple Process</a>: Generate personalized ARN links quickly and easily.</li>
+                                <li><a href="#">Tailored Links</a>: Customize your ARN link to match your business needs.</li>
+                                <li><a href="#">Seamless Integration</a>: Use your unique link to engage clients effortlessly.</li>
+                                <li><a href="#">Boost Efficiency</a>: Streamline your client onboarding and engagement with just one link.</li>
+                            </ul>
+                            <p>Get your custom link for a smooth experience.</p>
+                            <button class="btn-1 btn-lg me-2">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="right-section">
+                            <div class="center-logo">
+                                <img src="assets/images/logo-crmf.svg" alt="Canara Robeco Mutual Fund">
+                            </div>
+                            <div class="orbit" id="orbit">
+                                <div class="orbit-item orbit-item1 highlight" data-content="content1">
+                                    <img src="assets/images/cr_smarTMFD.svg" alt="CANARA ROBECO smart MFD">
+                                </div>
+                                <div class="orbit-item orbit-item2" data-content="content2">
+                                    <img src="assets/images/cr_si.svg" alt="CANARA ROBECO smart Invest">
+                                </div>
+                                <div class="orbit-item orbit-item3" data-content="content3">
+                                    <img src="assets/images/cr_sTsvg.svg" alt="CANARA ROBECO smart Tomorrows">
+                                </div>
+                                <div class="orbit-item orbit-item4" data-content="content4">
+                                    <img src="assets/images/smarTLink.svg" alt="CANARA ROBECO smart TLink">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- universe end -->
+         <!-- section6 -->
+        <div class="max-width pt-lg-5">
+            <div class="py-lg-5">
+            <h1 class="title">Explore Features</h1>
+            <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+             </div>
+        </div>
+        <!-- section6 end -->
+        <!-- subscribe-section -->
+        <div class="max-width d-flex newsletter-section">
+            <div class="latest-updates">
+                <h2>Latest Updates</h2>
+                <h5>Stay Updated with the Latest Market Insights</h5>
+                <div class="update-item">
+                    <h3>RBI Policy</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...</p>
+                    <time>Aug 8th, 2024 • 4 min read</time>
+                </div>
+                <div class="update-item">
+                    <h3>Weekly Musings NFO Pick</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...</p>
+                    <time>Aug 8th, 2024 • 4 min read</time>
+                </div>
+                <div class="update-item">
+                    <h3>Daily Market Updates</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...</p>
+                    <time>Aug 8th, 2024 • 4 min read</time>
+                </div>
+                <a href="#" class="view-all">View all &nbsp; &nbsp; →</a>
+            </div>
+            <div class="newsletter">
+                <div class="newsletter-content">
+                    <h2>Newsletter Subscription</h2>
+                    <h5>Subscribe to our newsletters and get daily updates and happenings, straight into your inbox.</h5>
+                </div>
+                <div class="email-box">
+                    <div class="subscription-type">
+                        <label>
+                            <input type="radio" name="subscription" value="daily" checked>
+                            Daily
+                        </label>
+                        <label>
+                            <input type="radio" name="subscription" value="monthly">
+                            Monthly
+                        </label>
+                    </div>
+                    <div class="subscription-form">
+                        <input type="email" placeholder="Email Address">
+                        <button class="btn-2 btn-0">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- subscribe-section-end -->
+        <!-- get app  -->
+        <div class="qr-block">
+            <div class="max-width d-flex">
+                <div class="left-section">
+                    <img src="assets/images/logo-crmf.svg" alt="Canara Robeco Mutual Fund">
+                    <h1>Get The <span>App</span> Now!</h1>
+                    <p>Gain financial control. Budget, save, and invest with ease, all in one app.</p>
+                </div>
+                <div class="right-section">
+                    <div class="qr-code">
+                        <img src="assets/images/footer-QR.svg" alt="QR Code 1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- get app end -->
+        <a class="btn-0" href="#">Swipe</a>
+        </main>
+
+    <footer class="text-center mt-4">
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+
+    
+
+   
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/custom.js"></script>
+
+</body>
+</html>

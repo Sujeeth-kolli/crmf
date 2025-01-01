@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Hub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0e162a;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        .left-section-uni {
+            background-color: #162447;
+            border-radius: 20px;
+            padding: 20px;
+            display: none;
+        }
+        .left-section-uni.active {
+            display: block;
+        }
+        .left-section-uni h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .left-section-uni ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .left-section-uni ul li {
+            margin-bottom: 10px;
+        }
+        .left-section-uni ul li a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+        .invest-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00d4ff;
+            color: #1a1a2e;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .right-section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .center-logo {
+            position: absolute;
+            z-index: 1;
+        }
+        .orbit {
+            transform: rotate(-65deg);
+            width: 310px;
+            height: 380px;
+            position: relative;
+            border-radius: 50%;
+            border: 2px dashed #00d4ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 1s ease-in-out; /* Smooth rotation */
+            margin: 0 auto;
+        }
+        .orbit-item {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+        .orbit-item img {
+            transform: rotate(65deg);
+            width: 100px;
+            height: auto;
+            transition: transform 0.5s ease; /* Smooth rotation for logos */
+        }
+        /* Position each orbit item */
+        .orbit-item1 {
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -100%);
+        }
+        .orbit-item2 {
+            top: 50%;
+            left: 0;
+            transform: translate(-100%, -50%);
+        }
+        .orbit-item3 {
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 100%);
+        }
+        .orbit-item4 {
+            top: 50%;
+            right: 0;
+            transform: translate(100%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="left-section active" id="content1">
+                    <h2>CANARA ROBECO smart MFD</h2>
+                    <p>Details about CANARA ROBECO smart MFD.</p>
+                    <ul>
+                        <li><a href="#">Track Your Portfolio</a>: Stay updated on fund performance and market trends.</li>
+                        <li><a href="#">Tailored Investment Plans</a>: Customize your investments based on your goals.</li>
+                        <li><a href="#">Expert Insights</a>: Access the latest market research and recommendations.</li>
+                        <li><a href="#">Quick Transactions</a>: Buy, switch, or redeem funds effortlessly.</li>
+                    </ul>
+                    <p>Take control of your investments today.</p>
+                    <a href="#" class="invest-btn">Invest Smarter</a>
+                </div>
+                <div class="left-section" id="content2">
+                    <h2>CANARA ROBECO smart Invest</h2>
+                    <p>Details about CANARA ROBECO smart Invest.</p>
+                    <ul>
+                        <li><a href="#">Track Your Portfolio</a>: Stay updated on fund performance and market trends.</li>
+                        <li><a href="#">Tailored Investment Plans</a>: Customize your investments based on your goals.</li>
+                        <li><a href="#">Expert Insights</a>: Access the latest market research and recommendations.</li>
+                        <li><a href="#">Quick Transactions</a>: Buy, switch, or redeem funds effortlessly.</li>
+                    </ul>
+                    <p>Take control of your investments today.</p>
+                    <a href="#" class="invest-btn">Invest Smarter</a>
+                </div>
+                <div class="left-section" id="content3">
+                    <h2>CANARA ROBECO smart Tomorrows</h2>
+                    <p>Details about CANARA ROBECO smart Tomorrows.</p>
+                    <ul>
+                        <li><a href="#">Track Your Portfolio</a>: Stay updated on fund performance and market trends.</li>
+                        <li><a href="#">Tailored Investment Plans</a>: Customize your investments based on your goals.</li>
+                        <li><a href="#">Expert Insights</a>: Access the latest market research and recommendations.</li>
+                        <li><a href="#">Quick Transactions</a>: Buy, switch, or redeem funds effortlessly.</li>
+                    </ul>
+                    <p>Take control of your investments today.</p>
+                    <a href="#" class="invest-btn">Invest Smarter</a>
+                </div>
+                <div class="left-section" id="content4">
+                    <h2>CANARA ROBECO smart TLink</h2>
+                    <p>Details about CANARA ROBECO smart TLink.</p>
+                    <ul>
+                        <li><a href="#">Track Your Portfolio</a>: Stay updated on fund performance and market trends.</li>
+                        <li><a href="#">Tailored Investment Plans</a>: Customize your investments based on your goals.</li>
+                        <li><a href="#">Expert Insights</a>: Access the latest market research and recommendations.</li>
+                        <li><a href="#">Quick Transactions</a>: Buy, switch, or redeem funds effortlessly.</li>
+                    </ul>
+                    <p>Take control of your investments today.</p>
+                    <a href="#" class="invest-btn">Invest Smarter</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="right-section">
+                    <div class="center-logo">
+                        <img src="center-logo.png" alt="Canara Robeco Mutual Fund">
+                    </div>
+                    <div class="orbit" id="orbit">
+                        <div class="orbit-item orbit-item1" data-content="content1">
+                            <img src="item1-logo.png" alt="CANARA ROBECO smart MFD">
+                        </div>
+                        <div class="orbit-item orbit-item2" data-content="content2">
+                            <img src="item2-logo.png" alt="CANARA ROBECO smart Invest">
+                        </div>
+                        <div class="orbit-item orbit-item3" data-content="content3">
+                            <img src="item3-logo.png" alt="CANARA ROBECO smart Tomorrows">
+                        </div>
+                        <div class="orbit-item orbit-item4" data-content="content4">
+                            <img src="item4-logo.png" alt="CANARA ROBECO smart TLink">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Define the angle of each item in the orbit
+            const itemAngles = {
+                'orbit-item1': 0,     // Top
+                'orbit-item2': 90,    // Left
+                'orbit-item3': 180,   // Bottom
+                'orbit-item4': 270    // Right
+            };
+
+            // Handle the click event on the orbit items
+            $('.orbit-item').click(function() {
+                $('.orbit-item img').css('opacity', '0');
+                // Get the class of the clicked orbit item
+                var clickedItemClass = $(this).attr('class').split(' ')[1];
+
+                // Calculate the rotation based on the clicked item
+                if(itemAngles[clickedItemClass] == 0 || itemAngles[clickedItemClass] == 180){
+                    var angleToRotate = -360 + itemAngles[clickedItemClass] - 65;  // Always rotate to left side (90 degrees)
+                }
+                else{
+                    var angleToRotate = 180 - itemAngles[clickedItemClass] - 65;  // Always rotate to left side (90 degrees)
+                }
+
+                // Rotate the orbit to bring the clicked item to the left side
+                $('#orbit').css('transform', 'rotate(' + angleToRotate + 'deg)');
+
+                // Apply counter-rotation to each orbit item
+                $('.orbit-item img').css('transform', 'rotate(' + (-angleToRotate) + 'deg)');
+                $('.orbit-item img').css('opacity', '1');
+
+                // Get the content ID from the clicked orbit item
+                var contentId = $(this).data('content');
+
+                // Hide all the left sections
+                $('.left-section-uni').removeClass('active');
+
+                // Show the corresponding content section
+                $('#' + contentId).addClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
