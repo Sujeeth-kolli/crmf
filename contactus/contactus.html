@@ -3,86 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Us</title>
-
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../contactus/contactus.css">
+    <link rel="stylesheet" href="contactus.css">
 </head>
+<!-- contactus/contactus.html -->
 <body>
     <main class="max-width">
         <h1 class="title">Contact Us</h1>
         <div class="nav-section">
-            <a href="#" class="nav-link active">Support Details</a>
-            <a href="#" class="nav-link">Locate Us</a>
-            <a href="#" class="nav-link">Get a Call Back</a>
-            <a href="#" class="nav-link">Customer Complaints</a>
-            <a href="#" class="nav-link">FAQs</a>
+            <a href="#" class="nav-link" id="supportLink" onclick="updateContent('support', this)">Support Details</a>
+            <a href="#" class="nav-link" id="locateLink" onclick="updateContent('locate', this)">Locate Us</a>
+            <a href="#" class="nav-link" id="callbackLink" onclick="updateContent('callback', this)">Get a Call Back</a>
+            <a href="#" class="nav-link" id="complaintsLink" onclick="updateContent('complaints', this)">Customer Complaints</a>
+            <a href="#" class="nav-link" id="faqsLink" onclick="updateContent('faqs', this)">FAQs</a>
         </div>
 
-        <!-- Main Container -->
-        <div class="main-container">
-            <!-- Social Media Section -->
-             <div class="social-media-container">
-            <div class="social-media">
-                <a href="#"><img src="/assets/images/facebook.svg" alt="Facebook" /></a>
-                <a href="#"><img src="/assets/images/Instagram.svg" alt="Instagram" /></a>
-                <a href="#"><img src="/assets/images/Twitter.svg" alt="Twitter" /></a>
-                <a href="#"><img src="/assets/images/Linkedin.svg" alt="LinkedIn" /></a>
-                <a href="#"><img src="/assets/images/Youtube.svg" alt="YouTube" /></a>
-                <a href="#"><img src="/assets/images/Whatsapp.svg" alt="WhatsApp" /></a>
-            </div>
-        </div>
-
-            <!-- Cards Container -->
-            <div class="card-container">
-                <div class="card">
-                    <img src="/assets/images/map.svg" alt="map logo" class="card-logo" />
-                    <h5>Address</h5>
-                    <p>Construction House, 4th Floor, 5, Walchand Hirachand Marg, Ballard Estate, Fort, Mumbai, Maharashtra 400001</p>
-                </div>
-                <div class="card">
-                    <img src="/assets/images/mobile.svg" alt="mobile logo" class="card-logo" />
-                    <h5>Phone</h5>
-                    <subtext>Investor:</subtext>
-                    <p> 1800-209-2726</p>
-                    <h5>Distributor:</h5> 
-                    <p>022-6658 5080 / 97</p>
-                </div>
-                <div class="card">
-                    <img src="/assets/images/mail.svg" alt="mail logo" class="card-logo" />
-                    <h5>Mail</h5>
-                    <subtext>Investor:</subtext>
-                    <p>crmf@canararobeco.com</p>
-                    <subtext>Distributor:</subtext> 
-                    <p>Brokerage.Team@canararobeco.com</p>
-                </div>
-            </div>
-
-            <!-- Map Container -->
-            <div class="map-container1">
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d943.4672671717792!2d72.83928996956315!3d18.937188698889937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1d0a88b9567%3A0xb216f2c5c9f86846!2sCanara%20Robeco%20Mutual%20Fund%20-%20Head%20Office!5e0!3m2!1sen!2sin!4v1735824362675!5m2!1sen!2sin"loading="lazy"></iframe>
-            </div>
-            <div class="working-hours" style="display: flex; align-items: center; text-align: left;">
-                <img src="/assets/images/Clock.svg" alt="clock Logo" class="logo" style="margin-right: 10px;" />
-                <p style="padding-top: 2%;">9:30 AM to 6:00 PM Monday to Friday</p>
-            </div>
-            </div>
+        <div id="contentContainer" class="main-container">
+            <div id="support" class="content" style="display: none;"></div>
+            <div id="locate" class="content" style="display: none;"></div>
+            <div id="callback" class="content" style="display: none;"></div>
+            <div id="complaints" class="content" style="display: none;"></div>
+            <div id="faqs" class="content" style="display: none;"></div>
         </div>
     </main>
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script> <!-- Add your script here -->
+    <script>
+        function updateContent(section, navLink) {
+            // Hide all sections
+            document.querySelectorAll('.content').forEach(content => content.style.display = 'none');
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            // Show the selected section
+            if (section === 'support') {
+                fetch('support.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('support').innerHTML = data;
+                        document.getElementById('support').style.display = 'block';
+                    });
+            } else if (section === 'locate') {
+                fetch('locateus.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('locate').innerHTML = data;
+                        document.getElementById('locate').style.display = 'block';
+                    });
+            } else if (section === 'complaints') {
+                fetch('customercomplaints.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('complaints').innerHTML = data;
+                        document.getElementById('complaints').style.display = 'block';
+                    });
+            } else if (section === 'faqs') {
+                fetch('faqs.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('faqs').innerHTML = data;
+                        document.getElementById('faqs').style.display = 'block';
+                    });
+            } else if (section === 'callback') {
+                fetch('getacallback.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('callback').innerHTML = data;
+                        document.getElementById('callback').style.display = 'block';
+                    });
+            }
+            // Set the active class on the clicked nav link
+            navLink.classList.add('active');
+            // Store the last selected section in localStorage
+            localStorage.setItem('lastSection', section);
+        }
+
+        // Load the last selected section or default to support
+        document.addEventListener('DOMContentLoaded', function() {
+            const lastSection = localStorage.getItem('lastSection') || 'support';
+            const lastLink = document.getElementById(lastSection + 'Link');
+            updateContent(lastSection, lastLink);
+            lastLink.classList.add('active'); // Ensure the active class is set
+        });
+    </script>
 </body>
 </html>
