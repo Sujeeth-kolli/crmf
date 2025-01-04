@@ -315,19 +315,23 @@ body {
 }
 .locate-card-body{
     background-color: #252736;
-    background-image: url('/assets/images//cardbg.png'); /* Add your background image here */
-    background-size: cover; /* Adjusts the image to cover the entire card */
-    background-position: center; /* Centers the background image */
+    background-image: url('/assets/images/cardbg.png'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center;
     border-radius: 30px;
-    padding: 25px 25px 30px 25px;
+    padding: 25px;
     color: #ffffff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     width: 413.33px;
     height: 375px;
     margin: 20px;
     position: relative;
+    transition: transform 0.3s; /* Smooth transition for hover effect */
 }
-.locate-card-conatiner{
+.locate-card-body:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+.locate-card-container{
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -337,24 +341,32 @@ body {
 .locate-card header{
     color: #54ABBF;
     font-size: 24px;
-    font-weight: 600px;
+    font-weight: 600;
     padding: 5px;   
 
 }
 .locate-card subtitle{
 color: grey;
 font-size: 16px;
-font-weight: 400px;
+font-weight: 400;
 margin-top: 15px;
 }
 .locate-card p{
     font-size: 18px;
-    font-weight: 600px;
+    font-weight: 600;
 }
 .locate-map{
     color: #8AC6D3;
     align-items: center;
     justify-content: center;
     text-align: center;
+    display: none; /* Initially hidden */
+}
+.locate-card-body:hover .locate-map {
+    display: block; /* Show map icon on hover */
+}
+.divider {
+    border-top: 1px solid #8AC6D3; /* Divider style */
+    margin: 10px 0; /* Spacing for the divider */
 }
 

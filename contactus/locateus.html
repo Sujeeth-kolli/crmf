@@ -3,21 +3,20 @@
         <!-- Filter Options -->
         <div class="">
             <label>
-                <input type="radio" id="locate-branch" name="locate-option" />
+                <input type="radio" id="locate-branch" name="locate-option" onchange="handleLocateOptionChange()" />
                 Locate our Branch
             </label>
             <label>
-                <input type="radio" id="locate-mfd" name="locate-option" />
+                <input type="radio" id="locate-mfd" name="locate-option" onchange="handleLocateOptionChange()"  />
                 Locate a MFD
             </label>
             <label>
-                <input type="radio" id="locate-pos" name="locate-option" />
+                <input type="radio" id="locate-pos" name="locate-option" onchange="handleLocateOptionChange()" />
                 Point of Sales (POS)
             </label>
         </div>
-
         <!-- Branch Card -->
-        <div id="branch-card" class="locate-card">
+        <div id="branch-card" class="locate-card" style="display: none;">
             <div class="locate-card-body">
                 <header>Hyderabad</header>
                 <div class="divider"></div>
@@ -30,37 +29,7 @@
                 <div class="divider"></div>
                 <div class="locate-map">view in map</div>
                 </div>
-                
-                
-            </div>
-            <div class="locate-card-body">
-                <header>Hyderabad</header>
-                <div class="divider"></div>
-                <div class="locate-card-conatiner">
-                    <subtitle>Adress</subtitle>
-                    <p>V. V. Vintage Boulevard, 1st Floor, Municipal H. No.6-3-1093, Somajiguda, Raj Bhavan Road,
-                        Hyderabad - 500 082.</p>
-                    <subtitle>Number</subtitle>
-                    <p>33AAACC2031JIZ9</p>
-                    <div class="divider"></div>
-                    <div class="locate-map">view in map</div>
-                </div>
-            </div>
-            <div class="locate-card-body">
-                <header>Hyderabad</header>
-                <div class="divider"></div>
-                <div class="locate-card-conatiner">
-                    <subtitle>Adress</subtitle>
-                    <p>V. V. Vintage Boulevard, 1st Floor, Municipal H. No.6-3-1093, Somajiguda, Raj Bhavan Road,
-                        Hyderabad - 500 082.</p>
-                    <subtitle>Number</subtitle>
-                    <p>33AAACC2031JIZ9</p>
-                    <div class="divider"></div>
-                    <div class="locate-map">view in map</div>
-                </div>
             </div>
         </div>
-    </div>
-    <!-- MFD Card -->
     </div>
 </body>
