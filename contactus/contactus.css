@@ -328,9 +328,7 @@ body {
     position: relative;
     transition: transform 0.3s; /* Smooth transition for hover effect */
 }
-.locate-card-body:hover {
-    transform: scale(1.05); /* Slightly enlarge the card on hover */
-}
+
 .locate-card-container{
   position: absolute;
   display: flex;
@@ -355,18 +353,37 @@ margin-top: 15px;
     font-size: 18px;
     font-weight: 600;
 }
-.locate-map{
+.locate-map {
     color: #8AC6D3;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 10px;
+    position: relative; /* Ensure positioning context for the logo */
+}
+
+.map-divider {
+    height: 1px; /* Adjust height as needed */
+    background-color: #979591; /* Use the same color as numeric-effortless */
+    margin-top: 20px; /* Space above the divider */
+    width: 100%;
+    opacity: 50%;
+    margin-bottom: 25px;
+}
+
+.locate-map:hover + .map-divider { /* Apply hover effect on the map divider when hovering over locate-map */
+    background-color: #0082A0;
+}
+
+.locate-map .logo { /* Add logo styling */
     display: none; /* Initially hidden */
+    position: absolute; /* Position it at the right end */
+    right: 10px; /* Adjust as needed */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
 }
-.locate-card-body:hover .locate-map {
-    display: block; /* Show map icon on hover */
-}
-.divider {
-    border-top: 1px solid #8AC6D3; /* Divider style */
-    margin: 10px 0; /* Spacing for the divider */
+
+.locate-map:hover .logo { /* Show logo on hover of locate-map */
+    display: block; /* Show logo on hover */
 }
 
