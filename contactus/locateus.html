@@ -3,11 +3,11 @@
         <!-- Filter Options -->
         <div class="">
             <label>
-                <input type="radio" id="locate-branch" name="locate-option" onchange="handleLocateOptionChange()" />
+                <input type="radio" id="locate-branch" name="locate-option" onchange="handleLocateOptionChange()" checked />
                 Locate our Branch
             </label>
             <label>
-                <input type="radio" id="locate-mfd" name="locate-option" onchange="handleLocateOptionChange()"  />
+                <input type="radio" id="locate-mfd" name="locate-option" onchange="handleLocateOptionChange()" />
                 Locate a MFD
             </label>
             <label>
@@ -15,20 +15,80 @@
                 Point of Sales (POS)
             </label>
         </div>
-        <!-- Branch Card -->
-        <div id="branch-card" class="locate-card" style="display: none;">
-            <div class="locate-card-body">
+        <!-- Branch Cards -->
+        <div class="locate-card">
+            <div id="branch-card" class="locate-card-body">
                 <header>Hyderabad</header>
                 <div class="divider"></div>
                 <div class="locate-card-conatiner">
-                    <subtitle>Adress</subtitle>
+                    <subtitle>Address</subtitle>
                     <p>V. V. Vintage Boulevard, 1st Floor, Municipal H. No.6-3-1093, Somajiguda, Raj Bhavan Road,
                         Hyderabad - 500 082.</p>
                     <subtitle>Number</subtitle>
                     <p>33AAACC2031JIZ9</p>
                 <div class="map-divider"></div>
                 <div class="locate-map">
-                    view in map
+                    <span class="map-text">view in map</span>
+                    <img src="/assets/images/3d-map.svg" class="logo" alt="Logo" />
+                </div>
+                </div>
+            </div>
+            <div id="branch-card" class="locate-card-body">
+                <header>Bangalore</header>
+                <div class="divider"></div>
+                <div class="locate-card-conatiner">
+                    <subtitle>Address</subtitle>
+                    <p>123, MG Road, Bangalore - 560 001.</p>
+                    <subtitle>Number</subtitle>
+                    <p>33AAACC2031JIZ8</p>
+                <div class="map-divider"></div>
+                <div class="locate-map">
+                    <span class="map-text">view in map</span>
+                    <img src="/assets/images/3d-map.svg" class="logo" alt="Logo" />
+                </div>
+                </div>
+            </div>
+            <div id="branch-card" class="locate-card-body">
+                <header>Mumbai</header>
+                <div class="divider"></div>
+                <div class="locate-card-conatiner">
+                    <subtitle>Address</subtitle>
+                    <p>456, Bandra West, Mumbai - 400 050.</p>
+                    <subtitle>Number</subtitle>
+                    <p>33AAACC2031JIZ7</p>
+                <div class="map-divider"></div>
+                <div class="locate-map">
+                    <span class="map-text">view in map</span>
+                    <img src="/assets/images/3d-map.svg" class="logo" alt="Logo" />
+                </div>
+                </div>
+            </div>
+            <div id="branch-card" class="locate-card-body">
+                <header>Pune</header>
+                <div class="divider"></div>
+                <div class="locate-card-conatiner">
+                    <subtitle>Address</subtitle>
+                    <p>789, FC Road, Pune - 411 004.</p>
+                    <subtitle>Number</subtitle>
+                    <p>33AAACC2031JIZ6</p>
+                <div class="map-divider"></div>
+                <div class="locate-map">
+                    <span class="map-text">view in map</span>
+                    <img src="/assets/images/3d-map.svg" class="logo" alt="Logo" />
+                </div>
+                </div>
+            </div>
+            <div id="branch-card" class="locate-card-body">
+                <header>Chennai</header>
+                <div class="divider"></div>
+                <div class="locate-card-conatiner">
+                    <subtitle>Address</subtitle>
+                    <p>101, Anna Salai, Chennai - 600 002.</p>
+                    <subtitle>Number</subtitle>
+                    <p>33AAACC2031JIZ5</p>
+                <div class="map-divider"></div>
+                <div class="locate-map">
+                    <span class="map-text">view in map</span>
                     <img src="/assets/images/3d-map.svg" class="logo" alt="Logo" />
                 </div>
                 </div>

@@ -312,6 +312,7 @@ body {
 .locate-card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 .locate-card-body{
     background-color: #252736;
@@ -363,23 +364,29 @@ margin-top: 15px;
 }
 
 .map-divider {
-    height: 1px; /* Adjust height as needed */
-    background-color: #979591; /* Use the same color as numeric-effortless */
-    margin-top: 20px; /* Space above the divider */
-    width: 100%;
-    opacity: 50%;
-    margin-bottom: 25px;
+    display: block; /* Ensure the divider is visible by default */
+    background-color: rgba(151, 149, 145, 0.5); /* Set initial color */
+    height: 1px; /* Set height for the divider */
+    transition: background-color 0.3s; /* Smooth transition for color change */
 }
 
-.locate-map:hover + .map-divider { /* Apply hover effect on the map divider when hovering over locate-map */
-    background-color: #0082A0;
+.locate-map:hover .map-text + .map-divider { /* Apply hover effect on the map divider when hovering over locate-map */
+    background-color: #0082A0; /* Change to the desired color on hover */
+}
+
+.locate-map .map-text:hover + .map-divider { /* Ensure the hover effect works when hovering over the text */
+    background-color: #0082A0; /* Change to the desired color on hover */
+}
+
+.locate-map .map-text:hover + .map-divider + .logo { /* Show the logo when hovering over the text */
+    display: block; /* Ensure the logo is displayed */
 }
 
 .locate-map .logo { /* Add logo styling */
     display: none; /* Initially hidden */
-    position: absolute; /* Position it at the right end */
-    right: 10px; /* Adjust as needed */
-    top: 50%; /* Center vertically */
+    position: absolute; /* Position it at the right end of the divider */
+    right: 0; /* Align to the right of the divider */
+    top: -10px; /* Adjust to position it above the divider */
     transform: translateY(-50%); /* Center vertically */
 }
 
