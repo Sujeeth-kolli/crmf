@@ -14,10 +14,10 @@ function updateContent(section) {
 }
 
 function handleLocateOptionChange() {
-    const branchCard = document.getElementById("branch-card");
+    const branchCards = document.getElementById("branch-cards");
     const isBranchSelected = document.getElementById("locate-branch").checked;
-    // Show or hide the branch card based on the selected option
-    branchCard.style.display = isBranchSelected ? "block" : "none";    
-    // Log the visibility status of the branch card
-    console.log(`Branch card is now ${isBranchSelected ? "visible" : "hidden"}.`);
+    // Show or hide the branch cards based on the selected option
+    branchCards.style.display = isBranchSelected ? "block" : "none";    
+    // Log the visibility status of the branch cards
+    console.log(`Branch cards are now ${isBranchSelected ? "visible" : "hidden"}.`);
 }
