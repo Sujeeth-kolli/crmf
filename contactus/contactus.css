@@ -403,7 +403,8 @@ margin-top: 15px;
     color: #fff; /* Text color */
     border-radius: 10px; /* Rounded corners */
     padding: 20px; /* Padding inside the card */
-    max-width: 400px; /* Max width of the card */
+    margin-bottom: 20px; /* Space between cards */
+    max-width: 100%; /* Max width of the card */
     margin: 20px auto; /* Center the card */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Shadow effect */
 }
@@ -421,9 +422,16 @@ margin-top: 15px;
 }
 
 .mfd-card .info-row {
-    display: flex; /* Flexbox for row layout */
-    flex-direction: column; /* Stack field name and value vertically */
+    display: flex; /* Keep flex layout */
+    justify-content: space-between; /* Space items to the ends */
+    align-items: flex-start; /* Align items to the start */
     margin: 10px 0; /* Space between rows */
+}
+
+.field-container {
+    display: flex; /* Keep flex layout for field name and value */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
 }
 
 .mfd-card .divider {
@@ -431,20 +439,27 @@ margin-top: 15px;
     margin: 10px 0; /* Space around the divider */
 }
 
-.mfd-card .email {
-    text-align: right; /* Align email to the right */
-}
-
 .field-name {
     color: #979591; /* Color for field names */
     font-size: 16px; /* Adjust font size as needed */
     text-align: left; /* Align field names to the left */
+}
+.field-name1{
+    color: #979591; /* Color for field names */
+    font-size: 16px; /* Adjust font size as needed */
+    text-align: right; /* Align field names to the right */
+
 }
 
 .field-value {
     color: #ffffff; /* Color for field values */
     font-size: 16px; /* Adjust font size as needed */
     margin-top: 5px; /* Space between field name and value */
-    text-align: left; /* Align values to the left */
+}
+.field-value1{
+    color: #ffffff; /* Color for field values */
+    font-size: 16px; /* Adjust font size as needed */
+    margin-top: 5px; /* Space between field name and value */
+    text-align: right;
 }
 
