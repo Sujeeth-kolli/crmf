@@ -432,6 +432,11 @@ margin-top: 15px;
     display: flex; /* Keep flex layout for field name and value */
     flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align items to the start */
+    flex: 1; /* Allow containers to take equal space */
+}
+
+.field-container:last-child {
+    align-items: flex-end; /* Align the last container to the end */
 }
 
 .mfd-card .divider {
@@ -461,5 +466,11 @@ margin-top: 15px;
     font-size: 16px; /* Adjust font size as needed */
     margin-top: 5px; /* Space between field name and value */
     text-align: right;
+}
+
+/* Add this with the other MFD card styles */
+.field-container.email-field {
+    flex-direction: column;
+    align-items: flex-start;
 }
 
