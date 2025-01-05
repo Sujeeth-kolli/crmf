@@ -313,6 +313,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
 }
 .locate-card-body{
     background-color: #252736;
@@ -323,7 +325,8 @@ body {
     padding: 25px;
     color: #ffffff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    width: auto;
+    width: 100%;
+    max-width: 413.33px;
     height: 100%;
     margin: 20px;
     position: relative;
@@ -392,5 +395,56 @@ margin-top: 15px;
 
 .locate-map:hover .logo { /* Show logo on hover of locate-map */
     display: block; /* Show logo on hover */
+}
+
+/* MFD Card Styles */
+.mfd-card {
+    background-color: #252736; /* Card background color */
+    color: #fff; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    max-width: 400px; /* Max width of the card */
+    margin: 20px auto; /* Center the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Shadow effect */
+}
+
+.mfd-card .card-title {
+    font-size: 24px; /* Title font size */
+    font-weight: bold; /* Title font weight */
+    margin-bottom: 10px; /* Space below the title */
+    color: #54ABBF;
+}
+
+.mfd-card .card-content {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Column layout */
+}
+
+.mfd-card .info-row {
+    display: flex; /* Flexbox for row layout */
+    flex-direction: column; /* Stack field name and value vertically */
+    margin: 10px 0; /* Space between rows */
+}
+
+.mfd-card .divider {
+    background-color: #979591; /* Divider color */
+    margin: 10px 0; /* Space around the divider */
+}
+
+.mfd-card .email {
+    text-align: right; /* Align email to the right */
+}
+
+.field-name {
+    color: #979591; /* Color for field names */
+    font-size: 16px; /* Adjust font size as needed */
+    text-align: left; /* Align field names to the left */
+}
+
+.field-value {
+    color: #ffffff; /* Color for field values */
+    font-size: 16px; /* Adjust font size as needed */
+    margin-top: 5px; /* Space between field name and value */
+    text-align: left; /* Align values to the left */
 }
 
