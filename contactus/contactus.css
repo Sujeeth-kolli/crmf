@@ -254,6 +254,7 @@ body {
     gap: 40px;
     border-radius: 30px;
     background-color: #252736;
+    margin-top: 20px;
 }
 
 .form-row {
@@ -430,12 +431,34 @@ margin-bottom: 20px;  /* Add space below the subtitle */
 }
 
 .map-divider {
-    display: block; /* Ensure the divider is visible by default */
-    background-color: rgba(151, 149, 145, 0.5); /* Set initial color */
-    height: 1px; /* Set height for the divider */
-    transition: background-color 0.3s; /* Smooth transition for color change */
-    margin-top: 10px; /* Add some spacing above the divider */
+    display: block;
+    background-color: rgba(151, 149, 145, 0.5);
+    height: 1px;
+    width: 100%;
+    margin-top: 10px;
+    transition: background 0.3s ease;
 }
+
+/* Add gradient effect on hover - fading to blue */
+.locate-map:hover .map-divider {
+    background: linear-gradient(
+        to right,
+        rgba(0, 130, 160, 0),
+        #0082A0
+    );
+    height: 1px;
+}
+
+/* Ensure the hover effect works when hovering over the text */
+.locate-map .map-text:hover + .map-divider {
+    background: linear-gradient(
+        to right,
+        rgba(0, 130, 160, 0),
+        #0082A0
+    );
+    height: 1px;
+}
+
 .pos-divider {
     background-color: rgba(151, 149, 145, 0.5); /* Set initial color */
     height: 1px; 
