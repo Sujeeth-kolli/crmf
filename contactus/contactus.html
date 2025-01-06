@@ -90,18 +90,48 @@
 
         // Add this function to your script
         function initializeFaqAccordions() {
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                question.addEventListener('click', () => {
-                    // Close all other items
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                    // Toggle current item
-                    item.classList.toggle('active');
+            // Get all accordion buttons
+            const accordionButtons = document.querySelectorAll('.btn-link');
+            
+            // Ensure first accordion is open by default
+            if (accordionButtons.length > 0) {
+                const firstButton = accordionButtons[0];
+                const firstCollapse = document.querySelector(firstButton.getAttribute('data-target'));
+                firstButton.classList.remove('collapsed');
+                firstButton.setAttribute('aria-expanded', 'true');
+                firstCollapse?.classList.add('show');
+            }
+
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    const targetId = button.getAttribute('data-target');
+                    const targetCollapse = document.querySelector(targetId);
+                    const isCurrentlyOpen = targetCollapse.classList.contains('show');
+
+                    // If clicking on a closed accordion
+                    if (!isCurrentlyOpen) {
+                        // Close all accordions
+                        document.querySelectorAll('.collapse.show').forEach(collapse => {
+                            collapse.classList.remove('show');
+                            const btn = document.querySelector(`[data-target="#${collapse.id}"]`);
+                            if (btn) {
+                                btn.classList.add('collapsed');
+                                btn.setAttribute('aria-expanded', 'false');
+                            }
+                        });
+
+                        // Open clicked accordion
+                        targetCollapse.classList.add('show');
+                        button.classList.remove('collapsed');
+                        button.setAttribute('aria-expanded', 'true');
+                    }
+                    // Prevent closing if it's the only open accordion
+                    else if (document.querySelectorAll('.collapse.show').length <= 1) {
+                        e.stopPropagation();
+                        return;
+                    }
                 });
             });
         }

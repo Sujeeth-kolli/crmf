@@ -134,8 +134,7 @@ body {
 }
 .divider {
     height: 1px; /* Adjust height as needed */
-    background-color: #979591; /* Use the same color as numeric-effortless */
-    margin-top: 20px; /* Space above the divider */
+    background-color: #979591;
     width: 100%;
     opacity: 50%;
 }
@@ -313,6 +312,7 @@ body {
     gap: 20px;
     justify-items: center;
     margin: 0 auto;
+    margin-top: 20px;
 }
 .locate-options {
     font-size: 20px;
@@ -369,13 +369,13 @@ body {
     background-size: cover;
     background-position: center;
     border-radius: 30px;
-    padding: 25px;
+    padding: 25px 25px 30px 25px;
     color: #ffffff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     width: 100%;
-    max-width: 413.33px;
     height: 100%;
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 
@@ -415,6 +415,7 @@ margin-bottom: 20px;  /* Add space below the subtitle */
     position: relative; /* Ensure positioning context for the logo */
     font-size: 22px;
     font-weight: 500;
+    margin-bottom: 0px;
 }
 
 .map-divider {
@@ -424,6 +425,12 @@ margin-bottom: 20px;  /* Add space below the subtitle */
     transition: background-color 0.3s; /* Smooth transition for color change */
     margin-top: 10px; /* Add some spacing above the divider */
 }
+.pos-divider {
+    background-color: rgba(151, 149, 145, 0.5); /* Set initial color */
+    height: 1px; 
+}
+
+
 
 .locate-map:hover .map-text + .map-divider { /* Apply hover effect on the map divider when hovering over locate-map */
     background-color: #0082A0; /* Change to the desired color on hover */
@@ -448,19 +455,22 @@ margin-bottom: 20px;  /* Add space below the subtitle */
 .locate-map:hover .logo { /* Show logo on hover of locate-map */
     display: block; /* Show logo on hover */
 }
+.arrow-icon {
+    margin-left: 0px; /* Space between text and arrow */
+    transition: transform 0.3s; /* Transition for rotation */
+    transform: rotate(315deg); 
+}
+.locate-map:hover .arrow-icon {
+    transform: translateX(5px) rotate(0deg); /* Move right and rotate */
+}
 
 /* MFD Card Styles */
 .mfd-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 20px;
-    width: 100%;
-    margin: 0 auto;
+    padding: 20px; 
 }
-
-
-
 .mfd-card {
     background-color: #252736;
     padding: 25px;
