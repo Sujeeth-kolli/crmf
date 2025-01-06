@@ -177,10 +177,11 @@ body {
 
 .accordion .card-header {
     padding: 0;
+    color: #CED2DD;
     
 }
 .acc-card button,.acc-card button:focus,.acc-card button:hover{
-    color: var(--text-white-darkmode) !important;
+    color: #CED2DD;
     cursor: pointer;
     font-size: 18px;
     font-weight: 500;
@@ -199,12 +200,17 @@ body {
     float: right;
     scale: 1.4;
 }
-#accordion1{
-    display: flex;
-    justify-content: space-between;
+#accordion1 {
+    display: grid;
+    grid-template-columns: minmax(400px, 1fr) minmax(400px, 1fr);  /* Set minimum width */
+    gap: 32px;  /* Increase gap between columns */
+    width: 100%;
 }
-.inner-faq{
-    flex-basis: 49%;
+.inner-faq {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 630px;  /* Set minimum width */
 }
 .accordion .card-header button:not(.collapsed){
     background-color: rgba(0, 72, 88, 1); 
@@ -213,7 +219,7 @@ body {
 
 .accordion .card-body {
     background-color: rgba(0, 118, 146, 1); 
-    color: var(--text-white-darkmode);
+    color: #CED2DD;
     font-size: 18px;
     font-weight: 500;
     line-height: 21.6px;
@@ -221,19 +227,24 @@ body {
     margin-top: -10px;
     border-bottom-right-radius:8px ;
     border-bottom-left-radius:8px ;
+    width: 100%;
+    word-wrap: break-word;
 }
 .accordion .acc-card {
     margin-bottom: 15px;
+    width: 100%;
 }
 
 .faq-block {
+    width: 100%;
     display: flex;
-    gap: 20px;
     margin-top: 20px;
+    padding: 0 20px;
 }
 
 .accordion-column {
-    flex: 1;
+    width: 100%;
+    position: relative;
 }
 
 .form-container {
