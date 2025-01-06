@@ -1,20 +1,54 @@
 <body>
     <div class="">
         <!-- Filter Options -->
-        <div class="">
-            <label>
+        <div class="locate-options">
+            <label class="option-label">
                 <input type="radio" id="locate-branch" name="locate-option" onchange="handleLocateOptionChange()" checked />
-                Locate our Branch
+                <span>Locate our Branch</span>
             </label>
-            <label>
+            <label class="option-label">
                 <input type="radio" id="locate-mfd" name="locate-option" onchange="handleLocateOptionChange()" />
-                Locate a MFD
+                <span>Locate a MFD</span>
             </label>
-            <label>
+            <label class="option-label">
                 <input type="radio" id="locate-pos" name="locate-option" onchange="handleLocateOptionChange()" />
-                Point of Sales (POS)
+                <span>Point of Sales (POS)</span>
             </label>
         </div>
+
+        <!-- Add Filter Form -->
+        <div class="">
+            <div class="form-row">
+                <div class="field">
+                    <label for="filter-state">State</label>
+                    <select id="filter-state" required>
+                        <option value="">All States</option>
+                        <option value="maharashtra">Maharashtra</option>
+                        <option value="karnataka">Karnataka</option>
+                        <option value="telangana">Telangana</option>
+                        <option value="tamil-nadu">Tamil Nadu</option>
+                        <option value="gujarat">Gujarat</option>
+                        <option value="kerala">Kerala</option>
+                        <option value="punjab">Punjab</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="filter-city">City</label>
+                    <select id="filter-city" required>
+                        <option value="">All Cities</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="pune">Pune</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="ahmedabad">Ahmedabad</option>
+                        <option value="kochi">Kochi</option>
+                        <option value="chandigarh">Chandigarh</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
         <!-- Branch Cards -->
         <div class="locate-card" id="branch-cards"> 
             <div class="locate-card-body">
@@ -199,7 +233,6 @@
           <!-- mfd cards -->
      
         <div class="mfd-container">
-
             <div class="mfd-card" id="mfd-card" style="display: none;">
                 <div class="card-title">ICICI Bank Ltd</div>
                 <div class="card-content">
@@ -238,13 +271,244 @@
                     <div class="divider"></div>
                     <!-- Email ID -->
                     <div class="info-row">
-                        <div class="field-container email-field">
+                        <div class="field-container" style="flex-direction: column; align-items: flex-start;">
                             <span class="field-name">Email ID</span>
                             <span class="field-value">aashrayrm123@gmail.com</span>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="mfd-card">
+                <div class="card-title">HDFC Bank Ltd</div>
+                <div class="card-content">
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">Name</span>
+                            <span class="field-value">Priya Sharma</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">ARN</span>
+                            <span class="field-value1">ARN-2021</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">State</span>
+                            <span class="field-value">Karnataka</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">City</span>
+                            <span class="field-value1">Bangalore</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">PinCode</span>
+                            <span class="field-value">560001</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">Mobile Number</span>
+                            <span class="field-value1">+91 9876543210</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container" style="flex-direction: column; align-items: flex-start;">
+                            <span class="field-name">Email ID</span>
+                            <span class="field-value">priya.sharma@hdfc.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mfd-card">
+                <div class="card-title">Axis Bank Ltd</div>
+                <div class="card-content">
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">Name</span>
+                            <span class="field-value">Rajesh Kumar</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">ARN</span>
+                            <span class="field-value1">ARN-2022</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">State</span>
+                            <span class="field-value">Tamil Nadu</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">City</span>
+                            <span class="field-value1">Chennai</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">PinCode</span>
+                            <span class="field-value">600001</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">Mobile Number</span>
+                            <span class="field-value1">+91 9876543211</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container" style="flex-direction: column; align-items: flex-start;">
+                            <span class="field-name">Email ID</span>
+                            <span class="field-value">rajesh.kumar@axis.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mfd-card">
+                <div class="card-title">SBI Bank Ltd</div>
+                <div class="card-content">
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">Name</span>
+                            <span class="field-value">Anita Patel</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">ARN</span>
+                            <span class="field-value1">ARN-2023</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">State</span>
+                            <span class="field-value">Gujarat</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">City</span>
+                            <span class="field-value1">Ahmedabad</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">PinCode</span>
+                            <span class="field-value">380001</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">Mobile Number</span>
+                            <span class="field-value1">+91 9876543212</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container" style="flex-direction: column; align-items: flex-start;">
+                            <span class="field-name">Email ID</span>
+                            <span class="field-value">anita.patel@sbi.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mfd-card">
+                <div class="card-title">Kotak Bank Ltd</div>
+                <div class="card-content">
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">Name</span>
+                            <span class="field-value">Suresh Menon</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">ARN</span>
+                            <span class="field-value1">ARN-2024</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">State</span>
+                            <span class="field-value">Kerala</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">City</span>
+                            <span class="field-value1">Kochi</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">PinCode</span>
+                            <span class="field-value">682001</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">Mobile Number</span>
+                            <span class="field-value1">+91 9876543213</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container" style="flex-direction: column; align-items: flex-start;">
+                            <span class="field-name">Email ID</span>
+                            <span class="field-value">suresh.menon@kotak.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mfd-card">
+                <div class="card-title">Yes Bank Ltd</div>
+                <div class="card-content">
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">Name</span>
+                            <span class="field-value">Meera Singh</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">ARN</span>
+                            <span class="field-value1">ARN-2025</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">State</span>
+                            <span class="field-value">Punjab</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">City</span>
+                            <span class="field-value1">Chandigarh</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container">
+                            <span class="field-name">PinCode</span>
+                            <span class="field-value">160001</span>
+                        </div>
+                        <div class="field-container">
+                            <span class="field-name1">Mobile Number</span>
+                            <span class="field-value1">+91 9876543214</span>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="info-row">
+                        <div class="field-container" style="flex-direction: column; align-items: flex-start;">
+                            <span class="field-name">Email ID</span>
+                            <span class="field-value">meera.singh@yes.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+    </div>
+    
+    <!-- Bottom Image Container -->
+    <div class="bottom-image-container">
+        <img src="/assets/images/locateusfooter.svg" alt="Description" class="bottom-image">
     </div>
 </body>

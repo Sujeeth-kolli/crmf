@@ -316,6 +316,55 @@ body {
     justify-items: center;
     margin: 0 auto;
 }
+.locate-options {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 20px;
+}
+
+.option-label {
+    color: #979591;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.option-label input[type="radio"] {
+    accent-color: #979591;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    appearance: none;
+    border: 2px solid #979591;
+    border-radius: 50%;
+    background-color: transparent;
+    position: relative;
+}
+
+/* Styling for selected radio button */
+.option-label input[type="radio"]:checked {
+    border: 2px solid #54ABBF;
+    background-color: transparent;
+}
+
+.option-label input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #54ABBF;
+}
+
+/* Styling for text when radio is selected */
+.option-label input[type="radio"]:checked + span {
+    color: white;
+}
 .locate-card-body{
     background-color: #252736;
     background-image: url('/assets/images/cardbg.png'); /* Ensure the path is correct */
@@ -398,79 +447,80 @@ margin-top: 15px;
 }
 
 /* MFD Card Styles */
-.mfd-card {
-    background-color: #252736; /* Card background color */
-    color: #fff; /* Text color */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding inside the card */
-    margin-bottom: 20px; /* Space between cards */
-    max-width: 100%; /* Max width of the card */
-    margin: 20px auto; /* Center the card */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Shadow effect */
+.mfd-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.mfd-card .card-title {
-    font-size: 24px; /* Title font size */
-    font-weight: bold; /* Title font weight */
-    margin-bottom: 10px; /* Space below the title */
+.mfd-card {
+    background-color: #252736;
+    padding: 25px;
+    border-radius: 30px;
+    display: none;
+    width: 100%;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    gap: 20px;
+    width: 100%;
+}
+.card-title{
+    font-size: 24px;
+    font-weight: 600;
     color: #54ABBF;
 }
-
-.mfd-card .card-content {
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Column layout */
-}
-
-.mfd-card .info-row {
-    display: flex; /* Keep flex layout */
-    justify-content: space-between; /* Space items to the ends */
-    align-items: flex-start; /* Align items to the start */
-    margin: 10px 0; /* Space between rows */
-}
-
 .field-container {
-    display: flex; /* Keep flex layout for field name and value */
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the start */
-    flex: 1; /* Allow containers to take equal space */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
-.field-container:last-child {
-    align-items: flex-end; /* Align the last container to the end */
-}
-
-.mfd-card .divider {
-    background-color: #979591; /* Divider color */
-    margin: 10px 0; /* Space around the divider */
-}
-
-.field-name {
-    color: #979591; /* Color for field names */
-    font-size: 16px; /* Adjust font size as needed */
-    text-align: left; /* Align field names to the left */
-}
-.field-name1{
-    color: #979591; /* Color for field names */
-    font-size: 16px; /* Adjust font size as needed */
-    text-align: right; /* Align field names to the right */
-
+/* Left-aligned fields */
+.field-name, .field-value {
+    width: 100%;
+    color: #979591;
+    font-size: 16px;
+    text-align: left;
 }
 
 .field-value {
-    color: #ffffff; /* Color for field values */
-    font-size: 16px; /* Adjust font size as needed */
-    margin-top: 5px; /* Space between field name and value */
+    color: #ffffff;
+    margin-top: 5px;
 }
-.field-value1{
-    color: #ffffff; /* Color for field values */
-    font-size: 16px; /* Adjust font size as needed */
-    margin-top: 5px; /* Space between field name and value */
+
+/* Right-aligned fields */
+.field-name1, .field-value1 {
+    width: 100%;
+    color: #979591;
+    font-size: 16px;
     text-align: right;
 }
 
-/* Add this with the other MFD card styles */
-.field-container.email-field {
-    flex-direction: column;
-    align-items: flex-start;
+.field-value1 {
+    color: #ffffff;
+    margin-top: 5px;
 }
 
+/* Email field */
+.field-container[style*="flex-direction: column"] {
+    width: 100%;
+}
+
+.bottom-image-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.bottom-image {
+    max-width: 100%;
+    height: auto;
+}

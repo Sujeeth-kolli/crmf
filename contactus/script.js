@@ -29,6 +29,7 @@ function handleLocateOptionChange() {
     } else if (isMFDSelected) {
         branchCards.style.display = "none"; // Hide branch cards
         posCards.style.display = "none"; // Hide POS cards
+        document.querySelector('.mfd-container').style.display = "grid"; // Show the container
         mfdCards.forEach(card => card.style.display = "block"); // Show all MFD cards
     } else if (isPOSSelected) {
         posCards.style.display = "grid"; // Show POS cards
@@ -38,6 +39,7 @@ function handleLocateOptionChange() {
         branchCards.style.display = "none"; // Hide branch cards
         posCards.style.display = "none"; // Hide POS cards
         mfdCards.forEach(card => card.style.display = "none"); // Hide all MFD cards
+        document.querySelector('.mfd-container').style.display = "none"; // Hide the container
     }
 
     // Log the visibility status of the branch, POS, and MFD cards
