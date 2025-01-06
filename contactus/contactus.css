@@ -415,7 +415,7 @@ margin-bottom: 20px;  /* Add space below the subtitle */
 }
 .locate-card p{
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 15px;  /* Add space below paragraphs */
 }
 .locate-map {
@@ -436,6 +436,7 @@ margin-bottom: 20px;  /* Add space below the subtitle */
     height: 1px;
     width: 100%;
     margin-top: 10px;
+    margin-bottom: 20px;
     transition: background 0.3s ease;
 }
 
@@ -464,6 +465,18 @@ margin-bottom: 20px;  /* Add space below the subtitle */
     height: 1px; 
 }
 
+.map-text {
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.map-text:hover {
+    color: #54ABBF;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 .locate-map:hover .map-text + .map-divider { /* Apply hover effect on the map divider when hovering over locate-map */
     background-color: #0082A0; /* Change to the desired color on hover */
 }
@@ -480,7 +493,7 @@ margin-bottom: 20px;  /* Add space below the subtitle */
     display: none; /* Initially hidden */
     position: absolute; /* Position it at the right end of the divider */
     right: -10px; /* Align to the right of the divider */   
-    bottom: -25px;
+    bottom: -5px;
     transform: translateY(-50%); /* Center vertically */
 }
 
