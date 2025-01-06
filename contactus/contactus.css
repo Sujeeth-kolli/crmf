@@ -464,8 +464,6 @@ margin-bottom: 20px;  /* Add space below the subtitle */
     height: 1px; 
 }
 
-
-
 .locate-map:hover .map-text + .map-divider { /* Apply hover effect on the map divider when hovering over locate-map */
     background-color: #0082A0; /* Change to the desired color on hover */
 }
@@ -481,8 +479,8 @@ margin-bottom: 20px;  /* Add space below the subtitle */
 .locate-map .logo { /* Add logo styling */
     display: none; /* Initially hidden */
     position: absolute; /* Position it at the right end of the divider */
-    right: 0; /* Align to the right of the divider */
-    top: -10px; /* Adjust to position it above the divider */
+    right: -10px; /* Align to the right of the divider */   
+    bottom: -25px;
     transform: translateY(-50%); /* Center vertically */
 }
 
@@ -490,13 +488,21 @@ margin-bottom: 20px;  /* Add space below the subtitle */
     display: block; /* Show logo on hover */
 }
 .arrow-icon {
-    margin-left: 0px; /* Space between text and arrow */
-    transition: transform 0.3s; /* Transition for rotation */
-    transform: rotate(315deg); 
+    width: 40px;
+    height: 40px;
+    stroke: #54ABBF;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    margin-left: 0px;
+    transition: transform 0.3s;
+    transform: rotate(315deg);
 }
 .locate-map:hover .arrow-icon {
-    transform: translateX(5px) rotate(0deg); /* Move right and rotate */
+    transform: translateX(5px) rotate(0deg);
 }
+
+/* Update map-text to properly align with arrow */
 
 /* MFD Card Styles */
 .mfd-container {
