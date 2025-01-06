@@ -1,129 +1,118 @@
-<div class="max-width faq-block">
-    <div class="accordion-column accordion" id="accordion1">
-        <div  class="inner-faq">
-            <div class="acc-card">
-                <div class="card-header" id="heading1">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                            What is Canara Robeco smarT MFD ?
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion1">
-                    <div class="card-body">
-                        SmarT MFD by Canara Robeco is a distributor portal designed for
-                        seamless, paperless transactions with robust analytics and reports. It
-                        enables superior servicing with real-time tracking, reporting, and easy
-                        access on desktop, tablet, and mobile—anytime, anywhere.
-                    </div>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Canara Robeco</title>
+    <style>
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background-color: #2A2F3E;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition:0.1s ease-in;
+            background-color: #008080;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .active .faq-question::after {
+            content: '×';
+        }
+
+        .active .faq-answer {
+        max-height: 1000px; /* Large enough value to show all content */
+        transition: max-height 0.5s ease-out;
+        padding: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">What is Canara Robeco smarT MFD ?</div>
+            <div class="faq-answer">
+                SmarT MFD by Canara Robeco is a distributor portal designed for seamless, paperless transactions with robust analytics and reports. It enables superior servicing with real-time tracking, reporting, and easy access on desktop, tablet, and mobile—anytime, anywhere.
             </div>
-            <div class="acc-card">
-                <div class="card-header" id="heading2">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                            What are the features of smarT MFD ?
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion1">
-                    <div class="card-body">
-                        This is the content for the second accordion in the first column. More detailed information goes here.
-                    </div>
-                </div>
-            </div>
-            <div class="acc-card">
-                <div class="card-header" id="heading3">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                            Who can gain access to smarT MFD ?
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion1">
-                    <div class="card-body">
-                        This is the content for the third accordion in the first column. It has some more information.
-                    </div>
-                </div>
-            </div>
-            <div class="acc-card">
-                <div class="card-header" id="heading3">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                            What is Canara Robeco smarT MFD ?
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion1">
-                    <div class="card-body">
-                        This is the content for the third accordion in the first column. It has some more information.
-                    </div>
-                </div>
-            </div>
-            
         </div>
-        <div class="inner-faq">
-            <div class="acc-card">
-                <div class="card-header" id="heading4">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                            What types of transactions that I can initiate on behalf of my investors ?
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion1">
-                    <div class="card-body">
-                        This is the content for the first accordion in the second column. It contains more detailed information.
-                    </div>
-                </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What are the features of smarT MFD ?</div>
+            <div class="faq-answer">
+                <!-- Add features content here -->
             </div>
-            <div class="acc-card">
-                <div class="card-header" id="heading5">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                            What is Canara Robeco smarT MFD ?
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion1">
-                    <div class="card-body">
-                        This is the content for the second accordion in the second column. Additional information is here.
-                    </div>
-                </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Who can gain access to smarT MFD ?</div>
+            <div class="faq-answer">
+                <!-- Add access information content here -->
             </div>
-            
-            <div class="acc-card">
-                <div class="card-header" id="heading6">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                            Who can gain access to smarT MFD ?
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion1">
-                    <div class="card-body">
-                        This is the content for the third accordion in the second column. More details can be found here.
-                    </div>
-                </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What types of transactions that I can initiate on behalf of my investors ?</div>
+            <div class="faq-answer">
+                <!-- Add transaction types content here -->
             </div>
-            <div class="acc-card">
-                <div class="card-header" id="heading1">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                            What is Canara Robeco smarT MFD ?
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion1">
-                    <div class="card-body">
-                        SmarT MFD by Canara Robeco is a distributor portal designed for
-                        seamless, paperless transactions with robust analytics and reports. It
-                        enables superior servicing with real-time tracking, reporting, and easy
-                        access on desktop, tablet, and mobile—anytime, anywhere.
-                    </div>
-                </div>
-            </div>
-            
         </div>
     </div>
-</div>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        const otherAnswer = otherItem.querySelector('.faq-answer');
+                        otherItem.classList.remove('active');
+                        otherAnswer.style.maxHeight = '0';
+                    }
+                });
+                
+                // Toggle current item
+                const isActive = item.classList.contains('active');
+                if (isActive) {
+                    answer.style.maxHeight = '0';
+                    item.classList.remove('active');
+                } else {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
