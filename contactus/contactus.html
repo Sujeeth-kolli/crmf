@@ -90,7 +90,6 @@
 
         // Add this function to your script
         function initializeFaqAccordions() {
-            // Get all accordion buttons
             const accordionButtons = document.querySelectorAll('.btn-link');
             
             // Ensure first accordion is open by default
@@ -110,9 +109,14 @@
                     const targetCollapse = document.querySelector(targetId);
                     const isCurrentlyOpen = targetCollapse.classList.contains('show');
 
-                    // If clicking on a closed accordion
-                    if (!isCurrentlyOpen) {
-                        // Close all accordions
+                    // Toggle the clicked accordion
+                    if (isCurrentlyOpen) {
+                        // Close the accordion
+                        targetCollapse.classList.remove('show');
+                        button.classList.add('collapsed');
+                        button.setAttribute('aria-expanded', 'false');
+                    } else {
+                        // Close all other accordions
                         document.querySelectorAll('.collapse.show').forEach(collapse => {
                             collapse.classList.remove('show');
                             const btn = document.querySelector(`[data-target="#${collapse.id}"]`);
@@ -122,15 +126,10 @@
                             }
                         });
 
-                        // Open clicked accordion
+                        // Open the clicked accordion
                         targetCollapse.classList.add('show');
                         button.classList.remove('collapsed');
                         button.setAttribute('aria-expanded', 'true');
-                    }
-                    // Prevent closing if it's the only open accordion
-                    else if (document.querySelectorAll('.collapse.show').length <= 1) {
-                        e.stopPropagation();
-                        return;
                     }
                 });
             });
