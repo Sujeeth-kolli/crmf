@@ -174,7 +174,7 @@ body {
     justify-content: center; /* Center text horizontally */
     gap: 10px; /* Gap between elements inside the button */
     transition: background-color 0.3s, color 0.3s; /* Smooth transitions for hover effects */
-    font-size: 14px; /* Adjust font size as needed */
+    font-size: 20px; 
 }
 
 .nav-link:hover {
@@ -276,7 +276,7 @@ body {
     gap: 32px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-   margin-bottom: auto;
+    margin-bottom: auto;
 }
 
 .field {
@@ -299,7 +299,6 @@ body {
     font-weight: 500;
     background-color:  #252736;
     color: white;
-    
 }
 
 .field :focus,
@@ -311,12 +310,105 @@ body {
     position: absolute;
     top: -10px;
     left: 10px;
-    font-size: 12px;
     background-color: #252736;
     padding: 0 5px;
     color: #979591;
     font-weight: 500;
     font-size: 14px;
+}
+
+.field1 {
+    width: 100%;
+    height: 56px;
+    position: relative;
+    gap: 20px;
+}
+
+.field1 input,
+.field1 select {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background-color: transparent;
+    border: 0.5px solid rgba(151, 149, 145, 0.5);
+    border-top-color: transparent;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    position: relative;
+}
+
+/* Create pseudo-element for top corners */
+.field1 input::before,
+.field1 select::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(151, 149, 145, 0.5);
+    mask: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 0px,
+        rgba(0, 0, 0, 1) 10px,
+        transparent 10px,
+        transparent calc(100% - 10px),
+        rgba(0, 0, 0, 1) calc(100% - 10px),
+        rgba(0, 0, 0, 1) 100%
+    );
+    -webkit-mask: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 0px,
+        rgba(0, 0, 0, 1) 10px,
+        transparent 10px,
+        transparent calc(100% - 10px),
+        rgba(0, 0, 0, 1) calc(100% - 10px),
+        rgba(0, 0, 0, 1) 100%
+    );
+}
+
+.field1 input:hover,
+.field1 input:focus,
+.field1 select:hover,
+.field1 select:focus {
+    border: 0.5px solid white;
+    border-radius: 8px;
+}
+
+/* Style the select dropdown */
+.field1 select option {
+    background-color: #252736;
+    color: white;
+}
+
+.field1 label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 14px;
+    color: #979591;
+    font-weight: 500;
+    padding: 0 5px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.field1 label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    background-color: #1E1D2A;
+    z-index: -1;
 }
 
 .submit-button {
@@ -325,7 +417,8 @@ body {
     background-color: #0082A0;
     border: none;
     border-radius: 55px;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 600;
     cursor: pointer;
     color: white;
     margin-top: 24px;
@@ -432,7 +525,7 @@ margin-bottom: 20px;  /* Add space below the subtitle */
 }
 .locate-card p{
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 15px;  /* Add space below paragraphs */
 }
 .locate-map {
@@ -573,7 +666,7 @@ margin-bottom: 20px;  /* Add space below the subtitle */
     width: 100%;
     color: #979591;
     font-size: 16px;
-    font-weight: 400px;
+    font-weight: 400;
     text-align: left;
 }
 
@@ -581,7 +674,7 @@ margin-bottom: 20px;  /* Add space below the subtitle */
     color: #ffffff;
     margin-top: 5px;
     font-size: 18px;
-    font-weight: 700px;
+    font-weight: 700;
 }
 
 /* Right-aligned fields */
@@ -589,6 +682,7 @@ margin-bottom: 20px;  /* Add space below the subtitle */
     width: 100%;
     color: #979591;
     font-size: 16px;
+    font-weight: 400;
     text-align: right;
 }
 
@@ -596,7 +690,7 @@ margin-bottom: 20px;  /* Add space below the subtitle */
     color: #ffffff;
     margin-top: 5px;
     font-size: 18px;
-    font-weight: 700px;
+    font-weight: 700;
 }
 
 /* Email field */
