@@ -49,6 +49,13 @@ body {
 .social-media-container{
     margin-top: 50px;
     width: 5%;
+    height: 100%;
+}
+.social-divider {
+    width: 40px;  /* or match your container width */
+    height: 1px;
+    background-color: #979591;
+    opacity: 0.5;
 }
 
 .social-media a {
@@ -93,11 +100,17 @@ body {
     right: -5px; /* Adjust as needed */
     width: 50px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 0px 20px 0px 20px;
 }
 .card h5 {
     color:  #979591;
     font-size: 20px;
     font-weight: 500px;
+}
+.card p{
+   
+    font-size: 24px;
+    font-weight: 600px;
 }
 .card subtext{
     color:  #979591;
@@ -114,7 +127,7 @@ body {
 .map-container iframe {
     width: 100%;
     height: 500px; /* Matches height with social media */
-    border-radius: 0; /* Removes rounded corners */
+    border-radius: 0px 30px 30px 0px; /* Removes rounded corners */
     border: none;
 }
 .map-container1{
