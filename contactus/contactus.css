@@ -9,6 +9,8 @@ body {
     margin-bottom: 5%;
     color: #fff;
     position: relative;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .title::after {
