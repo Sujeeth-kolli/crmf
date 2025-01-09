@@ -12,6 +12,14 @@ body {
     font-size: 24px;
     font-weight: 600;
 }
+.subtitle {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+}
 
 .title::after {
     content: "";
@@ -20,6 +28,7 @@ body {
     height: 4px;
     background-color: #E76408;
     margin-top: 5px;
+    border-radius: 2px;
 }
 
 .max-width {
@@ -283,7 +292,7 @@ input[type="radio"]:checked::before {
 .breadcrumb a::after,
 .breadcrumb span::after {
     content: ">";
-    color: #979591;
+    color: white;
     margin-left: 10px;
 }
 

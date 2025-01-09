@@ -20,6 +20,7 @@ body {
     height: 4px;
     background-color: #E76408;
     margin-top: 5px;
+    border-radius: 2px;
 }
 
 .max-width {
