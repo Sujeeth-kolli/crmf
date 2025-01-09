@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Statement</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Accstatements.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>  
+    <main class="max-width">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <a href="#">Home</a>
+            <a href="#">Distributor Corner</a>
+            <span>Account Statement for Distributors</span>
+        </div>
+
+        <h1 class="title">INSTANT SOA FOR DISTRIBUTORS</h1>
+        
+        <div class="main-container">
+            <div class="card-content">
+                <p>Now order an Instant account statement, as per your convenience 24*7 to your registered email or domain id with us along with the option to send it to the investor as well in a click.</p>
+            </div>
+            <!-- SOA Criteria Section -->
+            <div class="soa-criteria">
+                <div class="section-header">SOA Criteria</div>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="soa-type" value="pan" checked>
+                        <span>PAN</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="soa-type" value="folio">
+                        <span>Folio</span>
+                    </label>
+                </div>
+
+                <!-- Form Fields -->
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="field">
+                            <label>Enter ARN code</label>
+                            <input type="text" placeholder="ARN -" class="form-control">
+                        </div>
+                        <!-- PAN field -->
+                        <div class="field" id="pan-field">
+                            <label>PAN</label>
+                            <input type="text" placeholder="PANWD2214D" class="form-control">
+                        </div>
+                        <!-- Folio field (initially hidden) -->
+                        <div class="field" id="folio-field" style="display: none;">
+                            <label>Folio</label>
+                            <input type="text" placeholder="669412654" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mandatory-container">
+                        <div class="mandatory-text">*ARN and Folio/PAN is mandatory</div>
+                    </div>
+                </div>
+            </div>   
+            <div class="divider"></div>
+            <!-- Statement Type Section -->
+            <div class="statement-type">
+                <div class="section-header">Statement Type</div>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="statement-period" value="as-on-date" checked>
+                        <span>As On Date</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="statement-period" value="current-fy">
+                        <span>Current Financial Year</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="statement-period" value="last-fy">
+                        <span>Last Financial Year</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="statement-period" value="custom-range">
+                        <span>Custom Date Range</span>
+                    </label>
+                </div>
+                
+                <!-- Date Range Fields -->
+                <div class="date-range-fields" style="display: none;">
+                    <div class="form-row">
+                        <div class="field">
+                            <label>From Date</label>
+                            <div class="date-wrapper">
+                                <input type="text" placeholder="DD/MM/YYYY" class="form-control date-input">
+                                <i class="calendar-icon fas fa-calendar"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>To Date</label>
+                            <div class="date-wrapper">
+                                <input type="text" placeholder="DD/MM/YYYY" class="form-control date-input">
+                                <i class="calendar-icon fas fa-calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Validate Distributor Email Section -->
+            <div class="email-section">
+                <div class="section-header">Validate Distributor Email ID</div>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="email-type" checked>
+                        <span>IFA/NDs Registered/Official Email ID</span>
+                    </label>
+                </div>
+                <div class="field" style="width: 50%;">
+                    <label>Registered Email ID</label>
+                    <input type="email" placeholder="example@gmail.com" class="form-control">
+                </div>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Statement Type Selection -->
+            <div class="statement-delivery">
+                <div class="section-header">Statement Type</div>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="delivery-type" checked>
+                        <span>Send to Distributor Only</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="delivery-type">
+                        <span>Send to Investor Only</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="delivery-type">
+                        <span>Send for both Investor & Distributor</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button class="submit-button">Submit</button>
+           
+             <div class="mandatory-container">
+            <div class="mandatory-text">The latest Statement of Account will be instantly mailed to your requested Email ID</div>
+            </div>
+        </div>
+    </main>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // SOA Type Handler
+        const radioButtons = document.querySelectorAll('input[name="soa-type"]');
+        const panField = document.getElementById('pan-field');
+        const folioField = document.getElementById('folio-field');
+
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'pan') {
+                    panField.style.display = 'block';
+                    folioField.style.display = 'none';
+                } else {
+                    panField.style.display = 'none';
+                    folioField.style.display = 'block';
+                }
+            });
+        });
+
+        // Date Range Handler
+        const statementPeriodRadios = document.querySelectorAll('input[name="statement-period"]');
+        const dateRangeFields = document.querySelector('.date-range-fields');
+
+        statementPeriodRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'custom-range') {
+                    dateRangeFields.style.display = 'block';
+                } else {
+                    dateRangeFields.style.display = 'none';
+                }
+            });
+        });
+
+        // Initialize Flatpickr for date inputs
+        const dateInputs = document.querySelectorAll('.date-input');
+        dateInputs.forEach(input => {
+            const wrapper = input.closest('.date-wrapper');
+            const calendarIcon = wrapper.querySelector('.calendar-icon');
+            
+            const fp = flatpickr(input, {
+                dateFormat: "d/m/Y",
+                allowInput: true,
+                disableMobile: true,
+                theme: "dark",
+                position: "auto",
+                monthSelectorType: "dropdown",
+                nextArrow: '<i class="fas fa-chevron-right"></i>',
+                prevArrow: '<i class="fas fa-chevron-left"></i>',
+                clickOpens: false, // Prevent opening on input click
+                onChange: function(selectedDates, dateStr, instance) {
+                    input.value = dateStr;
+                }
+            });
+
+            // Open calendar only when clicking the calendar icon
+            calendarIcon.addEventListener('click', () => {
+                fp.open();
+            });
+        });
+    });
+    </script>
+</body>
+</html> 
