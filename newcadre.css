@@ -283,6 +283,10 @@ body {
         margin-right: 0;
         margin-bottom: 20px;
     }
+    .coc-overview-content {
+        max-width: 100%;
+        margin: auto;
+    }
     
     .ncd-overview-section {
         flex-direction: column;
