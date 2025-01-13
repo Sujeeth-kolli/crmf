@@ -71,7 +71,14 @@ body {
     color: #979591;
     line-height: 1.6;
     flex: 1;
-    max-width: 80%; /* Adjust this value to control content width */
+    max-width: 80%;
+}
+.coc-overview-content {
+    color: #979591;
+    line-height: 1.6;
+    flex: 1;
+    max-width: 70%;
+    margin-right: 100px;
 }
 
 .ncd-subtitle {
@@ -86,6 +93,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin: 30px 0;
+    counter-reset: card-counter;
 }
 
 .ncd-card {
@@ -96,7 +104,14 @@ body {
     gap: 20px;
 }
 
-.ncd-card-number {    
+.ncd-card-number {
+    position: absolute;
+    right: 25px;
+}
+
+.ncd-card-number::before {
+    counter-increment: card-counter;
+    content: counter(card-counter, decimal-leading-zero);
     position: absolute;
     right: 25px;
     font-size: 32px;
@@ -190,9 +205,46 @@ body {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 209.52px; /* Adjust based on your image size */
+    width: 209.52px;
     height: auto;
 }
+
+/* New CoC image style */
+.coc-overview-image {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 324.29px;
+    height: auto;
+    margin-left: 40px;
+    z-index: 0;
+}
+
+
+/* Modify the existing cards container for CoC page */
+.coc-cards {
+    grid-template-columns: repeat(4, 1fr); /* Force 4 columns */
+    gap: 40px; /* Slightly reduced gap for 4 cards */
+   
+}
+
+.coc-cards .ncd-card {
+    background: linear-gradient(180deg, #2D3047 0%, #1E1D2A 100%);
+    border-radius: 10px;
+    position: relative;   
+    gap: 20px;
+}
+
+.coc-cards .ncd-card-content {
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-right: 40px;
+    margin-top: 20px;
+}
+
 /* Responsive styles */
 @media screen and (max-width: 768px) {
     .ncd-container {
@@ -228,6 +280,8 @@ body {
 @media screen and (max-width: 992px) {
     .ncd-overview-content {
         max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
     }
     
     .ncd-overview-section {
@@ -241,5 +295,50 @@ body {
         transform: none;
         margin: 20px auto;
         display: block;
+    }
+    .coc-overview-image {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin: 20px auto;
+        display: block;
+        width: 240px; /* Slightly smaller on tablets */
+    }
+} 
+
+
+/* Responsive adjustments for CoC cards */
+@media screen and (max-width: 1200px) {
+    .coc-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .coc-cards {
+        grid-template-columns: 1fr;
+    }
+} 
+
+/* Responsive styles for CoC image */
+
+@media screen and (max-width: 768px) {
+    .coc-overview-image {
+        width: 200px; /* Even smaller on mobile */
+    }
+} 
+
+@media screen and (max-width: 768px) {
+    .coc-overview-content {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .coc-overview-content {
+        font-size: 13px;
+        line-height: 1.4;
     }
 } 
