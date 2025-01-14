@@ -1,7 +1,20 @@
+:root {
+    --background-darkmode: #1E1D2A;
+    --text-white-darkmode: #FEFEFE;
+    --grey-text-darkmode: #979591;
+    --text-blue-and-outline-darkmode: #54ABBF;
+    --orange-accent-darkmode: #E76408;
+    --card-gradient-start-darkmode: #2D3047;
+    --card-gradient-end-darkmode: #1E1D2A;
+    --warning-text-darkmode: #F79009;
+    --table-header-bg-darkmode: #54ABBF29;
+    --border-light-darkmode: rgba(255, 255, 255, 0.1);
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #1E1D2A;
-    color: #fff;
+    background-color: var(--background-darkmode);
+    color: var(--text-white-darkmode);
 }
 .max-width {
     max-width: 1360px;
@@ -22,7 +35,7 @@ body {
 }   
 
 .ncd-breadcrumb-link {
-    color: #E76408;
+    color: var(--orange-accent-darkmode);
     text-decoration: none;
 }
 
@@ -34,7 +47,7 @@ body {
 }
 
 .ncd-breadcrumb-current {
-    color: #979591;
+    color: var(--grey-text-darkmode);
 }
 
 .ncd-breadcrumb-current:last-child::after {
@@ -54,7 +67,7 @@ body {
     display: block;
     width: 50px;
     height: 4px;
-    background-color: #E76408;
+    background-color: var(--orange-accent-darkmode);
     margin-top: 5px;
     border-radius: 2px;
 }
@@ -68,13 +81,13 @@ body {
 }
 
 .ncd-overview-content {
-    color: #979591;
+    color: var(--grey-text-darkmode);
     line-height: 1.6;
     flex: 1;
     max-width: 80%;
 }
 .coc-overview-content {
-    color: #979591;
+    color: var(--grey-text-darkmode);
     line-height: 1.6;
     flex: 1;
     max-width: 70%;
@@ -99,7 +112,7 @@ body {
     margin-bottom: 70px;
 }
 .ncd-card {
-    background: linear-gradient(180deg, #2D3047 0%, #1E1D2A 100%);
+    background: linear-gradient(180deg, var(--card-gradient-start-darkmode) 0%, var(--card-gradient-end-darkmode) 100%);
     border-radius: 10px;
     position: relative;
     padding: 0px 20px 20px 20px;
@@ -164,7 +177,7 @@ body {
 }
 .ncd-content1{
     font-size: 16px;
-    color: #979591;
+    color: var(--grey-text-darkmode);
 }
 /* Notice box styles */
 .ncd-notice-box {
@@ -176,7 +189,7 @@ body {
 }
 
 .ncd-notice-text {
-    color: #F79009;
+    color: var(--warning-text-darkmode);
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -253,7 +266,7 @@ body {
     color: white;
 }
 .test-content{
-    color: #979591;
+    color: var(--grey-text-darkmode);
     font-size: 16px;
 }
 
@@ -374,7 +387,7 @@ body {
 }
 
 .custom-table th {
-    background: #54ABBF29;
+    background: var(--table-header-bg-darkmode);
     font-size: 14px;
     font-weight: 500;
     text-align: center;
@@ -392,7 +405,7 @@ body {
 
 /* Add bottom border only to data row cells */
 .custom-table .data-row td {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--border-light-darkmode);
 }
 
 /* Vertical lines using pseudo-elements */
@@ -404,5 +417,5 @@ body {
     top: 0;
     height: 100%;
     width: 1px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--border-light-darkmode);
 }
