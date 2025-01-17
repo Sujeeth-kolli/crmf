@@ -22,7 +22,7 @@ body {
     padding: 0 20px;
 }
 .ncd-container {
-        padding: 0 20px;
+    padding: 0 20px;
     margin: auto;
 }
 
@@ -418,4 +418,302 @@ body {
     height: 100%;
     width: 1px;
     background: var(--border-light-darkmode);
+}
+
+/* Latest Updates Card styles */
+.latest-update-card {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    gap: 50px;
+    border-radius: 10px;
+    background-color: #252736;
+}
+
+.latest-update-date {
+    color: var(--grey-text-darkmode);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.latest-update-title {
+    color: var(--text-white-darkmode);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.latest-update-description {
+    color: var(--grey-text-darkmode);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.read-more-link {
+    color: var(--text-blue-and-outline-darkmode);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Remove any existing hover effects */
+.read-more-link:hover {
+    text-decoration: none;
+    color: var(--text-blue-and-outline-darkmode);
+}
+
+/* Year dropdown styles */
+.year-select {
+    background: transparent;
+    color: var(--text-blue-and-outline-darkmode);
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 24px;
+    position: relative;
+    outline: none;
+}
+
+/* Style for option hover/selection state */
+.year-select option {
+    background-color: white !important;
+    color: black !important;
+}
+
+.year-select option:hover {
+    background-color: #54ABBF29 !important;
+}
+
+/* Custom dropdown arrow */
+.year-select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.year-select-wrapper::after {
+    content: "▼";
+    font-size: 8px;
+    color: var(--text-blue-and-outline-darkmode);
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Market Update Page Styles */
+.market-update-section {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.market-section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-white-darkmode);
+    margin-bottom: 20px;
+}
+
+/* Equity Market Update Styles */
+.equity-market-container {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.market-content {
+    width: 30%;
+}
+
+.market-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.market-points li {
+    color: var(--grey-text-darkmode);
+    margin-bottom: 16px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 16px;
+}
+
+.market-points li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--text-blue-and-outline-darkmode);
+}
+
+.market-table {
+    width: 70%;
+}
+
+.table-title {
+    color: var(--text-white-darkmode);
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.market-performance-table {
+    width: 100%;
+    margin: 24px 0;
+    color: white;
+    border-spacing: 0;
+    border-collapse: separate;
+    position: relative;
+}
+
+/* Add left and right borders to the table */
+.market-performance-table::before,
+.market-performance-table::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: var(--border-light-darkmode);
+}
+
+.market-performance-table::before {
+    left: 0;
+}
+
+.market-performance-table::after {
+    right: 0;
+}
+
+.market-performance-table th {
+    background: var(--table-header-bg-darkmode);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    border: none;
+    padding: 15px;
+}
+
+.market-performance-table td {
+    text-align: center;
+    position: relative;
+    border: none;
+    padding: 20px;
+}
+
+/* Left align first column */
+.market-performance-table th:first-child,
+.market-performance-table td:first-child {
+    text-align: left;
+}
+
+/* Add bottom border only to data row cells */
+.market-performance-table .data-row td {
+    border-bottom: 1px solid var(--border-light-darkmode);
+}
+
+/* Vertical lines using pseudo-elements */
+.market-performance-table th:not(:last-child)::after,
+.market-performance-table td:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: var(--border-light-darkmode);
+}
+
+/* Responsive styles */
+/* Add responsive styles */
+@media screen and (max-width: 768px) {
+    .market-performance-table {
+        overflow-x: auto;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .equity-market-container {
+        flex-direction: column;
+    }
+    
+    .market-content,
+    .market-table {
+        width: 100%;
+    }
+    
+    .table-wrapper {
+        overflow-x: auto;
+    }
+}
+
+/* Dark Container for all tables */
+.updates-container {
+    background: #252736;
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.market-section-title {
+    color: var(--text-white-darkmode);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.section-headers {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.market-section-title {
+    color: var(--text-white-darkmode);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Add these new styles */
+.daily-rates,
+.institutional-flows {
+    margin-top: 32px;
+}
+
+.table-title {
+    color: var(--text-white-darkmode);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+/* Add these styles for the header rows */
+.market-performance-table .header-row-1 th {
+    border-bottom: 1px solid var(--border-light-darkmode);
+}
+
+/* Optional: if you want to remove the pseudo-element vertical lines for the first header row */
+.market-performance-table .header-row-1 th::after {
+    height: calc(100% - 1px); /* Adjust for border */
 }
