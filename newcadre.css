@@ -455,11 +455,23 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0px;
     font-size: 16px;
     font-weight: 600;
     pointer-events: auto;
     cursor: pointer;
+}
+
+/* Add styles for the read more arrow icon */
+.read-more-link .arrow-icon {
+    width: 30px;
+    height: 30px;
+    stroke: var(--text-blue-and-outline-darkmode);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
 }
 
 /* Remove any existing hover effects */
@@ -468,48 +480,7 @@ body {
     color: var(--text-blue-and-outline-darkmode);
 }
 
-/* Year dropdown styles */
-.year-select {
-    background: transparent;
-    color: var(--text-blue-and-outline-darkmode);
-    border: none;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    padding-right: 24px;
-    position: relative;
-    outline: none;
-}
 
-/* Style for option hover/selection state */
-.year-select option {
-    background-color: white !important;
-    color: black !important;
-}
-
-.year-select option:hover {
-    background-color: #54ABBF29 !important;
-}
-
-/* Custom dropdown arrow */
-.year-select-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-.year-select-wrapper::after {
-    content: "▼";
-    font-size: 8px;
-    color: var(--text-blue-and-outline-darkmode);
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
 
 /* Market Update Page Styles */
 .market-update-section {
@@ -716,4 +687,410 @@ body {
 /* Optional: if you want to remove the pseudo-element vertical lines for the first header row */
 .market-performance-table .header-row-1 th::after {
     height: calc(100% - 1px); /* Adjust for border */
+}
+
+/* Updates header styles */
+.updates-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+/* Search container styles */
+.search-container {
+    position: relative;
+    flex: 1;
+    max-width:25%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 40px;
+    background: var(--background-darkmode);
+    border: 1px solid var(--border-light-darkmode);
+    border-radius: 25px;
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+}
+
+.search-input::placeholder {
+    color: var(--grey-text-darkmode);
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+
+/* Year selector styles */
+.year-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.year-label {
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+    padding-right: 5px;
+}
+
+.year-button {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    background: transparent;
+    border: none;
+    color: var(--text-blue-and-outline-darkmode);
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: -8px;
+    outline: none !important;
+}
+
+.year-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove hover background */
+.year-button:hover {
+    background: transparent;
+}
+
+.dropdown-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: var(--text-white-darkmode);  /* Match the button background */
+    color: black;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 12px;  /* Rounded corners */
+    margin-top: 8px;
+    padding: 8px;  /* Add padding around all items */
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-item {
+    color: var(--text-black-darkmode);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    border-radius: 8px;  /* Rounded corners for items */
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: #E0EFF3;  /* Lighter background on hover */
+}
+
+/* Style for the selected year in button */
+#selectedYear {
+    color: var(--text-blue-and-outline-darkmode);
+}
+
+/* Adjust the year label spacing */
+.year-label {
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+    margin-right: 4px;
+}
+
+/* Adjust dropdown icon */
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .updates-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .search-container {
+        width: 100%;
+    }
+    
+    .year-selector {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+/* Pagination styles */
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 40px 0;
+}
+
+.pagination-numbers {
+    display: flex;
+    gap: 8px;
+}
+
+.pagination-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    outline: none !important;
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pagination-number:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.pagination-number.active {
+    background: var(--text-white-darkmode);
+    color: var(--background-darkmode);
+}
+
+.pagination-arrow {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    outline: none !important;
+    color: var(--text-white-darkmode);
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.pagination-arrow:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.pagination-arrow:hover {
+    opacity: 0.8;
+}
+
+.pagination-arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Market Outlook specific styles */
+.latest-update-card {
+    background: #252736;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.latest-update-card:hover {
+    background: #2D3047;
+}
+
+.latest-update-date {
+    color: var(--grey-text-darkmode);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.latest-update-title {
+    color: var(--text-white-darkmode);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.latest-update-description {
+    color: var(--grey-text-darkmode);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.read-more-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-blue-and-outline-darkmode);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: gap 0.3s ease;
+}
+
+.read-more-link:hover {
+    gap: 12px;
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.read-more-link:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+/* Navigation section styles */
+.nav-section {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid var(--border-light-darkmode);
+}
+
+.nav-link {
+    padding: 8px 24px;
+    color: var(--grey-text-darkmode);
+    text-decoration: none;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-link.active {
+    background: var(--text-blue-and-outline-darkmode);
+    color: var(--text-white-darkmode);
+}
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .updates-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .year-selector {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+/* Market Outlook List Styles */
+.outlook-list {
+    margin: 20px 0;
+}
+
+.outlook-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.outlook-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.outlook-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.outlook-title {
+    color: var(--text-white-darkmode);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.outlook-title:hover {
+    color: var(--text-blue-and-outline-darkmode);
+    text-decoration: underline;
+}
+
+.outlook-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--grey-text-darkmode);
+    font-size: 14px;
+}
+
+/* Add vertical line between date and size */
+.outlook-meta span:first-child::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: var(--grey-text-darkmode);
+    margin-left: 16px;
+    vertical-align: middle;
+}
+
+.outlook-actions {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-end; /* Align actions to the right */
+}
+
+.outlook-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-blue-and-outline-darkmode);
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.outlook-action:hover {
+    color: #458a9b;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .outlook-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .outlook-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
 }

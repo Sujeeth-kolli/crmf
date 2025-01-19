@@ -18,24 +18,31 @@
 
             <h1 class="ncd-heading">LATEST UPDATES</h1>
 
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
-                <div style="position: relative;">
-                    <input type="text" placeholder="Search here..." 
-                           style="background: transparent; border: 1px solid rgba(255,255,255,0.1); 
-                                  border-radius: 25px; padding: 10px 40px; color: white; width: 300px;">
-                    <span style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%);">🔍</span>
+            <div class="updates-header">
+                <div class="search-container">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 21L16.65 16.65" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <input type="text" placeholder="Search here..." class="search-input">
                 </div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span >Year :</span>
-                    <div class="year-select-wrapper">
-                        <select class="year-select">
-                            <option>2024-25</option>
-                            <option>2023-24</option>
-                            <option>2022-23</option>
-                            <option>2021-22</option>
-                            <option>2020-21</option>
-                            <option>2019-20</option>
-                        </select>
+                <div class="year-selector">
+                    <span class="year-label">Year : </span>
+                    <div class="dropdown">
+                        <button class="year-button" onclick="toggleDropdown()">
+                            <span id="selectedYear">2023-24</span>
+                            <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9L12 15L18 9" stroke="#54ABBF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-content" id="yearDropdown">
+                            <div class="dropdown-item" onclick="selectYear('2024-25')">2024-25</div>
+                            <div class="dropdown-item" onclick="selectYear('2023-24')">2023-24</div>
+                            <div class="dropdown-item" onclick="selectYear('2022-23')">2022-23</div>
+                            <div class="dropdown-item" onclick="selectYear('2021-22')">2021-22</div>
+                            <div class="dropdown-item" onclick="selectYear('2020-21')">2020-21</div>
+                            <div class="dropdown-item" onclick="selectYear('2019-20')">2019-20</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -48,7 +55,10 @@
                         Canara Robeco Mutual Fund has registered four times increase in assets under man- agement to touch 62,544 cror...
                     </p>
                     <a href="./daily-market-updates.html" class="read-more-link">
-                        Read More →
+                        Read More 
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 12H7M17 12L13 8M17 12L13 16"/>
+                        </svg>
                     </a>
                 </div>
                 <div class="latest-update-card">
@@ -58,7 +68,10 @@
                         Canara Robeco Mutual Fund has registered four times increase in assets under man- agement to touch 62,544 cror...
                     </p>
                     <a href="#" class="read-more-link">
-                        Read More →
+                        Read More
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 12H7M17 12L13 8M17 12L13 16"/>
+                        </svg>
                     </a>
                 </div>
                 <div class="latest-update-card">
@@ -68,7 +81,10 @@
                         Canara Robeco Mutual Fund has registered four times increase in assets under man- agement to touch 62,544 cror...
                     </p>
                     <a href="#" class="read-more-link">
-                        Read More →
+                        Read More 
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 12H7M17 12L13 8M17 12L13 16"/>
+                        </svg>
                     </a>
                 </div>
                 <div class="latest-update-card">
@@ -78,7 +94,10 @@
                         Canara Robeco Mutual Fund has registered four times increase in assets under man- agement to touch 62,544 cror...
                     </p>
                     <a href="#" class="read-more-link">
-                        Read More →
+                        Read More 
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 12H7M17 12L13 8M17 12L13 16"/>
+                        </svg>
                     </a>
                 </div>
                 <div class="latest-update-card">
@@ -88,7 +107,10 @@
                         Canara Robeco Mutual Fund has registered four times increase in assets under man- agement to touch 62,544 cror...
                     </p>
                     <a href="#" class="read-more-link">
-                        Read More →
+                        Read More 
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 12H7M17 12L13 8M17 12L13 16"/>
+                        </svg>
                     </a>
                 </div>
                 <div class="latest-update-card">
@@ -98,7 +120,10 @@
                         Canara Robeco Mutual Fund has registered four times increase in assets under man- agement to touch 62,544 cror...
                     </p>
                     <a href="#" class="read-more-link">
-                        Read More →
+                        Read More 
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 12H7M17 12L13 8M17 12L13 16"/>
+                        </svg>
                     </a>
                 </div>
                 <div class="latest-update-card">
@@ -108,7 +133,10 @@
                         Canara Robeco Mutual Fund has registered four times increase in assets under man- agement to touch 62,544 cror...
                     </p>
                     <a href="#" class="read-more-link">
-                        Read More →
+                        Read More 
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 12H7M17 12L13 8M17 12L13 16"/>
+                        </svg>
                     </a>
                 </div>
                 <div class="latest-update-card">
@@ -118,7 +146,10 @@
                         Canara Robeco Mutual Fund has registered four times increase in assets under man- agement to touch 62,544 cror...
                     </p>
                     <a href="#" class="read-more-link">
-                        Read More →
+                        Read More 
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 12H7M17 12L13 8M17 12L13 16"/>
+                        </svg>
                     </a>
                 </div>
                 <div class="latest-update-card">
@@ -128,11 +159,54 @@
                         Canara Robeco Mutual Fund has registered four times increase in assets under man- agement to touch 62,544 cror...
                     </p>
                     <a href="#" class="read-more-link">
-                        Read More →
+                        Read More 
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 12H7M17 12L13 8M17 12L13 16"/>
+                        </svg>
                     </a>
                 </div>
+            </div>
+
+            <div class="pagination-container">
+                <button class="pagination-arrow prev" aria-label="Previous page">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="pagination-numbers">
+                    <button class="pagination-number active">1</button>
+                    <button class="pagination-number">2</button>
+                </div>
+                <button class="pagination-arrow next" aria-label="Next page">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </main>
 </body>
 </html> 
+<script>
+function toggleDropdown() {
+    document.getElementById("yearDropdown").classList.toggle("show");
+}
+
+function selectYear(year) {
+    document.getElementById("selectedYear").textContent = year;
+    document.getElementById("yearDropdown").classList.remove("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.year-button') && !event.target.matches('#selectedYear')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+</script>
