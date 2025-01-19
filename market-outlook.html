@@ -21,8 +21,8 @@
 
         <!-- Navigation Section -->
         <div class="nav-section">
-            <a href="#equity" class="nav-link active">Equity Scheme</a>
-            <a href="#debt" class="nav-link">Debt Scheme</a>
+            <a href="#" class="nav-link active" onclick="showScheme('equity')">Equity Scheme</a>
+            <a href="#" class="nav-link" onclick="showScheme('debt')">Debt Scheme</a>
         </div>
 
         <!-- Search and Year Filter -->
@@ -55,246 +55,274 @@
             </div>
         </div>
 
-        <!-- Market Updates List -->
-        <div class="outlook-list">
-            <div class="outlook-item">
-                <div class="outlook-left">
-                    <div class="outlook-title-row">
-                        <a href="#" class="outlook-title">Equity Market Outlook - November 2024</a>
-                        <div class="outlook-actions">
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/Download-arrow.svg" alt="Download">
-                                Download
-                            </a>
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/share.svg" alt="Share">
-                                Share
-                            </a>
+        <!-- Equity Scheme Content -->
+        <div id="equity-content" class="scheme-content">
+            <!-- Market Updates List -->
+            <div class="outlook-list">
+                <div class="outlook-item">
+                    <div class="outlook-left">
+                        <div class="outlook-title-row">
+                            <a href="#" class="outlook-title">Equity Market Outlook - November 2024</a>
+                            <div class="outlook-actions">
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/Download-arrow.svg" alt="Download">
+                                    Download
+                                </a>
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/share.svg" alt="Share">
+                                    Share
+                                </a>
+                            </div>
+                        </div>
+                        <div class="outlook-meta">
+                            <span>19 Nov 2024</span>
+                            <span>67kb</span>
                         </div>
                     </div>
-                    <div class="outlook-meta">
-                        <span>19 Nov 2024</span>
-                        <span>67kb</span>
+                </div>
+
+                <div class="outlook-item">
+                    <div class="outlook-left">
+                        <div class="outlook-title-row">
+                            <a href="#" class="outlook-title">Equity Market Outlook - October 2024</a>
+                            <div class="outlook-actions">
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/Download-arrow.svg" alt="Download">
+                                    Download
+                                </a>
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/share.svg" alt="Share">
+                                    Share
+                                </a>
+                            </div>
+                        </div>
+                        <div class="outlook-meta">
+                            <span>19 Nov 2024</span>
+                            <span>67kb</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outlook-item">
+                    <div class="outlook-left">
+                        <div class="outlook-title-row">
+                            <a href="#" class="outlook-title">Equity Market Outlook - September 2024</a>
+                            <div class="outlook-actions">
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/Download-arrow.svg" alt="Download">
+                                    Download
+                                </a>
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/share.svg" alt="Share">
+                                    Share
+                                </a>
+                            </div>
+                        </div>
+                        <div class="outlook-meta">
+                            <span>19 Nov 2024</span>
+                            <span>67kb</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outlook-item">
+                    <div class="outlook-left">
+                        <div class="outlook-title-row">
+                            <a href="#" class="outlook-title">Equity Market Outlook - August 2024</a>
+                            <div class="outlook-actions">
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/Download-arrow.svg" alt="Download">
+                                    Download
+                                </a>
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/share.svg" alt="Share">
+                                    Share
+                                </a>
+                            </div>
+                        </div>
+                        <div class="outlook-meta">
+                            <span>19 Nov 2024</span>
+                            <span>67kb</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outlook-item">
+                    <div class="outlook-left">
+                        <div class="outlook-title-row">
+                            <a href="#" class="outlook-title">Equity Market Outlook - July 2024</a>
+                            <div class="outlook-actions">
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/Download-arrow.svg" alt="Download">
+                                    Download
+                                </a>
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/share.svg" alt="Share">
+                                    Share
+                                </a>
+                            </div>
+                        </div>
+                        <div class="outlook-meta">
+                            <span>19 Nov 2024</span>
+                            <span>67kb</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outlook-item">
+                    <div class="outlook-left">
+                        <div class="outlook-title-row">
+                            <a href="#" class="outlook-title">Equity Market Outlook - June 2024</a>
+                            <div class="outlook-actions">
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/Download-arrow.svg" alt="Download">
+                                    Download
+                                </a>
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/share.svg" alt="Share">
+                                    Share
+                                </a>
+                            </div>
+                        </div>
+                        <div class="outlook-meta">
+                            <span>19 Nov 2024</span>
+                            <span>67kb</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outlook-item">
+                    <div class="outlook-left">
+                        <div class="outlook-title-row">
+                            <a href="#" class="outlook-title">Equity Market Outlook - May 2024</a>
+                            <div class="outlook-actions">
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/Download-arrow.svg" alt="Download">
+                                    Download
+                                </a>
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/share.svg" alt="Share">
+                                    Share
+                                </a>
+                            </div>
+                        </div>
+                        <div class="outlook-meta">
+                            <span>19 Nov 2024</span>
+                            <span>67kb</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outlook-item">
+                    <div class="outlook-left">
+                        <div class="outlook-title-row">
+                            <a href="#" class="outlook-title">Equity Market Outlook - April 2024</a>
+                            <div class="outlook-actions">
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/Download-arrow.svg" alt="Download">
+                                    Download
+                                </a>
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/share.svg" alt="Share">
+                                    Share
+                                </a>
+                            </div>
+                        </div>
+                        <div class="outlook-meta">
+                            <span>19 Nov 2024</span>
+                            <span>67kb</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outlook-item">
+                    <div class="outlook-left">
+                        <div class="outlook-title-row">
+                            <a href="#" class="outlook-title">Equity Market Outlook - March 2024</a>
+                            <div class="outlook-actions">
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/Download-arrow.svg" alt="Download">
+                                    Download
+                                </a>
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/share.svg" alt="Share">
+                                    Share
+                                </a>
+                            </div>
+                        </div>
+                        <div class="outlook-meta">
+                            <span>19 Nov 2024</span>
+                            <span>67kb</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="outlook-item">
+                    <div class="outlook-left">
+                        <div class="outlook-title-row">
+                            <a href="#" class="outlook-title">Equity Market Outlook - February 2024</a>
+                            <div class="outlook-actions">
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/Download-arrow.svg" alt="Download">
+                                    Download
+                                </a>
+                                <a href="#" class="outlook-action">
+                                    <img src="assets/images/share.svg" alt="Share">
+                                    Share
+                                </a>
+                            </div>
+                        </div>
+                        <div class="outlook-meta">
+                            <span>19 Nov 2024</span>
+                            <span>67kb</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="outlook-item">
-                <div class="outlook-left">
-                    <div class="outlook-title-row">
-                        <a href="#" class="outlook-title">Equity Market Outlook - October 2024</a>
-                        <div class="outlook-actions">
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/Download-arrow.svg" alt="Download">
-                                Download
-                            </a>
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/share.svg" alt="Share">
-                                Share
-                            </a>
-                        </div>
-                    </div>
-                    <div class="outlook-meta">
-                        <span>19 Nov 2024</span>
-                        <span>67kb</span>
-                    </div>
+            <!-- Pagination -->
+            <div class="pagination-container">
+                <button class="pagination-arrow" disabled>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <div class="pagination-numbers">
+                    <button class="pagination-number active">1</button>
+                    <button class="pagination-number">2</button>
+                    <button class="pagination-number">3</button>
                 </div>
-            </div>
-
-            <div class="outlook-item">
-                <div class="outlook-left">
-                    <div class="outlook-title-row">
-                        <a href="#" class="outlook-title">Equity Market Outlook - September 2024</a>
-                        <div class="outlook-actions">
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/Download-arrow.svg" alt="Download">
-                                Download
-                            </a>
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/share.svg" alt="Share">
-                                Share
-                            </a>
-                        </div>
-                    </div>
-                    <div class="outlook-meta">
-                        <span>19 Nov 2024</span>
-                        <span>67kb</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="outlook-item">
-                <div class="outlook-left">
-                    <div class="outlook-title-row">
-                        <a href="#" class="outlook-title">Equity Market Outlook - August 2024</a>
-                        <div class="outlook-actions">
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/Download-arrow.svg" alt="Download">
-                                Download
-                            </a>
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/share.svg" alt="Share">
-                                Share
-                            </a>
-                        </div>
-                    </div>
-                    <div class="outlook-meta">
-                        <span>19 Nov 2024</span>
-                        <span>67kb</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="outlook-item">
-                <div class="outlook-left">
-                    <div class="outlook-title-row">
-                        <a href="#" class="outlook-title">Equity Market Outlook - July 2024</a>
-                        <div class="outlook-actions">
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/Download-arrow.svg" alt="Download">
-                                Download
-                            </a>
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/share.svg" alt="Share">
-                                Share
-                            </a>
-                        </div>
-                    </div>
-                    <div class="outlook-meta">
-                        <span>19 Nov 2024</span>
-                        <span>67kb</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="outlook-item">
-                <div class="outlook-left">
-                    <div class="outlook-title-row">
-                        <a href="#" class="outlook-title">Equity Market Outlook - June 2024</a>
-                        <div class="outlook-actions">
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/Download-arrow.svg" alt="Download">
-                                Download
-                            </a>
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/share.svg" alt="Share">
-                                Share
-                            </a>
-                        </div>
-                    </div>
-                    <div class="outlook-meta">
-                        <span>19 Nov 2024</span>
-                        <span>67kb</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="outlook-item">
-                <div class="outlook-left">
-                    <div class="outlook-title-row">
-                        <a href="#" class="outlook-title">Equity Market Outlook - May 2024</a>
-                        <div class="outlook-actions">
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/Download-arrow.svg" alt="Download">
-                                Download
-                            </a>
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/share.svg" alt="Share">
-                                Share
-                            </a>
-                        </div>
-                    </div>
-                    <div class="outlook-meta">
-                        <span>19 Nov 2024</span>
-                        <span>67kb</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="outlook-item">
-                <div class="outlook-left">
-                    <div class="outlook-title-row">
-                        <a href="#" class="outlook-title">Equity Market Outlook - April 2024</a>
-                        <div class="outlook-actions">
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/Download-arrow.svg" alt="Download">
-                                Download
-                            </a>
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/share.svg" alt="Share">
-                                Share
-                            </a>
-                        </div>
-                    </div>
-                    <div class="outlook-meta">
-                        <span>19 Nov 2024</span>
-                        <span>67kb</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="outlook-item">
-                <div class="outlook-left">
-                    <div class="outlook-title-row">
-                        <a href="#" class="outlook-title">Equity Market Outlook - March 2024</a>
-                        <div class="outlook-actions">
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/Download-arrow.svg" alt="Download">
-                                Download
-                            </a>
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/share.svg" alt="Share">
-                                Share
-                            </a>
-                        </div>
-                    </div>
-                    <div class="outlook-meta">
-                        <span>19 Nov 2024</span>
-                        <span>67kb</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="outlook-item">
-                <div class="outlook-left">
-                    <div class="outlook-title-row">
-                        <a href="#" class="outlook-title">Equity Market Outlook - February 2024</a>
-                        <div class="outlook-actions">
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/Download-arrow.svg" alt="Download">
-                                Download
-                            </a>
-                            <a href="#" class="outlook-action">
-                                <img src="assets/images/share.svg" alt="Share">
-                                Share
-                            </a>
-                        </div>
-                    </div>
-                    <div class="outlook-meta">
-                        <span>19 Nov 2024</span>
-                        <span>67kb</span>
-                    </div>
-                </div>
+                <button class="pagination-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
             </div>
         </div>
 
-        <!-- Pagination -->
-        <div class="pagination-container">
-            <button class="pagination-arrow" disabled>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2"/>
-                </svg>
-            </button>
-            <div class="pagination-numbers">
-                <button class="pagination-number active">1</button>
-                <button class="pagination-number">2</button>
-                <button class="pagination-number">3</button>
+        <!-- Debt Scheme Content -->
+        <div id="debt-content" class="scheme-content" style="display: none;">
+            <div class="outlook-item">
+                <div class="outlook-left">
+                    <div class="outlook-title-row">
+                        <a href="#" class="outlook-title">Macro Review and Fixed Income Market Outlook - November 2024 - October 2024</a>
+                        <div class="outlook-actions">
+                            <a href="#" class="outlook-action">
+                                <img src="assets/images/Download-arrow.svg" alt="Download">
+                                Download
+                            </a>
+                            <a href="#" class="outlook-action">
+                                <img src="assets/images/share.svg" alt="Share">
+                                Share
+                            </a>
+                        </div>
+                    </div>
+                    <div class="outlook-meta">
+                        <span>19 Nov 2024</span>
+                        <span>67kb</span>
+                    </div>
+                </div>
             </div>
-            <button class="pagination-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2"/>
-                </svg>
-            </button>
         </div>
     </div>
 </body>
@@ -322,4 +350,21 @@
             }
         }
     }
-    </script>
+
+    function showScheme(scheme) {
+        // Update active tab
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+        });
+        event.target.classList.add('active');
+
+        // Show/hide content
+        if (scheme === 'equity') {
+            document.getElementById('equity-content').style.display = 'block';
+            document.getElementById('debt-content').style.display = 'none';
+        } else {
+            document.getElementById('equity-content').style.display = 'none';
+            document.getElementById('debt-content').style.display = 'block';
+        }
+    }
+</script>
