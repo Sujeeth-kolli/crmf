@@ -180,11 +180,6 @@ body {
     font-size: 20px; 
 }
 
-.nav-link:hover {
-    background-color: #007bff; /* Background color on hover */
-    color: #fff; /* Text color on hover */
-}
-
 .nav-link.active {
     background-color: #0082A0; /* Active state background color */
     color: #fff; /* Active state text color */

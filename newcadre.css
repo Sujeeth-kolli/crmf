@@ -9,6 +9,7 @@
     --warning-text-darkmode: #F79009;
     --table-header-bg-darkmode: #54ABBF29;
     --border-light-darkmode: rgba(255, 255, 255, 0.1);
+    --button-fill-darkmode: #0082A0;
 }
 
 body {
@@ -703,28 +704,30 @@ body {
     flex: 1;
     max-width:25%;
 }
+.acc-search-container {
+    position: relative;
+    flex: 1;
+    width: 95%;
+    margin-bottom: 24px;
+}
 
-.search-input {
+.acc-search-container .search-input {
     width: 100%;
-    padding: 12px 40px;
-    background: var(--background-darkmode);
-    border: 1px solid var(--border-light-darkmode);
-    border-radius: 25px;
+    height: 40px;
+    padding: 8px 16px 8px 40px;
+    background: transparent;
+    border: 1px solid rgba(151, 149, 145, 0.2);
+    border-radius: 100px;
     color: var(--text-white-darkmode);
-    font-size: 16px;
 }
 
-.search-input::placeholder {
-    color: var(--grey-text-darkmode);
-}
-
-.search-icon {
+.acc-search-container .search-icon {
     position: absolute;
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 
 /* Year selector styles */
@@ -952,44 +955,37 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Navigation section styles */
+/* Navigation Section Styles */
 .nav-section {
     display: flex;
-    gap: 16px;
-    margin-bottom: 32px;
-    padding-bottom: 1px;
-    border-bottom: 1px solid var(--border-light-darkmode);
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: relative;
+    border-bottom: 0.5px solid #6C737FB2; /* Divider line */
 }
 
 .nav-link {
-    padding: 8px 24px;
-    color: var(--grey-text-darkmode);
+    width: auto; /* Fixed width for buttons */
+    height: 34px; /* Fixed height for buttons */
+    padding: 5px 15px; /* Adjust padding for spacing */
+    margin-right: 10px; /* Space between links */
+    background-color: #FFFFFF0D; /* Background color when not active */
+    color: #979591; /* Text color for inactive links */
     text-decoration: none;
-    border-radius: 8px 8px 0 0;
-    transition: all 0.3s ease;
-    font-size: 20px;
-    font-weight: 500;
+    border-radius: 7px 7px 0px 0px; /* Rounded top corners */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    gap: 10px; /* Gap between elements inside the button */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions for hover effects */
+    font-size: 20px; 
 }
 
 .nav-link.active {
-    background: var(--text-blue-and-outline-darkmode);
+    background-color: var(--button-fill-darkmode);
     color: var(--text-white-darkmode);
-}
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-    .updates-header {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .search-container {
-        width: 100%;
-    }
-
-    .year-selector {
-        width: 100%;
-        justify-content: flex-end;
-    }
+    border-color: var(--button-fill-darkmode);
 }
 
 /* Market Outlook List Styles */
@@ -1083,5 +1079,692 @@ body {
     .outlook-actions {
         width: 100%;
         justify-content: flex-start;
+    }
+}
+/* Interactive SOA Form Styles */
+.soa-form-container {
+    background: rgba(37, 39, 54, 0.8);
+    border-radius: 12px;
+    padding: 32px;
+    margin-top: 24px;
+}
+
+.soa-form-title {
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.soa-radio-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.soa-radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--grey-text-darkmode);
+    font-size: 18px;
+    width: auto;
+    cursor: pointer;
+}
+
+.soa-radio-option input[type="radio"] {
+    accent-color: #54ABBF;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    appearance: none;
+    border: 2px solid var(--grey-text-darkmode);
+    border-radius: 50%;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.soa-radio-option input[type="radio"]:checked {
+    border: 2px solid var(--text-blue-and-outline-darkmode);
+}
+
+.soa-radio-option input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--text-blue-and-outline-darkmode);
+}
+
+.soa-radio-option input[type="radio"]:checked + .soa-radio-label {
+    color: var(--text-white-darkmode);
+}
+
+.soa-radio-label {
+    color: var(--grey-text-darkmode);
+    font-size: 18px;
+}
+
+.soa-input-field {
+    margin-bottom: 24px;
+    position: relative;
+    width: 50%;
+}
+.acc-input-field {
+    margin-bottom: 24px;
+    position: relative;
+    width: 100%;
+}
+
+.soa-input-label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: rgba(37, 39, 54, 0.8);
+    padding: 0 8px;
+    color: var(--grey-text-darkmode);
+    font-size: 14px;
+    z-index: 1;
+}
+.acc-input-label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: rgba(37, 39, 54, 0.8);
+    padding: 0 8px;
+    color: var(--white-text-darkmode);
+    font-size: 14px;
+    z-index: 1;
+}
+
+.soa-input {
+    width: 90%;
+    padding: 16px;
+    background: transparent;
+    border: 1px solid rgba(151, 149, 145, 0.5);
+    border-radius: 8px;
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+}
+.acc-input {
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    border: 1px solid rgba(151, 149, 145, 0.5);
+    border-radius: 8px;
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+}
+
+.soa-captcha-container {
+    width: 20%;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.soa-captcha-display {
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    border: 1px solid rgba(151, 149, 145, 0.5);
+    border-radius: 8px;
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.soa-captcha-text {
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+}
+
+.soa-refresh-button {
+    color: var(--text-blue-and-outline-darkmode);
+    text-decoration: underline; /* Always show underline */
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin-left: 16px;
+}
+
+/* Remove hover effect since underline is always visible */
+.soa-refresh-button:hover {
+    text-decoration: underline;
+}
+
+/* Ensure other input fields maintain 50% width */
+.soa-input-field {
+    margin-bottom: 24px;
+    position: relative;
+    width: 50%;
+}
+
+.soa-generate-button {
+    background: var(--button-fill-darkmode);
+    color: var(--text-white-darkmode);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+/* Update responsive styles for radio buttons */
+@media screen and (max-width: 768px) {
+    .soa-radio-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .soa-radio-option {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .soa-radio-option {
+        font-size: 14px;
+    }
+}
+
+/* Link section styles */
+.soa-link-section {
+    background: rgba(247, 144, 9, 0.12);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    min-height: fit-content; /* Changed to fit-content for flexibility */
+}
+
+/* For note container specific height */
+.soa-link-section.note-container {
+    min-height: 120px;
+}
+
+/* For link display container */
+.soa-link-section.link-display {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.soa-link-title {
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.soa-link-box {
+    margin-top: 10px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.soa-link-text {
+    color: var(--text-blue-and-outline-darkmode);
+    text-decoration: none;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+/* Note content styles */
+.note-content {
+    flex: 1;
+    padding-top: 4px;
+}
+
+.note-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--grey-text-darkmode);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.note-list li {
+    margin-bottom: 8px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.note-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--grey-text-darkmode);
+}
+
+.note-label {
+    color: var(--text-white-darkmode);
+    font-weight: 500;
+}
+
+.info-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    align-self: center;
+}
+
+/* Container transitions */
+.ncd-main-container {
+    transition: opacity 0.3s ease;
+}
+
+.main-container {
+    width: 100%;
+    min-height: auto;
+    padding: 30px 25px;
+    gap: 40px;
+    border-radius: 30px;
+    background-color: var(--div-background-darkmode);
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+/* Submit button styles */
+.soa-button {
+    background: var(--button-fill-darkmode);
+    color: var(--text-white-darkmode);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Note content styles */
+.soa-note-content {
+    color: var(--grey-text-darkmode);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.soa-note-content p {
+    margin: 8px 0;
+}
+
+.soa-note-content strong {
+    color: var(--text-white-darkmode);
+    font-weight: 500;
+}
+
+/* Adjust spacing for form container when note is present */
+.soa-form-container .soa-link-section + .soa-input-field {
+    margin-top: 32px;
+}
+
+/* Note container styles */
+.note-container {
+    display: flex;
+    gap: 16px;
+}
+
+
+.note-content {
+    flex: 1;
+}
+
+.note-title {
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.note-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--grey-text-darkmode);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.note-list li {
+    margin-bottom: 8px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.note-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--grey-text-darkmode);
+}
+
+.note-label {
+    color: var(--text-white-darkmode);
+    font-weight: 500;
+}
+
+/* Add this to your existing styles */
+.statement-filters {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.statement-filters .soa-input-field {
+    flex: 1;
+}
+
+/* Update select styling to match inputs */
+.soa-input-field select.soa-input {
+    appearance: none;
+    background-image: url('assets/images/dropdown-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px; /* Space for the arrow */
+    cursor: pointer;
+}
+
+.custom-select {
+    position: relative;
+    width: 90%;
+    color: var(--text-dar-darkmode);
+}
+
+.select-selected {
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    border: 1px solid rgba(151, 149, 145, 0.5);
+    border-radius: 8px;
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.select-selected:after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: solid var(--text-white-darkmode);
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.select-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    margin-top: 8px;
+    background: white;
+    color:black;
+    border-radius: 8px;
+    border: 1px solid rgba(151, 149, 145, 0.5);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.select-items.show {
+    display: block;
+}
+
+.select-item {
+    padding: 12px 16px;
+    color: black;
+    cursor: pointer;
+}
+
+.select-item:hover {
+    background: #E0EFF3;
+    color: var(--background-darkmode);
+}
+
+/* Scrollbar styling for the dropdown */
+.select-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.select-items::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.select-items::-webkit-scrollbar-thumb {
+    background: var(--text-blue-and-outline-darkmode);
+    border-radius: 3px;
+}
+
+/* Add these styles */
+.pan-details {
+    margin: 24px 0;
+}
+
+.pan-info {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.info-card{
+    background: #FEFEFE0D;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.folio-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.folio-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.folio-number {
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+}
+
+.change-folio {
+    color: var(--text-blue-and-outline-darkmode);
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.holder-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.holder-section, .mode-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.holder-label, .mode-label {
+    color: var(--grey-text-darkmode);
+    font-size: 14px;
+}
+
+.holder-value, .mode-value {
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+}
+
+.mode-section {
+    text-align: right;
+}
+
+.schemes-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.schemes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.schemes-header h2 {
+    color: var(--text-white-darkmode);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.hide-zero-balance {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-white-darkmode);
+    font-size: 14px;
+}
+
+.schemes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.scheme-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-white-darkmode);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checkbox-input {
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(151, 149, 145, 0.5);
+    border-radius: 4px;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-input:checked {
+    background: var(--text-blue-and-outline-darkmode);
+    border-color: var(--text-blue-and-outline-darkmode);
+}
+
+.checkbox-input:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Date picker styling */
+.date-range-fields {
+    margin: 24px 0;
+}
+
+.form-row {
+    display: flex;
+    gap: 24px;
+}
+
+.field {
+    flex: 1;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-white-darkmode);
+    font-size: 14px;
+}
+
+.date-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.date-wrapper input {
+    width: 100%;
+    height: 48px;
+    padding: 8px 40px 8px 16px;
+    background: transparent;
+    border: 1px solid rgba(151, 149, 145, 0.5);
+    border-radius: 8px;
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+}
+
+.calendar-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--grey-text-darkmode);
+    cursor: pointer;
+    z-index: 1;
+    font-size: 16px;
+}
+
+/* Flatpickr specific styles */
+.flatpickr-calendar {
+    background: var(--calendar-background-darkmode) !important;
+}
+
+.flatpickr-months,
+.flatpickr-month,
+.flatpickr-weekdays {
+    background: var(--calendar-background-darkmode) !important;
+}
+
+.flatpickr-day {
+    color: var(--text-white-darkmode) !important;
+}
+
+.flatpickr-day.selected {
+    background: var(--calendar-selected-darkmode) !important;
+    border-color: var(--calendar-selected-darkmode) !important;
+}
+
+.flatpickr-day:hover {
+    background: var(--calendar-hover-darkmode) !important;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 16px;
     }
 }

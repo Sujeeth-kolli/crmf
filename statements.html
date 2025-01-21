@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive SOA</title>
+    <link rel="stylesheet" href="newcadre.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+    <div class="max-width">
+        <!-- Breadcrumb -->
+        <div class="ncd-breadcrumb">
+            <a href="/" class="ncd-breadcrumb-link">Home</a>
+            <a href="#" class="ncd-breadcrumb-link">Investor Corner</a>
+            <a href="#" class="ncd-breadcrumb-link">Statements</a>
+            <span class="ncd-breadcrumb-current">Interactive SOA</span>
+        </div>
+
+        <!-- Page Title -->
+        <h1 class="ncd-heading">STATEMENTS</h1>
+
+        <!-- Navigation Section -->
+        <div class="nav-section">
+            <a href="#" class="nav-link active" onclick="showSection('interactive')">Interactive SOA</a>
+            <a href="#" class="nav-link" onclick="showSection('account')">Account Statement</a>
+            <a href="#" class="nav-link" onclick="showSection('exitload')">Exit Load Statement</a>
+            <a href="#" class="nav-link" onclick="showSection('capital')">Capital Gain Statement</a>
+        </div>
+
+        <!-- Existing Interactive SOA Content -->
+        <div class="ncd-main-container" id="interactive-content">
+            <!-- SOA Form Section -->
+            <div class="soa-form-container">
+                <h2 class="soa-form-title">Please select your Identification type</h2>
+                
+                <div class="soa-radio-group">
+                    <label class="soa-radio-option">
+                        <input type="radio" name="id-type" value="pan" checked>
+                        <span class="soa-radio-label">PAN</span>
+                    </label>
+                    <label class="soa-radio-option">
+                        <input type="radio" name="id-type" value="folio">
+                        <span class="soa-radio-label">Folio</span>
+                    </label>
+                </div>
+
+                <div class="soa-input-field" id="pan-field">
+                    <label class="soa-input-label">PAN</label>
+                    <input type="text" class="soa-input" value="MSWIS3547D">
+                </div>
+
+                <div class="soa-input-field" id="folio-field" style="display: none;">
+                    <label class="soa-input-label">Folio</label>
+                    <input type="text" class="soa-input">
+                </div>
+
+                <h2 class="soa-form-title">Please Enter Captcha to continue</h2>
+                
+                <div class="soa-captcha-container">
+                    <div class="soa-captcha-display">
+                        <span class="soa-captcha-text">D56EA</span>
+                        <a href="#" class="soa-refresh-button">Refresh</a>
+                    </div>
+                </div>
+
+                <div class="soa-input-field">
+                    <label class="soa-input-label">Please Enter Captcha</label>
+                    <input type="text" class="soa-input" value="D56EA">
+                </div>
+
+                <button class="soa-generate-button">Generate Link</button>
+                            <!-- Add this section after the form, initially hidden -->
+            <div class="soa-link-section" style="display: none;">
+                <h2 class="soa-link-title">Please click here to proceed</h2>
+                <div class="soa-link-box">
+                    <a href="https://crmf.in/Z9O5d8" class="soa-link-text" target="_blank">https://crmf.in/Z9O5d8</a>
+                </div>
+            </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Exit Load Statement Content -->
+        <div class="ncd-main-container" id="exitload-content" style="display: none;">
+            <div class="soa-form-container">
+                <div class="soa-input-field">
+                    <label class="soa-input-label">PAN</label>
+                    <input type="text" class="soa-input" value="MSWIS3547D">
+                </div>
+
+                <h2 class="soa-form-title">Please Enter Captcha to continue</h2>
+                
+                <div class="soa-captcha-container">
+                    <div class="soa-captcha-display">
+                        <span class="soa-captcha-text">D56EA</span>
+                        <a href="#" class="soa-refresh-button">Refresh</a>
+                    </div>
+                </div>
+
+                <div class="soa-input-field">
+                    <label class="soa-input-label">Please Enter Captcha</label>
+                    <input type="text" class="soa-input" value="D56EA">
+                </div>
+
+                <button class="soa-button">Submit</button>
+            </div>
+        </div>
+
+        <!-- Capital Gain Statement Content -->
+        <div class="ncd-main-container" id="capital-content" style="display: none;">
+            <div class="soa-form-container">
+                <!-- Note Container -->
+                <div class="soa-link-section note-container">
+                    <img src="assets/images/info-logo.svg" alt="info" class="info-logo">
+                    <div class="note-content">
+                        <h2 class="note-title">Note:</h2>
+                        <ul class="note-list">
+                            <li>The account statement will be password protected. To access the account statement please enter password in the below mentioned format.</li>
+                            <li><span class="note-label">For Minor investor/folio:</span> Guardian's PAN + Minor's DOB (DDMMYYYY) in UPPERCASE.</li>
+                            <li><span class="note-label">For Others:</span> Investor's PAN + Investor's DOB (DDMMYYYY) in UPPERCASE.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Form Fields -->
+                <div class="soa-input-field">
+                    <label class="soa-input-label">PAN</label>
+                    <input type="text" class="soa-input" value="MSWIS3547D">
+                </div>
+
+                <h2 class="soa-form-title">Please Enter Captcha to continue</h2>
+                
+                <div class="soa-captcha-container">
+                    <div class="soa-captcha-display">
+                        <span class="soa-captcha-text">D56EA</span>
+                        <a href="#" class="soa-refresh-button">Refresh</a>
+                    </div>
+                </div>
+
+                <div class="soa-input-field">
+                    <label class="soa-input-label">Please Enter Captcha</label>
+                    <input type="text" class="soa-input" value="D56EA">
+                </div>
+
+                <button class="soa-button">Submit</button>
+            </div>
+        </div>
+
+        <!-- Account Statement Content -->
+        <div class="ncd-main-container" id="account-content" style="display: none;">
+            <div class="soa-form-container">
+                <!-- Note Container -->
+                <div class="soa-link-section note-container">
+                    <img src="assets/images/info-logo.svg" alt="info" class="info-logo">
+                    <div class="note-content">
+                        <h2 class="note-title">Note:</h2>
+                        <ul class="note-list">
+                            <li>The account statement will be password protected. To access the account statement please enter password in the below mentioned format.</li>
+                            <li><span class="note-label">For Minor investor/folio:</span> Guardian's PAN + Minor's DOB (DDMMYYYY) in UPPERCASE.</li>
+                            <li><span class="note-label">For Others:</span> Investor's PAN + Investor's DOB (DDMMYYYY) in UPPERCASE.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Form Fields -->
+                <div class="soa-input-field">
+                    <label class="soa-input-label">PAN</label>
+                    <input type="text" class="soa-input" value="MSWIS3547D">
+                </div>
+
+                <h2 class="soa-form-title">Please Enter Captcha to continue</h2>
+                
+                <div class="soa-captcha-container">
+                    <div class="soa-captcha-display">
+                        <span class="soa-captcha-text">D56EA</span>
+                        <a href="#" class="soa-refresh-button">Refresh</a>
+                    </div>
+                </div>
+
+                <div class="soa-input-field">
+                    <label class="soa-input-label">Please Enter Captcha</label>
+                    <input type="text" class="soa-input" value="D56EA">
+                </div>
+
+                <button class="soa-button">Submit</button>
+            </div>
+        </div>
+
+
+        <!-- Account Statement Result View -->
+        <div class="soa-form-container" id="account-result" style="display: none;">
+            <!-- Radio Options -->
+            <div class="soa-radio-group">
+                <label class="soa-radio-option">
+                    <input type="radio" name="statement-type" value="general" checked>
+                    <span class="soa-radio-label">General Statements</span>
+                </label>
+                <label class="soa-radio-option">
+                    <input type="radio" name="statement-type" value="schedule">
+                    <span class="soa-radio-label">Schedule Statements</span>
+                </label>
+            </div>
+
+            <!-- Statement Filters -->
+            <div class="statement-filters">
+                <div class="soa-input-field">
+                    <label class="soa-input-label">Statement for</label>
+                    <div class="custom-select">
+                        <div class="select-selected">Folio</div>
+                        <div class="select-items">
+                            <div class="select-item" data-value="folio">Folio</div>
+                            <div class="select-item" data-value="pan">PAN</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="soa-input-field">
+                    <label class="soa-input-label">Frequency</label>
+                    <div class="custom-select">
+                        <div class="select-selected">Custom Date</div>
+                        <div class="select-items">
+                            <div class="select-item">As on Date</div>
+                            <div class="select-item">Current Financial Year</div>
+                            <div class="select-item">Last Financial Year</div>
+                            <div class="select-item">Custom Date</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Date inputs using the same custom-select styling -->
+            <div class="date-range-fields" style="display: none;">
+                <div class="soa-input-field">
+                    <label class="soa-input-label">Start Date</label>
+                    <div class="custom-select">
+                        <input type="text" class="select-selected date-input" placeholder="DD/MM/YYYY">
+                        <svg class="calendar-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.8333 3.33337H4.16667C3.24619 3.33337 2.5 4.07957 2.5 5.00004V16.6667C2.5 17.5872 3.24619 18.3334 4.16667 18.3334H15.8333C16.7538 18.3334 17.5 17.5872 17.5 16.6667V5.00004C17.5 4.07957 16.7538 3.33337 15.8333 3.33337Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.3333 1.66663V4.99996" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.66669 1.66663V4.99996" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.5 8.33337H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="soa-input-field">
+                    <label class="soa-input-label">End Date</label>
+                    <div class="custom-select">
+                        <input type="text" class="select-selected date-input" placeholder="DD/MM/YYYY">
+                        <svg class="calendar-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.8333 3.33337H4.16667C3.24619 3.33337 2.5 4.07957 2.5 5.00004V16.6667C2.5 17.5872 3.24619 18.3334 4.16667 18.3334H15.8333C16.7538 18.3334 17.5 17.5872 17.5 16.6667V5.00004C17.5 4.07957 16.7538 3.33337 15.8333 3.33337Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.3333 1.66663V4.99996" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.66669 1.66663V4.99996" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.5 8.33337H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAN Details Section -->
+            <div class="pan-details" style="display: none;">
+                <div class="info-card">
+                    <div class="pan-info">
+                        <span class="pan-label">PAN :</span>
+                        <span class="pan-value">HBAPD2423K</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Folio Details Section -->
+            <div class="info-card">
+                <div class="folio-info">
+                    <div class="acc-input-field">
+                        <label class="acc-input-label">Folio</label>
+                        <div class="acc-input folio-display">
+                            <span class="folio-number">9801092133</span>
+                            <a href="#" class="change-folio">Change Folio</a>
+                        </div>
+                    </div>
+                    <div class="holder-info">
+                        <div class="holder-section">
+                            <div class="holder-label">Joint Holder 1</div>
+                            <div class="holder-value">Jeevan Kumar</div>
+                        </div>
+                        <div class="mode-section">
+                            <div class="mode-label">Mode of Holding</div>
+                            <div class="mode-value">Either or Survivor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schemes Section -->
+            <div class="schemes-section">
+                <div class="schemes-header">
+                    <h2>Schemes</h2>
+                    <div class="hide-zero-balance">
+                        <input type="checkbox" id="hideZeroBalance" class="checkbox-input">
+                        <label for="hideZeroBalance">Hide Zero Balance Schemes</label>
+                    </div>
+                </div>
+
+                <div class="acc-search-container">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 21L16.65 16.65" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <input type="text" placeholder="Search here..." class="search-input">
+                </div>
+
+                <div class="schemes-list">
+                    <label class="scheme-checkbox">
+                        <input type="checkbox" class="checkbox-input">
+                        <span class="checkbox-label">All Schemes</span>
+                    </label>
+                    
+                    <label class="scheme-checkbox">
+                        <input type="checkbox" class="checkbox-input">
+                        <span class="checkbox-label">Canara Robeco ELSS Tax Saver - Regular Growth - Growth</span>
+                    </label>
+
+                    <label class="scheme-checkbox">
+                        <input type="checkbox" class="checkbox-input" checked>
+                        <span class="checkbox-label">Canara Robeco Mid Cap Fund - Direct Growth - Growth</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="button-group">
+                <button class="soa-button">Email Statement</button>
+                <button class="soa-button">Download Statement</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Radio button handler
+        document.querySelectorAll('input[name="id-type"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                document.getElementById('pan-field').style.display = 
+                    this.value === 'pan' ? 'block' : 'none';
+                document.getElementById('folio-field').style.display = 
+                    this.value === 'folio' ? 'block' : 'none';
+            });
+        });
+
+        // Refresh captcha handler
+        document.querySelector('.soa-refresh-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            // Add captcha refresh logic here
+        });
+
+        // generate link
+        document.querySelector('.soa-generate-button').addEventListener('click', function() {
+            document.querySelector('.soa-link-section').style.display = 'block';
+        });
+
+        // Function to show/hide sections
+        function showSection(sectionId) {
+            event.preventDefault();
+            
+            // Hide all sections
+            document.querySelectorAll('.ncd-main-container').forEach(container => {
+                container.style.display = 'none';
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId + '-content').style.display = 'block';
+            
+            // Update active nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+        }
+
+        // Add event listeners for the new sections
+        document.querySelectorAll('.soa-button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.closest('#account-content')) {
+                    document.querySelector('#account-content').style.display = 'none';
+                    document.querySelector('#account-result').style.display = 'block';
+                }
+            });
+        });
+
+        // Set Interactive SOA as default on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('interactive-content').style.display = 'block';
+            document.querySelector('.nav-link').classList.add('active');
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all custom select elements
+            const customSelects = document.querySelectorAll('.custom-select');
+            const dateRangeFields = document.querySelector('.date-range-fields');
+
+            customSelects.forEach(select => {
+                const selected = select.querySelector('.select-selected');
+                const items = select.querySelector('.select-items');
+
+                // Toggle dropdown
+                selected.addEventListener('click', function() {
+                    items.classList.toggle('show');
+                });
+
+                // Handle item selection
+                const selectItems = select.querySelectorAll('.select-item');
+                selectItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        selected.textContent = this.textContent;
+                        items.classList.remove('show');
+
+                        // Show/hide date range fields if "Custom Date" is selected
+                        if (this.textContent === 'Custom Date') {
+                            dateRangeFields.style.display = 'block';
+                        } else {
+                            dateRangeFields.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                customSelects.forEach(select => {
+                    if (!select.contains(e.target)) {
+                        select.querySelector('.select-items').classList.remove('show');
+                    }
+                });
+            });
+        });
+
+        // Initialize Flatpickr for date inputs
+        const dateInputs = document.querySelectorAll('.date-input');
+        dateInputs.forEach(input => {
+            const wrapper = input.closest('.date-wrapper');
+            const calendarIcon = wrapper.querySelector('.calendar-icon');
+            
+            const fp = flatpickr(input, {
+                dateFormat: "d/m/Y",
+                allowInput: true,
+                disableMobile: true,
+                theme: "dark",
+                position: "auto",
+                monthSelectorType: "dropdown",
+                nextArrow: '<i class="fas fa-chevron-right"></i>',
+                prevArrow: '<i class="fas fa-chevron-left"></i>',
+                clickOpens: false,
+                onChange: function(selectedDates, dateStr, instance) {
+                    input.value = dateStr;
+                }
+            });
+
+            // Open calendar only when clicking the calendar icon
+            calendarIcon.addEventListener('click', () => {
+                fp.open();
+            });
+        });
+    </script>
+</body>
+</html> 
