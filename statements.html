@@ -223,13 +223,10 @@
 
                 <div class="soa-input-field">
                     <label class="soa-input-label">Frequency</label>
-                    <div class="custom-select">
-                        <div class="select-selected">Custom Date</div>
+                    <div class="custom-select" data-type="frequency">
+                        <div class="select-selected">As on Date</div>
                         <div class="select-items">
-                            <div class="select-item">As on Date</div>
-                            <div class="select-item">Current Financial Year</div>
-                            <div class="select-item">Last Financial Year</div>
-                            <div class="select-item">Custom Date</div>
+                            <!-- Options will be populated by JavaScript -->
                         </div>
                     </div>
                 </div>
@@ -341,130 +338,7 @@
         </div>
     </div>
 
-    <script>
-        // Radio button handler
-        document.querySelectorAll('input[name="id-type"]').forEach(radio => {
-            radio.addEventListener('change', function() {
-                document.getElementById('pan-field').style.display = 
-                    this.value === 'pan' ? 'block' : 'none';
-                document.getElementById('folio-field').style.display = 
-                    this.value === 'folio' ? 'block' : 'none';
-            });
-        });
-
-        // Refresh captcha handler
-        document.querySelector('.soa-refresh-button').addEventListener('click', function(e) {
-            e.preventDefault();
-            // Add captcha refresh logic here
-        });
-
-        // generate link
-        document.querySelector('.soa-generate-button').addEventListener('click', function() {
-            document.querySelector('.soa-link-section').style.display = 'block';
-        });
-
-        // Function to show/hide sections
-        function showSection(sectionId) {
-            event.preventDefault();
-            
-            // Hide all sections
-            document.querySelectorAll('.ncd-main-container').forEach(container => {
-                container.style.display = 'none';
-            });
-            
-            // Show selected section
-            document.getElementById(sectionId + '-content').style.display = 'block';
-            
-            // Update active nav link
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            event.currentTarget.classList.add('active');
-        }
-
-        // Add event listeners for the new sections
-        document.querySelectorAll('.soa-button').forEach(button => {
-            button.addEventListener('click', function() {
-                if (this.closest('#account-content')) {
-                    document.querySelector('#account-content').style.display = 'none';
-                    document.querySelector('#account-result').style.display = 'block';
-                }
-            });
-        });
-
-        // Set Interactive SOA as default on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('interactive-content').style.display = 'block';
-            document.querySelector('.nav-link').classList.add('active');
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get all custom select elements
-            const customSelects = document.querySelectorAll('.custom-select');
-            const dateRangeFields = document.querySelector('.date-range-fields');
-
-            customSelects.forEach(select => {
-                const selected = select.querySelector('.select-selected');
-                const items = select.querySelector('.select-items');
-
-                // Toggle dropdown
-                selected.addEventListener('click', function() {
-                    items.classList.toggle('show');
-                });
-
-                // Handle item selection
-                const selectItems = select.querySelectorAll('.select-item');
-                selectItems.forEach(item => {
-                    item.addEventListener('click', function() {
-                        selected.textContent = this.textContent;
-                        items.classList.remove('show');
-
-                        // Show/hide date range fields if "Custom Date" is selected
-                        if (this.textContent === 'Custom Date') {
-                            dateRangeFields.style.display = 'block';
-                        } else {
-                            dateRangeFields.style.display = 'none';
-                        }
-                    });
-                });
-            });
-
-            // Close dropdowns when clicking outside
-            document.addEventListener('click', function(e) {
-                customSelects.forEach(select => {
-                    if (!select.contains(e.target)) {
-                        select.querySelector('.select-items').classList.remove('show');
-                    }
-                });
-            });
-        });
-
-        // Initialize Flatpickr for date inputs
-        const dateInputs = document.querySelectorAll('.date-input');
-        dateInputs.forEach(input => {
-            const wrapper = input.closest('.date-wrapper');
-            const calendarIcon = wrapper.querySelector('.calendar-icon');
-            
-            const fp = flatpickr(input, {
-                dateFormat: "d/m/Y",
-                allowInput: true,
-                disableMobile: true,
-                theme: "dark",
-                position: "auto",
-                monthSelectorType: "dropdown",
-                nextArrow: '<i class="fas fa-chevron-right"></i>',
-                prevArrow: '<i class="fas fa-chevron-left"></i>',
-                clickOpens: false,
-                onChange: function(selectedDates, dateStr, instance) {
-                    input.value = dateStr;
-                }
-            });
-
-            // Open calendar only when clicking the calendar icon
-            calendarIcon.addEventListener('click', () => {
-                fp.open();
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="statements.js"></script>
 </body>
 </html> 
