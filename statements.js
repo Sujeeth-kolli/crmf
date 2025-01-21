@@ -36,6 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
         accountSubmitBtn.addEventListener('click', function() {
             document.querySelector('#account-content').style.display = 'none';
             document.querySelector('#account-result').style.display = 'block';
+            
+            // Check if PAN is selected and hide schemes accordingly
+            const selectedValue = document.querySelector('.statement-filters .select-selected')?.textContent.toLowerCase();
+            const schemesSection = document.querySelector('#account-result .schemes-section');
+            if (selectedValue === 'pan' && schemesSection) {
+                schemesSection.style.display = 'none';
+            }
         });
     }
 
@@ -156,35 +163,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const statementForSelect = document.querySelector('.statement-filters .custom-select');
     const panDetails = document.querySelector('.pan-details');
     const folioDetails = document.querySelector('.info-card .folio-info').closest('.info-card');
-    const schemesSection = document.querySelector('.schemes-section');
+    const schemesSection = document.querySelector('#account-result .schemes-section');
     
     if (statementForSelect) {
-        const selectItems = statementForSelect.querySelectorAll('.select-item');
-        selectItems.forEach(item => {
+        const items = statementForSelect.querySelector('.select-items');
+        
+        // Handle item selection
+        items?.querySelectorAll('.select-item').forEach(item => {
             item.addEventListener('click', function() {
-                const selectedValue = this.getAttribute('data-value');
+                const value = this.getAttribute('data-value');
                 
-                // Update the select display
-                const selectedDisplay = statementForSelect.querySelector('.select-selected');
-                if (selectedDisplay) {
-                    selectedDisplay.textContent = this.textContent;
-                }
-
-                // Show/hide appropriate sections
-                if (selectedValue === 'pan') {
+                // Toggle visibility based on selection
+                if (value === 'pan') {
                     panDetails.style.display = 'block';
                     folioDetails.style.display = 'none';
-                    schemesSection.style.display = 'none';
-                } else if (selectedValue === 'folio') {
+                    if (schemesSection) {
+                        schemesSection.style.display = 'none'; // Hide schemes for PAN
+                    }
+                } else {
                     panDetails.style.display = 'none';
                     folioDetails.style.display = 'block';
-                    schemesSection.style.display = 'block';
-                }
-                
-                // Close the dropdown
-                const selectItems = statementForSelect.querySelector('.select-items');
-                if (selectItems) {
-                    selectItems.classList.remove('show');
+                    if (schemesSection) {
+                        schemesSection.style.display = 'block'; // Show schemes for Folio
+                    }
                 }
             });
         });
@@ -357,4 +358,20 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+});
+
+// Add search functionality for schemes
+document.querySelector('#exitload-result .search-box input')?.addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    const schemes = document.querySelectorAll('#exitload-result .scheme-item');
+    
+    schemes.forEach(scheme => {
+        const text = scheme.querySelector('span').textContent.toLowerCase();
+        scheme.style.display = text.includes(searchTerm) ? 'flex' : 'none';
+    });
+});
+
+// Handle hide zero balance checkbox
+document.querySelector('#exitload-result #hideZeroBalance')?.addEventListener('change', function() {
+    // Add your zero balance hiding logic here
 }); 

@@ -194,6 +194,74 @@
         </div>
 
 
+        <!-- Exit Load Statement Result View -->
+        <div class="ncd-main-container" id="exitload-result" style="display: none;">
+            <div class="soa-form-container">
+                <!-- Statement For field -->
+                <div class="soa-input-field">
+                    <label class="soa-input-label">Statement for</label>
+                    <div class="static-field">Folio</div>
+                </div>
+
+                <!-- Folio Details -->
+                <div class="info-card">
+                    <div class="folio-info">
+                        <div class="acc-input-field">
+                            <label class="acc-input-label">Folio</label>
+                            <div class="acc-input folio-display">
+                                <span class="folio-number">9801092133</span>
+                                <a href="#" class="change-folio">Change Folio</a>
+                            </div>
+                        </div>
+                        <div class="holder-info">
+                            <div class="holder-section">
+                                <div class="holder-label">Joint Holder 1</div>
+                                <div class="holder-value">Jeevan Kumar</div>
+                            </div>
+                            <div class="mode-section">
+                                <div class="mode-label">Mode of Holding</div>
+                                <div class="mode-value">Either or Survivor</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Schemes Section -->
+                <div class="schemes-section">
+                    <div class="schemes-header">
+                        <h2>Schemes</h2>
+                        <div class="hide-zero-balance">
+                            <input type="checkbox" id="hideZeroBalance" class="checkbox-input">
+                            <label for="hideZeroBalance">Hide Zero Balance Schemes</label>
+                        </div>
+                    </div>
+
+                    <div class="acc-search-container">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 21L16.65 16.65" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="text" placeholder="Search here..." class="search-input">
+                    </div>
+
+                    <div class="schemes-list">
+                        <label class="scheme-radio">
+                            <input type="radio" name="scheme">
+                            <span class="radio-label">Canara Robeco ELSS Tax Saver - Regular Growth - Growth</span>
+                        </label>
+                        
+                        <label class="scheme-radio">
+                            <input type="radio" name="scheme" checked>
+                            <span class="radio-label">Canara Robeco Mid Cap Fund - Direct Growth - Growth</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button class="soa-button">Submit</button>
+            </div>
+        </div>
+
         <!-- Account Statement Result View -->
         <div class="soa-form-container" id="account-result" style="display: none;">
             <!-- Radio Options -->
