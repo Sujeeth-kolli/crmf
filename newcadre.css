@@ -1242,13 +1242,6 @@ body {
     text-decoration: underline;
 }
 
-/* Ensure other input fields maintain 50% width */
-.soa-input-field {
-    margin-bottom: 24px;
-    position: relative;
-    width: 50%;
-}
-
 .soa-generate-button {
     background: var(--button-fill-darkmode);
     color: var(--text-white-darkmode);
@@ -1689,7 +1682,7 @@ body {
     transform: rotate(45deg);
 }
 
-/* Date picker styling */
+/* Date range fields styling */
 .date-range-fields {
     margin: 24px 0;
 }
@@ -1697,10 +1690,12 @@ body {
 .form-row {
     display: flex;
     gap: 24px;
+    width: 90%;
 }
 
 .field {
     flex: 1;
+    width: 50%;
 }
 
 .field label {
@@ -1734,31 +1729,6 @@ body {
     color: var(--grey-text-darkmode);
     cursor: pointer;
     z-index: 1;
-    font-size: 16px;
-}
-
-/* Flatpickr specific styles */
-.flatpickr-calendar {
-    background: var(--calendar-background-darkmode) !important;
-}
-
-.flatpickr-months,
-.flatpickr-month,
-.flatpickr-weekdays {
-    background: var(--calendar-background-darkmode) !important;
-}
-
-.flatpickr-day {
-    color: var(--text-white-darkmode) !important;
-}
-
-.flatpickr-day.selected {
-    background: var(--calendar-selected-darkmode) !important;
-    border-color: var(--calendar-selected-darkmode) !important;
-}
-
-.flatpickr-day:hover {
-    background: var(--calendar-hover-darkmode) !important;
 }
 
 /* Responsive styles */
@@ -1766,5 +1736,9 @@ body {
     .form-row {
         flex-direction: column;
         gap: 16px;
+    }
+    
+    .field {
+        width: 100%;
     }
 }
