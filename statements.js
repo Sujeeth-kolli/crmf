@@ -61,32 +61,44 @@ document.addEventListener('DOMContentLoaded', function() {
     const capitalSubmitBtn = document.querySelector('#capital-content .soa-button');
     if (capitalSubmitBtn) {
         capitalSubmitBtn.addEventListener('click', function() {
-            // Add specific handling for Capital Gain Statement if needed
+            // Hide the form view
+            if (capitalGainForm) {
+                capitalGainForm.style.display = 'none';
+            }
+            
+            // Show the result view
+            if (capitalGainResult) {
+                capitalGainResult.style.display = 'block';
+            }
         });
     }
 });
 
 // Function to show sections
 function showSection(sectionId) {
-    event.preventDefault();
-    
-    // Hide all sections and results
-    document.querySelectorAll([
-        '.ncd-main-container', 
-        '#account-result', 
-        '#exitload-result'
-    ].join(',')).forEach(container => {
-        container.style.display = 'none';
+    // Hide all content sections
+    const sections = ['interactive', 'account', 'exitload', 'capital'];
+    sections.forEach(section => {
+        const contentElement = document.getElementById(`${section}-content`);
+        const resultElement = document.getElementById(`${section}-result`);
+        if (contentElement) contentElement.style.display = 'none';
+        if (resultElement) resultElement.style.display = 'none';
     });
-    
-    // Show selected section's initial form
-    document.getElementById(sectionId + '-content').style.display = 'block';
-    
+
+    // Show the selected content section
+    const selectedContent = document.getElementById(`${sectionId}-content`);
+    if (selectedContent) {
+        selectedContent.style.display = 'block';
+    }
+
     // Update active nav link
-    document.querySelectorAll('.nav-link').forEach(link => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
         link.classList.remove('active');
+        if (link.getAttribute('onclick').includes(sectionId)) {
+            link.classList.add('active');
+        }
     });
-    event.currentTarget.classList.add('active');
 }
 
 // Add event listeners for the new sections
@@ -162,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle Statement For selection (PAN/Folio toggle)
     const statementForSelect = document.querySelector('.statement-filters .custom-select');
     const panDetails = document.querySelector('.pan-details');
-    const folioDetails = document.querySelector('.info-card .folio-info').closest('.info-card');
+    const folioInfo = document.querySelector('#account-result .folio-info');
     const schemesSection = document.querySelector('#account-result .schemes-section');
     
     if (statementForSelect) {
@@ -176,15 +188,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Toggle visibility based on selection
                 if (value === 'pan') {
                     panDetails.style.display = 'block';
-                    folioDetails.style.display = 'none';
+                    folioInfo.style.display = 'none';
                     if (schemesSection) {
-                        schemesSection.style.display = 'none'; // Hide schemes for PAN
+                        schemesSection.style.display = 'none';
                     }
                 } else {
                     panDetails.style.display = 'none';
-                    folioDetails.style.display = 'block';
+                    folioInfo.style.display = 'block';
                     if (schemesSection) {
-                        schemesSection.style.display = 'block'; // Show schemes for Folio
+                        schemesSection.style.display = 'block';
                     }
                 }
             });
@@ -374,4 +386,24 @@ document.querySelector('#exitload-result .search-box input')?.addEventListener('
 // Handle hide zero balance checkbox
 document.querySelector('#exitload-result #hideZeroBalance')?.addEventListener('change', function() {
     // Add your zero balance hiding logic here
-}); 
+});
+
+// Get all the necessary elements
+const capitalGainForm = document.querySelector('#capital-content');
+const capitalGainResult = document.querySelector('#capital-result');
+const capitalGainSubmitBtn = document.querySelector('#capital-content .soa-button');
+
+// Add click event listener to the Capital Gain submit button
+if (capitalGainSubmitBtn) {
+    capitalGainSubmitBtn.addEventListener('click', function() {
+        // Hide the form view
+        if (capitalGainForm) {
+            capitalGainForm.style.display = 'none';
+        }
+        
+        // Show the result view
+        if (capitalGainResult) {
+            capitalGainResult.style.display = 'block';
+        }
+    });
+} 
