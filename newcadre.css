@@ -1759,3 +1759,128 @@ body {
         width: 100%;
     }
 }
+
+/* Myth Busters Styles */
+.myth-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Changed from auto-fit to exactly 3 columns */
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.myth-card {
+    background: #252736;
+    border-radius: 25.6px;
+    padding: 24px;
+    position: relative;
+    transition: all 0.3s ease;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.myth-card.expanded {
+    background: #252736; /* Keep the same background */
+    height: auto;
+    min-height: 200px;
+    border: 1px solid #54ABBF; /* Blue border */
+    box-shadow: 0 0 15px rgba(84, 171, 191, 0.2); /* Subtle blue glow */
+}
+
+.myth-label, .fact-label {
+    width: 104.35px; /* Adjust based on your image size */
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.myth-content {
+    color: var(--text-white-darkmode);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+    line-height: 1.4;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.view-fact-btn, .hide-fact-btn {
+    align-self: center;
+    background: transparent;
+    border: none;
+    color: var(--text-blue-and-outline-darkmode);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.view-fact-btn:hover, .hide-fact-btn:hover {
+    color: var(--text-white-darkmode); /* Change to white on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.fact-content {
+    margin-top: 16px;
+    border-top-style: dotted;
+    border-top-width: 2px;
+    border-top-color: rgba(151, 149, 145, 0.2);
+    border-image: repeating-linear-gradient(
+        to right,
+        rgba(151, 149, 145, 0.2) 0,
+        rgba(151, 149, 145, 0.2) 8px,
+        transparent 8px,
+        transparent 15px /* Reduced spacing between dots from 25px to 16px */
+    ) 1;
+    padding-top: 16px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.fact-text {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+    margin: 16px 0 24px 0;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+    .myth-cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .myth-cards-container {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+    
+    .myth-card {
+        height: 180px;
+    }
+    
+    .myth-card.expanded {
+        height: auto;
+        min-height: 180px;
+    }
+    
+    .myth-content {
+        font-size: 16px;
+    }
+    
+    .fact-text {
+        font-size: 14px;
+    }
+
+    .myth-label, .fact-label {
+        width: 50px; /* Slightly smaller on mobile */
+    }
+}
