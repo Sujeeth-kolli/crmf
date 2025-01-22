@@ -1690,7 +1690,7 @@ body {
 .form-row {
     display: flex;
     gap: 24px;
-    width: 90%;
+    width: 100%;
 }
 
 .field {
@@ -1723,7 +1723,7 @@ body {
 
 .calendar-icon {
     position: absolute;
-    right: 15px;
+    right: 0px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--grey-text-darkmode);

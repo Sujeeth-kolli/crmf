@@ -69,6 +69,38 @@ document.addEventListener('DOMContentLoaded', function() {
             // Show the result view
             if (capitalGainResult) {
                 capitalGainResult.style.display = 'block';
+                
+                // Initialize frequency dropdown in Capital Gain result view
+                const resultFrequencySelect = capitalGainResult.querySelector('.custom-select[data-type="frequency"]');
+                if (resultFrequencySelect) {
+                    const selectItems = resultFrequencySelect.querySelector('.select-items');
+                    const selectedDisplay = resultFrequencySelect.querySelector('.select-selected');
+                    
+                    
+                    // Use the same general options
+                    const generalOptions = [
+                        'As on Date',
+                        'Current Financial Year',
+                        'Last Financial Year',
+                        'Custom Date'
+                    ];
+                    
+                    // Clear and populate options
+                    selectItems.innerHTML = '';
+                    generalOptions.forEach(option => {
+                        const div = document.createElement('div');
+                        div.className = 'select-item';
+                        div.textContent = option;
+                        div.setAttribute('data-value', option.toLowerCase().replace(/\s+/g, '-'));
+                        selectItems.appendChild(div);
+                    });
+                    
+                    // Set initial selected value
+                    selectedDisplay.textContent = generalOptions[0];
+                    
+                    // Initialize the dropdown
+                    initializeDropdown(resultFrequencySelect);
+                }
             }
         });
     }
@@ -117,9 +149,14 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('interactive-content').style.display = 'block';
     document.querySelector('.nav-link').classList.add('active');
 
-    // Get all custom select elements
+    // Get all custom select elements and date range fields
     const customSelects = document.querySelectorAll('.custom-select');
-    const dateRangeFields = document.querySelector('.date-range-fields');
+    const dateRangeFields = document.querySelectorAll('.date-range-fields');
+
+    // Initially hide all date range fields
+    dateRangeFields.forEach(field => {
+        field.style.display = 'none';
+    });
 
     customSelects.forEach(select => {
         const selected = select.querySelector('.select-selected');
@@ -138,11 +175,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     selected.textContent = this.textContent;
                     items.classList.remove('show');
 
+                    // Find the closest date range fields to this select
+                    const closestDateFields = this.closest('.statement-section')
+                        ?.querySelector('.date-range-fields');
+
                     // Show/hide date range fields if "Custom Date" is selected
-                    if (this.textContent === 'Custom Date') {
-                        dateRangeFields.style.display = 'block';
-                    } else {
-                        dateRangeFields.style.display = 'none';
+                    if (closestDateFields) {
+                        closestDateFields.style.display = 
+                            this.textContent === 'Custom Date' ? 'block' : 'none';
                     }
                 });
             });
@@ -151,14 +191,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close dropdowns when clicking outside
     document.addEventListener('click', function(e) {
-        customSelects.forEach(select => {
-            if (!select.contains(e.target)) {
+        if (!e.target.closest('.custom-select')) {
+            customSelects.forEach(select => {
                 const items = select.querySelector('.select-items');
                 if (items) {
                     items.classList.remove('show');
                 }
-            }
-        });
+            });
+        }
     });
 
     // Initialize Flatpickr for date inputs
@@ -299,10 +339,11 @@ statementTypeRadios.forEach(radio => {
     });
 });
 
-// Initialize dropdowns
+// Function to initialize frequency dropdown with date range handling
 function initializeDropdown(select) {
     const selected = select.querySelector('.select-selected');
     const items = select.querySelector('.select-items');
+    const container = select.closest('.soa-form-container');
 
     if (selected && items) {
         // Toggle dropdown
@@ -319,10 +360,24 @@ function initializeDropdown(select) {
                 items.classList.remove('show');
                 
                 // Handle date range fields visibility
-                const dateRangeFields = document.querySelector('.date-range-fields');
+                const dateRangeFields = container.querySelector('.date-range-fields');
                 if (dateRangeFields) {
-                    dateRangeFields.style.display = 
-                        this.textContent === 'Custom Date' ? 'block' : 'none';
+                    if (this.textContent === 'Custom Date') {
+                        dateRangeFields.style.display = 'flex';
+                        // Initialize flatpickr for date inputs if not already initialized
+                        const dateInputs = dateRangeFields.querySelectorAll('.date-input');
+                        dateInputs.forEach(input => {
+                            if (!input._flatpickr) {
+                                flatpickr(input, {
+                                    dateFormat: "d/m/Y",
+                                    allowInput: true,
+                                    monthSelectorType: "dropdown"
+                                });
+                            }
+                        });
+                    } else {
+                        dateRangeFields.style.display = 'none';
+                    }
                 }
             });
         });
@@ -396,14 +451,43 @@ const capitalGainSubmitBtn = document.querySelector('#capital-content .soa-butto
 // Add click event listener to the Capital Gain submit button
 if (capitalGainSubmitBtn) {
     capitalGainSubmitBtn.addEventListener('click', function() {
-        // Hide the form view
-        if (capitalGainForm) {
-            capitalGainForm.style.display = 'none';
-        }
+        const capitalGainForm = document.querySelector('#capital-content');
+        const capitalGainResult = document.querySelector('#capital-result');
         
-        // Show the result view
+        if (capitalGainForm) capitalGainForm.style.display = 'none';
         if (capitalGainResult) {
             capitalGainResult.style.display = 'block';
+            
+            // Initialize frequency dropdown in Capital Gain result view
+            const resultFrequencySelect = capitalGainResult.querySelector('.custom-select[data-type="frequency"]');
+            if (resultFrequencySelect) {
+                const selectItems = resultFrequencySelect.querySelector('.select-items');
+                const selectedDisplay = resultFrequencySelect.querySelector('.select-selected');
+                
+                // Use the same general options
+                const generalOptions = [
+                    'As on Date',
+                    'Current Financial Year',
+                    'Last Financial Year',
+                    'Custom Date'
+                ];
+                
+                // Clear and populate options
+                selectItems.innerHTML = '';
+                generalOptions.forEach(option => {
+                    const div = document.createElement('div');
+                    div.className = 'select-item';
+                    div.textContent = option;
+                    div.setAttribute('data-value', option.toLowerCase().replace(/\s+/g, '-'));
+                    selectItems.appendChild(div);
+                });
+                
+                // Set initial selected value
+                selectedDisplay.textContent = generalOptions[0];
+                
+                // Initialize the dropdown
+                initializeDropdown(resultFrequencySelect);
+            }
         }
     });
 } 
