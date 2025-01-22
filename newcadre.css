@@ -1184,14 +1184,25 @@ body {
 }
 
 .soa-input {
-    width: 90%;
+    width: 100%;
     padding: 16px;
     background: transparent;
-    border: 1px solid rgba(151, 149, 145, 0.5);
+    border: 0.5px solid rgba(151, 149, 145, 0.5);
     border-radius: 8px;
     color: var(--text-white-darkmode);
     font-size: 16px;
 }
+
+.soa-input:hover,
+.soa-input:focus {
+    border: 0.5px solid white;
+    border-radius: 8px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    box-shadow: none;
+}
+
 .acc-input {
     width: 100%;
     padding: 16px;

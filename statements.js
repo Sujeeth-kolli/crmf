@@ -364,17 +364,8 @@ function initializeDropdown(select) {
                 if (dateRangeFields) {
                     if (this.textContent === 'Custom Date') {
                         dateRangeFields.style.display = 'flex';
-                        // Initialize flatpickr for date inputs if not already initialized
-                        const dateInputs = dateRangeFields.querySelectorAll('.date-input');
-                        dateInputs.forEach(input => {
-                            if (!input._flatpickr) {
-                                flatpickr(input, {
-                                    dateFormat: "d/m/Y",
-                                    allowInput: true,
-                                    monthSelectorType: "dropdown"
-                                });
-                            }
-                        });
+                        // Initialize flatpickr for date inputs
+                        initializeDatePickers(dateRangeFields);
                     } else {
                         dateRangeFields.style.display = 'none';
                     }
@@ -382,6 +373,30 @@ function initializeDropdown(select) {
             });
         });
     }
+}
+
+// Function to initialize date pickers
+function initializeDatePickers(container) {
+    const dateInputs = container.querySelectorAll('.date-input');
+    dateInputs.forEach(input => {
+        if (!input._flatpickr) {
+            flatpickr(input, {
+                dateFormat: "d/m/Y",
+                allowInput: true,
+                monthSelectorType: "dropdown",
+                onOpen: function(selectedDates, dateStr, instance) {
+                    // Ensure the calendar opens above the input if there's not enough space below
+                    const inputBottom = instance.element.getBoundingClientRect().bottom;
+                    const windowHeight = window.innerHeight;
+                    if (windowHeight - inputBottom < 300) { // 300px is approximate calendar height
+                        instance.config.position = 'above';
+                    } else {
+                        instance.config.position = 'below';
+                    }
+                }
+            });
+        }
+    });
 }
 
 // Initialize when DOM is loaded
