@@ -1115,9 +1115,11 @@ body {
 }
 /* Interactive SOA Form Styles */
 .soa-form-container {
-    background: rgba(37, 39, 54, 0.8);
+    background: #252736;
     border-radius: 12px;
-    padding: 20px;
+    padding: 24px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .soa-form-title {
@@ -1222,6 +1224,7 @@ body {
     border-radius: 8px;
     color: var(--text-white-darkmode);
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 .soa-input:hover,
@@ -1248,6 +1251,7 @@ body {
     width: 20%;
     position: relative;
     margin-bottom: 24px;
+    box-sizing: border-box;
 }
 
 .soa-captcha-display {
@@ -1261,6 +1265,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .soa-captcha-text {
@@ -1297,19 +1302,18 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    /* Main container adjustment */
     .soa-form-container {
-        padding: 24px 20px;
         width: 100%;
+        padding: 24px;
+        box-sizing: border-box;
     }
 
     /* Input fields and containers */
     .soa-input-field,
     .soa-captcha-container {
         width: 100%;
-        padding: 0;
-        margin-left: 0;
-        margin-right: 0;
+        box-sizing: border-box;
+        margin-bottom: 24px;
     }
 
     /* Radio group alignment */
@@ -1324,7 +1328,7 @@ body {
     /* Generate button */
     .soa-generate-button {
         width: 100%;
-        margin: 0;
+        margin-bottom: 10px;
     }
     .soa-button {
         width: 100%
