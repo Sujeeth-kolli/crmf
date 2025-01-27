@@ -711,7 +711,8 @@ body {
     margin-bottom: 24px;
 }
 
-.acc-search-container .search-input {
+.acc-search-container .search-input,
+.search-container .search-input{
     width: 100%;
     height: 40px;
     padding: 8px 16px 8px 40px;
@@ -721,7 +722,8 @@ body {
     color: var(--text-white-darkmode);
 }
 
-.acc-search-container .search-icon {
+.acc-search-container .search-icon ,
+.search-container .search-icon {
     position: absolute;
     left: 12px;
     top: 50%;
@@ -1567,7 +1569,7 @@ body {
 /* Add this to your existing styles */
 .statement-filters {
     display: flex;
-    gap: 24px;
+    gap: 20px;
     margin-bottom: 24px;
 }
 
@@ -1587,7 +1589,7 @@ body {
 
 .custom-select {
     position: relative;
-    width: 90%;
+    width: 100%;
     color: var(--text-dar-darkmode);
 }
 
@@ -1601,6 +1603,7 @@ body {
     font-size: 16px;
     cursor: pointer;
     position: relative;
+    box-sizing: border-box;
 }
 
 .select-selected:after {
@@ -1666,15 +1669,14 @@ body {
 }
 
 .pan-info {
-    padding: 16px;
     display: flex;
     align-items: center;
     gap: 12px;
 }
 .info-card{
     background: #FEFEFE0D;
-    border-radius: 8px;
-    padding: 24px;
+    border-radius: 15px;
+    padding: 20px;
     max-width: 100%;
     box-sizing: border-box;
 }
@@ -1802,24 +1804,29 @@ body {
 /* Date range fields styling */
 .date-range-fields {
     margin: 24px 0;
+    
 }
 
 .form-row {
     display: flex;
-    gap: 24px;
+    justify-content: space-between;
+    gap: 20px;
     width: 100%;
 }
 
 .field {
-    flex: 1;
-    width: 50%;
+    width: 100%;
+    position: relative;
 }
 
 .field label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--text-white-darkmode);
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    padding: 0 5px;
+    color: var(--grey-text-darkmode);
     font-size: 14px;
+    z-index: 1;
 }
 
 .date-wrapper {
@@ -1830,7 +1837,6 @@ body {
 .date-wrapper input {
     width: 100%;
     height: 48px;
-    padding: 8px 40px 8px 16px;
     background: transparent;
     border: 1px solid rgba(151, 149, 145, 0.5);
     border-radius: 8px;
@@ -1840,18 +1846,39 @@ body {
 
 .calendar-icon {
     position: absolute;
-    right: 0px;
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--grey-text-darkmode);
+    color: var(--icon-color);
     cursor: pointer;
     z-index: 1;
+    font-size: 16px;
 }
-.static-field {
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.1);
+
+
+.static-field {    
+    border: 0.5px solid rgba(151, 149, 145, 0.5);
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    color: var(--text-white-darkmode);
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    
+}
+
+.static-field:hover,
+.static-field:focus {
+    border: 0.5px solid white;
+    border-radius: 8px;
+    background-color: transparent;
     color: white;
+    outline: none;
+    box-shadow: none;
 }
 
 /* Responsive styles */
@@ -1988,5 +2015,174 @@ body {
 
     .myth-label, .fact-label {
         width: 50px; /* Slightly smaller on mobile */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Common styles for both Account and Capital Gain Statement result views */
+    .checkbox-input {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid rgba(151, 149, 145, 0.5);
+        border-radius: 4px;
+        margin: 0;
+        position: relative;
+        cursor: pointer;
+        background: transparent;
+        flex-shrink: 0;
+        vertical-align: top;
+    }
+
+    .checkbox-input:checked {
+        background: #54ABBF;
+        border-color: #54ABBF;
+    }
+
+    .checkbox-input:checked::after {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+
+     .scheme-checkbox{
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 4px 0;
+        min-height: 28px;
+    }
+
+    .checkbox-label {
+        padding-top: 2px;
+        line-height: 1.4;
+    }
+
+    /* Common container and layout styles */
+     .soa-radio-group{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
+     .statement-filters{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+
+     .schemes-section{
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    .schemes-header{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .acc-search-container{
+        width: 100%;
+        margin: 16px 0;
+    }
+
+    .search-input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+        /* Form fields */
+        .form-row {
+            grid-template-columns: 1fr; /* Stack fields vertically */
+            gap: 20px;
+        }
+    
+        .field {
+            width: 100%;
+            margin: 0 0 15px 0;
+        }
+
+    /* Date fields styling */
+     .date-range-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+
+  
+     .date-input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 40px 12px 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(151, 149, 145, 0.2);
+        border-radius: 8px;
+        color: var(--text-white-darkmode);
+        font-size: 14px;
+        line-height: 1.4;
+        appearance: none;
+        -webkit-appearance: none;
+    }
+
+    #capital-result .custom-select .calendar-icon {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none; 
+    }
+    
+    #capital-result .custom-select {
+        position: relative;
+        width: 100%;
+    }
+        /* Date picker fields */
+        .date-range-fields .form-row {
+            gap: 15px;
+        }
+}
+
+/* Date input specific overrides */
+.date-wrapper input.date-input.flatpickr-input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.form-row .field .date-wrapper input.flatpickr-input {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Ensure the date wrapper maintains correct width */
+.form-row .field .date-wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Override any inline styles */
+input.date-input.flatpickr-input[style] {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+
+    .static-field {
+        width: 100%;
     }
 }

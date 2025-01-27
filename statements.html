@@ -190,11 +190,11 @@
 
         <!-- Exit Load Statement Result View -->
         <div class="soa-form-container" id="exitload-result" style="display: none;">
-            <div class="soa-form-container">
+           
                 <!-- Statement For field -->
                 <div class="soa-input-field">
                     <label class="soa-input-label">Statement for</label>
-                    <div class="static-field">Folio</div>
+                    <div class="static-field">PAN</div>
                 </div>
 
                 <!-- Folio Details -->
@@ -252,7 +252,7 @@
 
                 <!-- Submit Button -->
                 <button class="soa-button">Submit</button>
-            </div>
+            
         </div>
 
         <!-- Account Statement Result View -->
@@ -295,29 +295,20 @@
 
             <!-- Date inputs using the same custom-select styling -->
             <div class="date-range-fields" style="display: none;">
-                <div class="soa-input-field">
-                    <label class="soa-input-label">Start Date</label>
-                    <div class="custom-select">
-                        <input type="text" class="select-selected date-input" placeholder="DD/MM/YYYY">
-                        <svg class="calendar-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.8333 3.33337H4.16667C3.24619 3.33337 2.5 4.07957 2.5 5.00004V16.6667C2.5 17.5872 3.24619 18.3334 4.16667 18.3334H15.8333C16.7538 18.3334 17.5 17.5872 17.5 16.6667V5.00004C17.5 4.07957 16.7538 3.33337 15.8333 3.33337Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M13.3333 1.66663V4.99996" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M6.66669 1.66663V4.99996" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2.5 8.33337H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                <div class="form-row">
+                    <div class="field">
+                        <label>Start Date</label>
+                        <div class="date-wrapper">
+                            <input type="text" placeholder="DD/MM/YYYY" class="date-input">
+                            <i class="calendar-icon fas fa-calendar"></i>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="soa-input-field">
-                    <label class="soa-input-label">End Date</label>
-                    <div class="custom-select">
-                        <input type="text" class="select-selected date-input" placeholder="DD/MM/YYYY">
-                        <svg class="calendar-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.8333 3.33337H4.16667C3.24619 3.33337 2.5 4.07957 2.5 5.00004V16.6667C2.5 17.5872 3.24619 18.3334 4.16667 18.3334H15.8333C16.7538 18.3334 17.5 17.5872 17.5 16.6667V5.00004C17.5 4.07957 16.7538 3.33337 15.8333 3.33337Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M13.3333 1.66663V4.99996" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M6.66669 1.66663V4.99996" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2.5 8.33337H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                    <div class="field">
+                        <label>End Date</label>
+                        <div class="date-wrapper">
+                            <input type="text" placeholder="DD/MM/YYYY" class="date-input">
+                            <i class="calendar-icon fas fa-calendar"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -401,55 +392,40 @@
 
         <!-- Capital Gain Statement Result View -->
         <div class="soa-form-container" id="capital-result" style="display: none;">
-            <div class="soa-form-container">
+            
                 <!-- Statement Filters -->
                 <div class="statement-filters">
                     <div class="soa-input-field">
                         <label class="soa-input-label">Statement for</label>
-                        <div class="custom-select">
-                            <div class="select-selected">Folio</div>
-                            <div class="select-items">
-                                <div class="select-item" data-value="folio">Folio</div>
-                            </div>
-                        </div>
+                        <div class="static-field">Folio</div>
                     </div>
-
                     <div class="soa-input-field">
                         <label class="soa-input-label">Frequency</label>
                         <div class="custom-select" data-type="frequency">
                             <div class="select-selected">As on Date</div>
                             <div class="select-items">
-                                <!-- Options populated by JavaScript -->
+                                <!-- Options will be populated by JavaScript -->
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Add date range fields -->
-                <div class="date-range-fields" >
-                    <div class="soa-input-field">
-                        <label class="soa-input-label">Start Date</label>
-                        <div class="custom-select">
-                            <input type="text" class="select-selected date-input" placeholder="DD/MM/YYYY">
-                            <svg class="calendar-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15.8333 3.33337H4.16667C3.24619 3.33337 2.5 4.07957 2.5 5.00004V16.6667C2.5 17.5872 3.24619 18.3334 4.16667 18.3334H15.8333C16.7538 18.3334 17.5 17.5872 17.5 16.6667V5.00004C17.5 4.07957 16.7538 3.33337 15.8333 3.33337Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13.3333 1.66663V4.99996" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M6.66669 1.66663V4.99996" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M2.5 8.33337H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                <div class="date-range-fields">
+                    <div class="form-row">
+                        <div class="field">
+                            <label>Start Date</label>
+                            <div class="date-wrapper">
+                                <input type="text" placeholder="DD/MM/YYYY" class="date-input">
+                                <i class="calendar-icon fas fa-calendar"></i>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="soa-input-field">
-                        <label class="soa-input-label">End Date</label>
-                        <div class="custom-select">
-                            <input type="text" class="select-selected date-input" placeholder="DD/MM/YYYY">
-                            <svg class="calendar-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15.8333 3.33337H4.16667C3.24619 3.33337 2.5 4.07957 2.5 5.00004V16.6667C2.5 17.5872 3.24619 18.3334 4.16667 18.3334H15.8333C16.7538 18.3334 17.5 17.5872 17.5 16.6667V5.00004C17.5 4.07957 16.7538 3.33337 15.8333 3.33337Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13.3333 1.66663V4.99996" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M6.66669 1.66663V4.99996" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M2.5 8.33337H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                        <div class="field">
+                            <label>End Date</label>
+                            <div class="date-wrapper">
+                                <input type="text" placeholder="DD/MM/YYYY" class="date-input">
+                                <i class="calendar-icon fas fa-calendar"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -517,7 +493,7 @@
                     <button class="soa-button">Email Statement</button>
                     <button class="soa-button">Download Statement</button>
                 </div>
-            </div>
+            
         </div>
     </div>
 

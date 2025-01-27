@@ -505,4 +505,43 @@ if (capitalGainSubmitBtn) {
             }
         }
     });
+    const statementPeriodRadios = document.querySelectorAll('input[name="statement-period"]');
+    const dateRangeFields = document.querySelector('.date-range-fields');
+
+    statementPeriodRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.value === 'custom-range') {
+                dateRangeFields.style.display = 'block';
+            } else {
+                dateRangeFields.style.display = 'none';
+            }
+        });
+    });
+
+    // Initialize Flatpickr for date inputs
+    const dateInputs = document.querySelectorAll('.date-input');
+    dateInputs.forEach(input => {
+        const wrapper = input.closest('.date-wrapper');
+        const calendarIcon = wrapper.querySelector('.calendar-icon');
+        
+        const fp = flatpickr(input, {
+            dateFormat: "d/m/Y",
+            allowInput: true,
+            disableMobile: true,
+            theme: "dark",
+            position: "auto",
+            monthSelectorType: "dropdown",
+            nextArrow: '<i class="fas fa-chevron-right"></i>',
+            prevArrow: '<i class="fas fa-chevron-left"></i>',
+            clickOpens: false, // Prevent opening on input click
+            onChange: function(selectedDates, dateStr, instance) {
+                input.value = dateStr;
+            }
+        });
+
+        // Open calendar only when clicking the calendar icon
+        calendarIcon.addEventListener('click', () => {
+            fp.open();
+        });
+    });
 } 
