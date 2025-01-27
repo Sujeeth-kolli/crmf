@@ -1159,6 +1159,7 @@ body {
     background-color: transparent;
     position: relative;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .soa-radio-option input[type="radio"]:checked {
@@ -1335,6 +1336,14 @@ body {
     .soa-button {
         width: 100%
     }
+    .button-group {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .button-group .soa-button {
+        width: 100%;
+    }
     
 }
 /* Update responsive styles for radio buttons */
@@ -1346,6 +1355,12 @@ body {
 
     .soa-radio-option {
         font-size: 16px;
+    }
+    .static-field {
+        width: 100%;
+    }
+    .schemes-list.soa-radio-group {
+        gap: 12px;
     }
 }
 
@@ -1462,6 +1477,43 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+.button-group {
+    display: flex;
+    gap: 32px;  /* Increased gap between buttons */
+    margin-top: 24px;
+}
+
+.button-group .soa-button {
+    padding: 12px 24px;
+    border-radius: 38px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Style for Email Statement button */
+.button-group .soa-button:first-child {
+    background: transparent;
+    border: 1px solid var(--text-blue-and-outline-darkmode);
+    color: var(--text-blue-and-outline-darkmode);
+}
+
+.button-group .soa-button:first-child:hover {
+    background: rgba(84, 171, 191, 0.1);
+}
+
+/* Style for Download Statement button */
+.button-group .soa-button:last-child {
+    background: var(--button-fill-darkmode);  /* Changed to #0082A0 */
+    border: 1px solid var(--button-fill-darkmode);  /* Matching border color */
+    color: white;
+}
+
+.button-group .soa-button:last-child:hover {
+    opacity: 0.9;
+}
+
 
 /* Note content styles */
 .soa-note-content {
@@ -2182,7 +2234,5 @@ input.date-input.flatpickr-input[style] {
 /* Mobile responsive styles */
 @media screen and (max-width: 768px) {
 
-    .static-field {
-        width: 100%;
-    }
+ 
 }
