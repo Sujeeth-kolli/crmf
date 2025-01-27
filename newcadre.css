@@ -1967,9 +1967,15 @@ body {
 /* Myth Busters Styles */
 .myth-cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Changed from auto-fit to exactly 3 columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin: 40px 0;
+}
+.myth-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Space between cards in the same column */
+    flex: 1; /* Ensures columns are of equal width */
 }
 
 .myth-card {
@@ -1986,13 +1992,10 @@ body {
 }
 
 .myth-card.expanded {
-    background: #252736; /* Keep the same background */
     height: auto;
-    min-height: 200px;
     border: 1px solid #54ABBF; /* Blue border */
     box-shadow: 0 0 15px rgba(84, 171, 191, 0.2); /* Subtle blue glow */
 }
-
 .myth-label, .fact-label {
     width: 104.35px; /* Adjust based on your image size */
     height: auto;
@@ -2032,17 +2035,8 @@ body {
     border-top-style: dotted;
     border-top-width: 2px;
     border-top-color: rgba(151, 149, 145, 0.2);
-    border-image: repeating-linear-gradient(
-        to right,
-        rgba(151, 149, 145, 0.2) 0,
-        rgba(151, 149, 145, 0.2) 8px,
-        transparent 8px,
-        transparent 15px /* Reduced spacing between dots from 25px to 16px */
-    ) 1;
     padding-top: 16px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     text-align: center;
 }
 

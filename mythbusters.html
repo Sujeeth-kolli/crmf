@@ -22,109 +22,111 @@
         <!-- Myths Grid -->
         <div class="myth-cards-container">
             <!-- Myth Card 1 -->
-            <div class="myth-card">
-                <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
-                <h3 class="myth-content">One needs a large sum to invest in Mutual Funds.</h3>
-                <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
-                <div class="fact-content" style="display: none;">
-                    <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
-                    <p class="fact-text">One does not necessarily need to invest a huge amount in Mutual Funds. One can start to invest in mutual funds with an amount as low as Rs. 500/-.</p>
-                    <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
+            <div class="myth-column">
+                <div class="myth-card">
+                    <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
+                    <h3 class="myth-content">One needs a large sum to invest in Mutual Funds.</h3>
+                    <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
+                    <div class="fact-content" style="display: none;">
+                        <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
+                        <p class="fact-text">One does not necessarily need to invest a huge amount in Mutual Funds. One can start to invest in mutual funds with an amount as low as Rs. 500/-.</p>
+                        <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
+                    </div>
+                </div>
+
+                <div class="myth-card">
+                    <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
+                    <h3 class="myth-content">NFOs (new fund offers) are better than existing schemes</h3>
+                    <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
+                    <div class="fact-content" style="display: none;">
+                        <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
+                        <p class="fact-text">Existing schemes with proven track records are often better choices as they have demonstrated performance history and established portfolios.</p>
+                        <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
+                    </div>
+                </div>
+                <div class="myth-card">
+                    <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
+                    <h3 class="myth-content">Performance of funds is directly related to the stock market</h3>
+                    <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
+                    <div class="fact-content" style="display: none;">
+                        <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
+                        <p class="fact-text">Fund performance depends on various factors including fund management, asset allocation, and investment strategy, not just market movements.</p>
+                        <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
+                    </div>
+                </div>
+                <!-- Add more cards for column 1 -->
+            </div>
+        
+            <!-- Column 2 -->
+            <div class="myth-column">
+                <div class="myth-card">
+                    <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
+                    <h3 class="myth-content">Mutual Funds are only for those who like to invest in the stock market</h3>
+                    <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
+                    <div class="fact-content" style="display: none;">
+                        <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
+                        <p class="fact-text">Mutual funds offer various investment options beyond stocks, including debt and hybrid funds, suitable for different risk appetites.</p>
+                        <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
+                    </div>
+                </div>
+                <div class="myth-card">
+                    <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
+                    <h3 class="myth-content">Buy a fund once it announces dividend.</h3>
+                    <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
+                    <div class="fact-content" style="display: none;">
+                        <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
+                        <p class="fact-text">Dividend announcements don't indicate better fund performance. The fund's NAV reduces by the dividend amount paid.</p>
+                        <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
+                    </div>
+                </div>
+                <div class="myth-card">
+                    <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
+                    <h3 class="myth-content">You need to time MF investments</h3>
+                    <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
+                    <div class="fact-content" style="display: none;">
+                        <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
+                        <p class="fact-text">Regular, systematic investments are more effective than trying to time the market. Consistency is key in mutual fund investing.</p>
+                        <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
+                    </div>
+                </div>    
+                <!-- Add more cards for column 2 -->
+            </div>
+        
+            <!-- Column 3 -->
+            <div class="myth-column">
+                <div class="myth-card">
+                    <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
+                    <h3 class="myth-content">Mutual Funds with lower NAV (Net Asset Value) are best to invest</h3>
+                    <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
+                    <div class="fact-content" style="display: none;">
+                        <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
+                        <p class="fact-text">NAV is simply the per-unit market value of a fund. A lower NAV doesn't necessarily mean better returns. Focus on the fund's performance, strategy, and alignment with your goals.</p>
+                        <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
+                    </div>
+                </div>           
+
+                <div class="myth-card">
+                    <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
+                    <h3 class="myth-content">Debt funds are also impacted by equity market movement</h3>
+                    <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
+                    <div class="fact-content" style="display: none;">
+                        <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
+                        <p class="fact-text">Debt fund returns are primarily influenced by interest rate changes and credit quality, not equity market movements.</p>
+                        <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
+                    </div>
+                </div>
+                <div class="myth-card">
+                    <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
+                    <h3 class="myth-content">Debt funds are also impacted by equity market movement</h3>
+                    <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
+                    <div class="fact-content" style="display: none;">
+                        <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
+                        <p class="fact-text">Debt fund returns are primarily influenced by interest rate changes and credit quality, not equity market movements.</p>
+                        <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
+                    </div>
                 </div>
             </div>
-
-            <!-- Myth Card 2 -->
-            <div class="myth-card">
-                <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
-                <h3 class="myth-content">Mutual Funds are only for those who like to invest in stock market</h3>
-                <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
-                <div class="fact-content" style="display: none;">
-                    <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
-                    <p class="fact-text">Mutual funds offer various investment options beyond stocks, including debt and hybrid funds, suitable for different risk appetites.</p>
-                    <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
-                </div>
-            </div>
-
-            <!-- Myth Card 3 -->
-            <div class="myth-card">
-                <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
-                <h3 class="myth-content">Mutual Funds with lower NAV (Net Asset Value) are best to invest</h3>
-                <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
-                <div class="fact-content" style="display: none;">
-                    <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
-                    <p class="fact-text">NAV is simply the per-unit market value of a fund. A lower NAV doesn't necessarily mean better returns. Focus on the fund's performance, strategy, and alignment with your goals.</p>
-                    <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
-                </div>
-            </div>
-
-            <!-- New cards -->
-            <div class="myth-card">
-                <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
-                <h3 class="myth-content">NFOs (new fund offers) are better than existing schemes</h3>
-                <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
-                <div class="fact-content" style="display: none;">
-                    <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
-                    <p class="fact-text">Existing schemes with proven track records are often better choices as they have demonstrated performance history and established portfolios.</p>
-                    <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
-                </div>
-            </div>
-
-            <div class="myth-card">
-                <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
-                <h3 class="myth-content">Buy a fund once it announces dividend.</h3>
-                <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
-                <div class="fact-content" style="display: none;">
-                    <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
-                    <p class="fact-text">Dividend announcements don't indicate better fund performance. The fund's NAV reduces by the dividend amount paid.</p>
-                    <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
-                </div>
-            </div>
-
-            <div class="myth-card">
-                <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
-                <h3 class="myth-content">Redeem funds with high NAV and reinvest in schemes with low NAV</h3>
-                <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
-                <div class="fact-content" style="display: none;">
-                    <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
-                    <p class="fact-text">NAV levels don't determine future returns. Focus on fund performance, strategy, and alignment with your investment goals.</p>
-                    <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
-                </div>
-            </div>
-
-            <div class="myth-card">
-                <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
-                <h3 class="myth-content">You need to time MF investments</h3>
-                <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
-                <div class="fact-content" style="display: none;">
-                    <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
-                    <p class="fact-text">Regular, systematic investments are more effective than trying to time the market. Consistency is key in mutual fund investing.</p>
-                    <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
-                </div>
-            </div>
-
-            <div class="myth-card">
-                <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
-                <h3 class="myth-content">Performance of funds is directly related to the stock market</h3>
-                <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
-                <div class="fact-content" style="display: none;">
-                    <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
-                    <p class="fact-text">Fund performance depends on various factors including fund management, asset allocation, and investment strategy, not just market movements.</p>
-                    <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
-                </div>
-            </div>
-
-            <div class="myth-card">
-                <img src="assets/images/myth-logo.svg" alt="Myth" class="myth-label">
-                <h3 class="myth-content">Debt funds are also impacted by equity market movement</h3>
-                <button class="view-fact-btn" onclick="toggleFact(this)">View Fact</button>
-                <div class="fact-content" style="display: none;">
-                    <img src="assets/images/fact-logo.svg" alt="Fact" class="fact-label">
-                    <p class="fact-text">Debt fund returns are primarily influenced by interest rate changes and credit quality, not equity market movements.</p>
-                    <button class="hide-fact-btn" onclick="toggleFact(this)">Hide</button>
-                </div>
-            </div>
-        </div>
-
+        </div>  
         <div class="pagination-container">
             <button class="pagination-arrow prev" aria-label="Previous page">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
