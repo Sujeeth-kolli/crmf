@@ -185,7 +185,9 @@ body {
     color: #fff; /* Active state text color */
     border-radius: 7px 7px 0px 0px; /* Keep corners consistent */
 }
-
+.nav-link:hover {
+    color: inherit; /* Keep the text color the same as the default */
+}
 .accordion .card-header {
     padding: 0;
     color: #CED2DD;
