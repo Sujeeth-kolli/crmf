@@ -652,13 +652,13 @@ body {
     font-size: 20px;
     cursor: pointer;
     background: transparent;
-    color: var(--text-white-darkmode);
+    color: #808080; /* Default grey color for inactive state */
     transition: all 0.3s ease;
 }
 
 .toggle-button.active {
     background: var(--orange-accent-darkmode);
-    color: white;
+    color: white; /* White color for active state */
 }
 
 .toggle-button:not(.active) {
