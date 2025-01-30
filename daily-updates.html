@@ -4,32 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Updates</title>
-    <link rel="stylesheet" href="styles/long-tenure.css">
+    <link rel="stylesheet" href="/long-tenure.css">
 </head>
 <body>
     <!--  Universe sectipn -->
     <div class="max-width">
         <div class="universe-section">
+             <!-- Character at bottom of universe section -->
+             <div class="character-wrapper">
+                <img src="assets/images/cloud-message1.svg" alt="Message" class="message-bubble1">
+                <img src="assets/images/cloud-message2.svg" alt="Message" class="message-bubble2">
+                <img src="assets/images/cartoon-portrait1.svg" alt="Investment Advisor" class="character-image1">
+            </div>
             <!-- Form Card -->
             <div class="form-section">
                 <div class="form-card">
                     <h3>Get Started with Mutual Funds</h3>
                     <form>
                         <div class="field1">
-                            <input type="text" required>
+                            <input type="text" required placeholder="Anika Visser">
                             <label>Name</label>
                         </div>
                         <div class="field1">
-                            <input type="email" required>
+                            <input type="email" required placeholder="anikavisser_123@gmail.com">
                             <label>Email ID</label>
                         </div>
                         <div class="field1">
-                            <input type="tel" required>
+                            <input type="tel" required placeholder="9812763477">
                             <label>Mobile Number</label>
                         </div>
                         <div class="field1">
-                            <select required>
-                                <option value="" selected disabled></option>
+                            <select required style="color: grey;">
+                                <option value="" selected disabled>Select City</option>
                                 <option value="city1">City 1</option>
                                 <option value="city2">City 2</option>
                             </select>
@@ -44,14 +50,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
-
-             <!-- Character at bottom of universe section -->
-            <div class="character-wrapper">
-                <img src="assets/images/cloud-message1.svg" alt="Message" class="message-bubble1">
-                <img src="assets/images/cloud-message2.svg" alt="Message" class="message-bubble2">
-                <img src="assets/images/cartoon-portrait1.svg" alt="Investment Advisor" class="character-image1">
-            </div>
+            </div>        
         </div>
 
         <!-- youtube Section (immediately after universe section) -->

@@ -26,20 +26,19 @@ body {
 }
 /* Universe Section Styles */
 .universe-section {
+    width: 100%;
     margin-top: 20px;
     background: url('../assets/images/main-bg.svg') no-repeat center center;
     background-size: cover;
     min-height: 100vh;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
 }
 /* Form Section */
-.form-section {
-    position: absolute;
+.form-section {    
     height: auto;
-    right: 0px;
-    top: 0;
 }
 
 .form-card {
@@ -702,7 +701,8 @@ body {
     pointer-events: none;
 }
 .toggle-card h3 {
-    background: linear-gradient(90deg, #1FA2FF 0%, #A6FFCB 100%);    
+    background: linear-gradient(90deg, #1FA2FF 0%, #1FA2FF 5%, #A6FFCB 7%, #A6FFCB 100%);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-size: 26px;
