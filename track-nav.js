@@ -1,12 +1,3 @@
- // Toggle buttons functionality
- const toggleButtons = document.querySelectorAll('.track-nav-toggle-button');
- toggleButtons.forEach(button => {
-     button.addEventListener('click', () => {
-         toggleButtons.forEach(btn => btn.classList.remove('active'));
-         button.classList.add('active');
-     });
- });
-
  // Collapsible container functionality
  const schemeHeaders = document.querySelectorAll('.scheme-header');
  schemeHeaders.forEach((header, index) => {

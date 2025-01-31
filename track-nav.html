@@ -23,45 +23,32 @@
             <a href="#track-nav" class="nav-link active" id="track-nav-link">Track NAV</a>
             <a href="#idcw-details" class="nav-link" id="idcw-details-link">IDCW Details</a>
         </nav>
+        
+        <header class="track-nav-header">
+            <form class="search-container" role="search">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 21L16.65 16.65" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <input type="text" placeholder="Search for Funds..." class="search-input">
+            </form>
 
+            <div class="option-selector">
+                <span class="option-label">Option : </span>
+                <button class="option-button" onclick="toggleOptionDropdown()">
+                    <span id="selectedOption">Open Ended</span>
+                    <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="#54ABBF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="dropdown-content" id="optionDropdown">
+                    <span class="dropdown-item" onclick="selectOption('Open Ended')">Open Ended</span>
+                    <span class="dropdown-item" onclick="selectOption('Closed Ended')">Closed Ended</span>
+                </div>
+            </div>
+        </header>
         <!-- Track NAV Section -->
         <div class="track-nav-container" id="track-nav">
-            <header class="track-nav-header">
-                <form class="search-container" role="search">
-                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M21 21L16.65 16.65" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <input type="text" placeholder="Search for Funds..." class="search-input">
-                </form>
-
-                <div class="option-selector">
-                    <span class="option-label">Option : </span>
-                    <button class="option-button" onclick="toggleOptionDropdown()">
-                        <span id="selectedOption">Open Ended</span>
-                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 9L12 15L18 9" stroke="#54ABBF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    <div class="dropdown-content" id="optionDropdown">
-                        <span class="dropdown-item" onclick="selectOption('Open Ended')">Open Ended</span>
-                        <span class="dropdown-item" onclick="selectOption('Closed Ended')">Closed Ended</span>
-                    </div>
-                </div>
-
-                <aside class="right-controls">
-                    <button class="filter-button">
-                        <img src="assets/images/filters-logo.svg" alt="Filter">
-                        Filters
-                    </button>
-
-                    <nav class="toggle-container">
-                        <button class="track-nav-toggle-button active">Direct</button>
-                        <button class="track-nav-toggle-button">Regular</button>
-                    </nav>
-                </aside>
-            </header>
-
             <!-- Scheme Sections -->
             <div class="scheme-container">
                 <header class="scheme-header">
@@ -262,7 +249,6 @@
                     </table>
                 </div>
             </div>
-
             <div class="scheme-container">
                 <header class="scheme-header">
                     <h2 class="scheme-title">Canara Robeco Overnight Fund</h2>
@@ -312,7 +298,120 @@
 
         <!-- IDCW Details Section -->
         <div class="idcw-details-container" id="idcw-details" hidden>
-            <h2>IDCW Details Content</h2>
+            <!-- Scheme Sections -->
+            <div class="scheme-container">
+                <header class="scheme-header">
+                    <h2 class="scheme-title">Canara Robeco Liquid Fund</h2>
+                    <button class="expand-btn" aria-label="Expand section">+</button>
+                </header>
+                
+                <div class="scheme-content">
+                    <hr class="card-divider">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Scheme</th>
+                                <th>Nav Date</th>
+                                <th>NAV (₹) per unit</th>
+                                <th>Action</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;">Unclaimed Redemption And Dividend Plan -direct Growth Option</td>
+                                <td>10 Aug 2024</td>
+                                <td>
+                                    <div class="nav-value-container">
+                                        <span class="nav-value">1619.286</span>
+                                        <span class="nav-change positive">
+                                            <i class="trend-arrow"></i>
+                                            0.32(0.01%)
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#" class="compare-link">
+                                        <img src="/assets/images/compare-logo.svg" alt="Compare" style="width: 24px; height: 24px; margin-right: 4px;">
+                                        Compare
+                                    </a>
+                                </td>
+                                <td>
+                                    <button class="invest-btn">Invest Now</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Regular Plan - Weekly Idcw (payout/reinvestment)</td>
+                                <td>10 Aug 2024</td>
+                                <td>
+                                    <div class="nav-value-container">
+                                        <span class="nav-value">1663.4105</span>
+                                        <span class="nav-change positive">
+                                            <i class="trend-arrow"></i>
+                                            0.33(0.02%)
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#" class="compare-link">
+                                        <img src="/assets/images/compare-logo.svg" alt="Compare" style="width: 24px; height: 24px; margin-right: 4px;">
+                                        Compare
+                                    </a>
+                                </td>
+                                <td>
+                                    <button class="invest-btn">Invest Now</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="scheme-container">
+                <header class="scheme-header">
+                    <h2 class="scheme-title">Canara Robeco Overnight Fund</h2>
+                    <button class="expand-btn" aria-label="Expand section">+</button>
+                </header>
+                
+                <div class="scheme-content">
+                    <hr class="card-divider">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Scheme</th>
+                                <th>Nav Date</th>
+                                <th>NAV (₹) per unit</th>
+                                <th>Action</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;">Overnight Fund - Direct Growth Option</td>
+                                <td>10 Aug 2024</td>
+                                <td>
+                                    <div class="nav-value-container">
+                                        <span class="nav-value">1000.000</span>
+                                        <span class="nav-change positive">
+                                            <i class="trend-arrow"></i>
+                                            0.10(0.01%)
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#" class="compare-link">
+                                        <img src="/assets/images/compare-logo.svg" alt="Compare" style="width: 24px; height: 24px; margin-right: 4px;">
+                                        Compare
+                                    </a>
+                                </td>
+                                <td>
+                                    <button class="invest-btn">Invest Now</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
 

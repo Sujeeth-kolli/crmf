@@ -983,6 +983,7 @@ body {
     gap: 24px;
     background: transparent;
     flex-wrap: nowrap; /* Prevent wrapping */
+    margin-bottom: 20px;
 }
 
 /* Search container styles */
@@ -1251,34 +1252,6 @@ body {
     margin-left: auto;
 }
 
-/* Filter Button Styles */
-.filter-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    background: transparent;
-    border: none;
-    color: var(--text-white-darkmode);
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.track-nav-toggle-button {
-    padding: 8px 16px;
-    border: none;
-    background: transparent;
-    color: var(--grey-text-darkmode);
-    cursor: pointer;
-    border-radius: 100px;
-    font-size: 18px;
-}
-
-.track-nav-toggle-button.active {
-    background: var(--orange-accent-darkmode);
-    color: var(--text-white-darkmode);
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     .track-nav-header {
@@ -1530,7 +1503,44 @@ body {
     width: 100%;
     padding-right: 30px; /* Make space for the icon */
 }
+.date-input {
+    width: 100%;
+    padding: 8px 32px 8px 12px;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+}
 
+.date-input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.field1 {
+    position: relative;
+}
+
+.calendar-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Optional: Style for when the input is focused */
+.date-input:focus {
+    outline: none;
+    border-color: #54ABBF;
+    box-shadow: 0 0 0 2px rgba(84, 171, 191, 0.2);
+}
 .calendar-icon {
     position: absolute;
     right: 10px;
