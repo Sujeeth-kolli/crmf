@@ -1250,7 +1250,7 @@ body {
     border: none;
     color: var(--text-white-darkmode);
     cursor: pointer;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .track-nav-toggle-button {
@@ -1260,7 +1260,7 @@ body {
     color: var(--grey-text-darkmode);
     cursor: pointer;
     border-radius: 100px;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .track-nav-toggle-button.active {
