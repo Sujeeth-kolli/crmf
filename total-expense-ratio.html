@@ -8,27 +8,25 @@
     <script src="total-expense-ratio.js" defer></script>
 </head>
 <body>
-    <div class="max-width">
+    <main class="max-width">
         <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <a href="#" class="breadcrumb-link">Home</a>
+        <nav class="breadcrumb">
+            <a href="/" class="breadcrumb-link">Home</a>
             <a href="#" class="breadcrumb-link">Investor Corner</a>
             <span class="breadcrumb-current">Total Expense Ratio</span>
-        </div>
-
+        </nav>
         <!-- Page Title -->
-        <h1 class="ncd-heading">TOTAL EXPENSE RATIO</h1>
-        
+        <h1 class="ncd-heading">TOTAL EXPENSE RATIO</h1>        
         <!-- Navigation Tabs -->
-        <div class="nav-section">
+        <nav class="nav-section">
             <a href="#" class="nav-link active" onclick="showSection('ter-section')">Total Expense Ratio</a>
             <a href="#" class="nav-link" onclick="showSection('notice-section')">Notice of Change in Base TER</a>
-        </div>
+        </nav>
 
         <!-- Total Expense Ratio Section -->
         <div id="ter-section" class="section" style="display: block;">
             <!-- Search Form -->
-            <div class="form-grid">
+            <form class="form-grid">
                 <div class="field1">
                     <label>From Date</label>
                         <input type="text" placeholder="DD/MM/YYYY">
@@ -44,17 +42,16 @@
                     <input type="text" placeholder="Enter Scheme Name" id="schemeSearchInput" onkeyup="searchSchemes()">
                     <div id="searchResults" class="search-results"></div>
                 </div>
-            </div>
+            </form>
             <!-- Table -->        
-            <div class="table-wrapper">
-                <div class="table-container">
-                    <table class="custom-table">
-                        <thead>
-                            <tr>
-                                <th rowspan="2" class="header-cell">Scheme Name</th>
-                                <th rowspan="2" class="header-cell">Date</th>
-                                <th colspan="5" class="header-cell">Regular Plan</th>
-                                <th colspan="5" class="header-cell">Direct Plan</th>
+            <table class="table-wrapper">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2" class="header-cell">Scheme Name</th>
+                            <th rowspan="2" class="header-cell">Date</th>
+                            <th colspan="5" class="header-cell">Regular Plan</th>
+                            <th colspan="5" class="header-cell">Direct Plan</th>
                             </tr>
                             <tr>
                                 <th class="header-cell">Base TER(%)</th>
@@ -99,9 +96,8 @@
                                 <td>0.11</td>
                             </tr>
                         </tbody>
-                    </table>
-                </div>
-            </div>
+                </table>
+            </table>
             <div class="disclosure-section">
                 <h2 class="disclosure-title">Format for disclosure of TER of mutual fund schemes</h2>
                 <ul class="disclosure-list">
@@ -136,9 +132,9 @@
                                 </svg>
                             </button>
                             <div class="dropdown-content" id="optionDropdown">
-                                <div class="dropdown-item" onclick="selectOption('2024-25')">2024-25</div>
-                                <div class="dropdown-item" onclick="selectOption('2023-24')">2023-24</div>
-                                <div class="dropdown-item" onclick="selectOption('2022-23')">2022-23</div>
+                                <span class="dropdown-item" onclick="selectOption('2024-25')">2024-25</span>
+                                <span class="dropdown-item" onclick="selectOption('2023-24')">2023-24</span>
+                                <span class="dropdown-item" onclick="selectOption('2022-23')">2022-23</span>
                             </div>
                         </div>
                     </div>

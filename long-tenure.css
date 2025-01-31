@@ -1059,11 +1059,6 @@ body {
     /* Space between arrow and change text */
 }
 
-.nav-change.positive {
-    color: #00C48C;
-    /* Color for positive change */
-}
-
 .nav-change.negative {
     color: #FF0000;
     /* Color for negative change */
@@ -1138,9 +1133,6 @@ body {
 .scheme-content {
     display: none;
     padding: 0 20px 20px;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    width: 100%;
 }
 
 .scheme-content.active {
@@ -1307,9 +1299,9 @@ body {
 
 /* Card divider styles */
 .card-divider {
-    width: 100%;
+    border: none;
     height: 1px;
-    background-color: rgba(151, 149, 145, 0.2);
+    background-color: var(--grey-text-darkmode);
     margin: 0;
 }
 .form-grid {
@@ -1582,4 +1574,26 @@ body {
 .search-results div:hover {
     color: black;
     background: #E0EFF3;
+}
+.trend-arrow {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.nav-change.positive {
+    color: #0DB975;
+}
+
+.nav-change.positive .trend-arrow {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M7 17L17 7M17 7H7M17 7V17' stroke='%2300C853' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.nav-change.negative {
+    color: #FF3D00;
+}
+
+.nav-change.negative .trend-arrow {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M17 7L7 17M7 17H17M7 17V7' stroke='%23FF3D00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }

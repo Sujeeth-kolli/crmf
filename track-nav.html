@@ -7,35 +7,33 @@
     <link rel="stylesheet" href="long-tenure.css">
 </head>
 <body>
-    <div class="max-width">
+    <main class="max-width">
         <!-- Breadcrumb -->
-        <div class="breadcrumb">
+        <nav class="breadcrumb">
             <a href="/" class="breadcrumb-link">Home</a>
             <a href="#" class="breadcrumb-link">Investor Corner</a>
             <a href="#" class="breadcrumb-link">Fund Value and Returns</a>
             <span class="breadcrumb-current" id="breadcrumb-title">Track NAV</span>
-        </div>
+        </nav>
 
-        <!-- Page Title -->
         <h1 class="ncd-heading" id="page-title">TRACK NAV</h1>
 
         <!-- Navigation Section -->
-        <div class="nav-section">
+        <nav class="nav-section">
             <a href="#track-nav" class="nav-link active" id="track-nav-link">Track NAV</a>
             <a href="#idcw-details" class="nav-link" id="idcw-details-link">IDCW Details</a>
-        </div>
+        </nav>
 
-        <!-- Track NAV Container -->
+        <!-- Track NAV Section -->
         <div class="track-nav-container" id="track-nav">
-            <!-- Search and Filters -->
-            <div class="track-nav-header">
-                <div class="search-container">
+            <header class="track-nav-header">
+                <form class="search-container" role="search">
                     <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M21 21L16.65 16.65" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <input type="text" placeholder="Search for Funds..." class="search-input">
-                </div>
+                </form>
 
                 <div class="option-selector">
                     <span class="option-label">Option : </span>
@@ -46,32 +44,33 @@
                         </svg>
                     </button>
                     <div class="dropdown-content" id="optionDropdown">
-                        <div class="dropdown-item" onclick="selectOption('Open Ended')">Open Ended</div>
-                        <div class="dropdown-item" onclick="selectOption('Closed Ended')">Closed Ended</div>
+                        <span class="dropdown-item" onclick="selectOption('Open Ended')">Open Ended</span>
+                        <span class="dropdown-item" onclick="selectOption('Closed Ended')">Closed Ended</span>
                     </div>
                 </div>
 
-                <div class="right-controls">
+                <aside class="right-controls">
                     <button class="filter-button">
                         <img src="assets/images/filters-logo.svg" alt="Filter">
                         Filters
                     </button>
 
-                    <div class="toggle-container">
+                    <nav class="toggle-container">
                         <button class="track-nav-toggle-button active">Direct</button>
                         <button class="track-nav-toggle-button">Regular</button>
-                    </div>
-                </div>
-            </div>
+                    </nav>
+                </aside>
+            </header>
 
-            <!-- Collapsible Scheme Container -->
+            <!-- Scheme Sections -->
             <div class="scheme-container">
-                <div class="scheme-header">
-                    <span class="scheme-title">Canara Robeco Liquid Fund</span>
-                    <button class="expand-btn">+</button>
-                </div>                 
+                <header class="scheme-header">
+                    <h2 class="scheme-title">Canara Robeco Liquid Fund</h2>
+                    <button class="expand-btn" aria-label="Expand section">+</button>
+                </header>
+                
                 <div class="scheme-content">
-                    <div class="card-divider"></div>
+                    <hr class="card-divider">
                     <table class="custom-table">
                         <thead>
                             <tr>
@@ -89,7 +88,10 @@
                                 <td>
                                     <div class="nav-value-container">
                                         <span class="nav-value">1619.286</span>
-                                        <span class="nav-change positive">↑ 0.32(0.01%)</span>
+                                        <span class="nav-change positive">
+                                            <i class="trend-arrow"></i>
+                                            0.32(0.01%)
+                                        </span>
                                     </div>
                                 </td>
                                 <td>
@@ -108,7 +110,10 @@
                                 <td>
                                     <div class="nav-value-container">
                                         <span class="nav-value">1663.4105</span>
-                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                        <span class="nav-change positive">
+                                            <i class="trend-arrow"></i>
+                                            0.33(0.02%)
+                                        </span>
                                     </div>
                                 </td>
                                 <td>
@@ -127,7 +132,10 @@
                                 <td>
                                     <div class="nav-value-container">
                                         <span class="nav-value">1663.4105</span>
-                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                        <span class="nav-change positive">
+                                            <i class="trend-arrow"></i>
+                                            0.33(0.02%)
+                                        </span>
                                     </div>
                                 </td>
                                 <td>
@@ -146,7 +154,10 @@
                                 <td>
                                     <div class="nav-value-container">
                                         <span class="nav-value">1663.4105</span>
-                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                        <span class="nav-change positive">
+                                            <i class="trend-arrow"></i>
+                                            0.33(0.02%)
+                                        </span>
                                     </div>
                                 </td>
                                 <td>
@@ -165,7 +176,10 @@
                                 <td>
                                     <div class="nav-value-container">
                                         <span class="nav-value">1663.4105</span>
-                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                        <span class="nav-change positive">
+                                            <i class="trend-arrow"></i>
+                                            0.33(0.02%)
+                                        </span>
                                     </div>
                                 </td>
                                 <td>
@@ -184,7 +198,10 @@
                                 <td>
                                     <div class="nav-value-container">
                                         <span class="nav-value">1663.4105</span>
-                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                        <span class="nav-change positive">
+                                            <i class="trend-arrow"></i>
+                                            0.33(0.02%)
+                                        </span>
                                     </div>
                                 </td>
                                 <td>
@@ -203,7 +220,10 @@
                                 <td>
                                     <div class="nav-value-container">
                                         <span class="nav-value">1663.4105</span>
-                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                        <span class="nav-change positive">
+                                            <i class="trend-arrow"></i>
+                                            0.33(0.02%)
+                                        </span>
                                     </div>
                                 </td>
                                 <td>
@@ -222,7 +242,10 @@
                                 <td>
                                     <div class="nav-value-container">
                                         <span class="nav-value">1663.4105</span>
-                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                        <span class="nav-change positive">
+                                            <i class="trend-arrow"></i>
+                                            0.33(0.02%)
+                                        </span>
                                     </div>
                                 </td>
                                 <td>
@@ -240,14 +263,14 @@
                 </div>
             </div>
 
-            <!-- New Collapsible Scheme Container for Canara Robeco Overnight Fund -->
             <div class="scheme-container">
-                <div class="scheme-header">
-                    <span class="scheme-title">Canara Robeco Overnight Fund</span>
-                    <button class="expand-btn">+</button>
-                </div>
+                <header class="scheme-header">
+                    <h2 class="scheme-title">Canara Robeco Overnight Fund</h2>
+                    <button class="expand-btn" aria-label="Expand section">+</button>
+                </header>
+                
                 <div class="scheme-content">
-                    <div class="card-divider"></div>
+                    <hr class="card-divider">
                     <table class="custom-table">
                         <thead>
                             <tr>
@@ -265,7 +288,10 @@
                                 <td>
                                     <div class="nav-value-container">
                                         <span class="nav-value">1000.000</span>
-                                        <span class="nav-change positive">↑ 0.10(0.01%)</span>
+                                        <span class="nav-change positive">
+                                            <i class="trend-arrow"></i>
+                                            0.10(0.01%)
+                                        </span>
                                     </div>
                                 </td>
                                 <td>
@@ -284,13 +310,11 @@
             </div>
         </div>
 
-        <!-- IDCW Details Container -->
-        <div class="idcw-details-container" id="idcw-details" style="display: none;">
-            <!-- Add your IDCW Details content here -->
+        <!-- IDCW Details Section -->
+        <div class="idcw-details-container" id="idcw-details" hidden>
             <h2>IDCW Details Content</h2>
-            <!-- Add more content as needed -->
         </div>
-    </div>
+    </main>
 
     <script src="track-nav.js"></script>
 </body>
