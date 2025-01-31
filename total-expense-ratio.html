@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Total Expense Ratio</title>
     <link rel="stylesheet" href="long-tenure.css">
+    <script src="total-expense-ratio.js" defer></script>
 </head>
 <body>
     <div class="max-width">
@@ -30,14 +31,18 @@
             <div class="form-grid">
                 <div class="field1">
                     <label>From Date</label>
-                    <input type="text" placeholder="DD/MM/YYYY">
+                        <input type="text" placeholder="DD/MM/YYYY">
+                        <img src="assets/images/calender-icon.svg" alt="Calendar" class="calendar-icon">
+                    
                 </div>
                 <div class="field1">
                     <label>To Date</label>
                     <input type="text" placeholder="DD/MM/YYYY">
+                    <img src="assets/images/calender-icon.svg" alt="Calendar" class="calendar-icon">
                 </div>
                 <div class="input-container">
-                    <input type="text" placeholder="Enter Scheme Name">
+                    <input type="text" placeholder="Enter Scheme Name" id="schemeSearchInput" onkeyup="searchSchemes()">
+                    <div id="searchResults" class="search-results"></div>
                 </div>
             </div>
             <!-- Table -->        
@@ -115,7 +120,7 @@
                             <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M21 21L16.65 16.65" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <input type="text" placeholder="Search here..." class="search-input">
+                        <input type="text" placeholder="Search here..." class="search-input" onkeyup="searchNotices()">
                     </div>
                     <div class="year-filter">
                         <span class="year-label">Year : </span>
@@ -368,32 +373,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-    function showSection(sectionId) {
-        // Hide all sections
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.display = 'none';
-        });
-        
-        // Show selected section
-        document.getElementById(sectionId).style.display = 'block';
-        
-        // Update nav links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.classList.remove('active');
-        });
-        event.target.classList.add('active');
-    }
-
-    function toggleOptionDropdown() {
-        document.getElementById('optionDropdown').classList.toggle('show');
-    }
-
-    function selectOption(option) {
-        document.getElementById('selectedOption').textContent = option;
-        document.getElementById('optionDropdown').classList.remove('show');
-    }
-    </script>
 </body>
 </html> 
