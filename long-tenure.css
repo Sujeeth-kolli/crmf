@@ -657,6 +657,10 @@ body {
     .custom-table {
         overflow-x: auto;
     }
+    .breadcrumb {
+        flex-wrap: wrap;
+        font-size: 14px;
+    }
 }
 
 /* Container for the entire toggle section */
@@ -914,7 +918,7 @@ body {
 .breadcrumb-link::after,
 .breadcrumb-current::after {
     content: ">";
-    color: white;
+    color: var(--text-white-darkmode);
     margin-left: 10px;
 }
 
@@ -946,30 +950,18 @@ body {
 
 .nav-link {
     width: auto;
-    /* Fixed width for buttons */
     height: 34px;
-    /* Fixed height for buttons */
     padding: 5px 15px;
-    /* Adjust padding for spacing */
     margin-right: 10px;
-    /* Space between links */
-    background-color: #FFFFFF0D;
-    /* Background color when not active */
-    color: #979591;
-    /* Text color for inactive links */
+    background-color: rgba(255, 255, 255, 0.05); /* Using rgba for consistency */
+    color: var(--grey-text-darkmode);
     text-decoration: none;
     border-radius: 7px 7px 0px 0px;
-    /* Rounded top corners */
     display: flex;
-    /* Flexbox for alignment */
     align-items: center;
-    /* Center text vertically */
     justify-content: center;
-    /* Center text horizontally */
     gap: 10px;
-    /* Gap between elements inside the button */
     transition: background-color 0.3s, color 0.3s;
-    /* Smooth transitions for hover effects */
     font-size: 20px;
 }
 
@@ -1006,7 +998,7 @@ body {
     height: 40px;
     padding: 8px 16px 8px 40px;
     background: transparent;
-    border: 1px solid rgba(151, 149, 145, 0.2);
+    border: 1px solid var(--border-light-darkmode);
     border-radius: 100px;
     color: var(--text-white-darkmode);
     font-size: 14px;
@@ -1146,10 +1138,37 @@ body {
 .scheme-content {
     display: none;
     padding: 0 20px 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    width: 100%;
 }
 
 .scheme-content.active {
     display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .scheme-container {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .scheme-content {
+        padding: 0; /* Remove padding to maximize scroll area */
+        margin: 0 15px; /* Add margin instead of padding */
+        width: calc(100% - 30px); /* Account for margins */
+    }
+    /* Add visual indicator for scrollable content */
+    .scheme-content::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background: linear-gradient(to left, rgba(255,255,255,0.1), transparent);
+        pointer-events: none;
+    }
 }
 
 /* Option Selector Styles */
