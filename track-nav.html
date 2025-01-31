@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track NAV</title>
+    <link rel="stylesheet" href="long-tenure.css">
+</head>
+<body>
+    <div class="max-width">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="/" class="breadcrumb-link">Home</a>
+            <a href="#" class="breadcrumb-link">Investor Corner</a>
+            <a href="#" class="breadcrumb-link">Fund Value and Returns</a>
+            <span class="breadcrumb-current" id="breadcrumb-title">Track NAV</span>
+        </div>
+
+        <!-- Page Title -->
+        <h1 class="ncd-heading" id="page-title">TRACK NAV</h1>
+
+        <!-- Navigation Section -->
+        <div class="nav-section">
+            <a href="#track-nav" class="nav-link active" id="track-nav-link">Track NAV</a>
+            <a href="#idcw-details" class="nav-link" id="idcw-details-link">IDCW Details</a>
+        </div>
+
+        <!-- Track NAV Container -->
+        <div class="track-nav-container" id="track-nav">
+            <!-- Search and Filters -->
+            <div class="track-nav-header">
+                <div class="search-container">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 21L16.65 16.65" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <input type="text" placeholder="Search for Funds..." class="search-input">
+                </div>
+
+                <div class="option-selector">
+                    <span class="option-label">Option : </span>
+                    <button class="option-button" onclick="toggleOptionDropdown()">
+                        <span id="selectedOption">Open Ended</span>
+                        <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="#54ABBF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="dropdown-content" id="optionDropdown">
+                        <div class="dropdown-item" onclick="selectOption('Open Ended')">Open Ended</div>
+                        <div class="dropdown-item" onclick="selectOption('Closed Ended')">Closed Ended</div>
+                    </div>
+                </div>
+
+                <div class="right-controls">
+                    <button class="filter-button">
+                        <img src="assets/images/filters-logo.svg" alt="Filter">
+                        Filters
+                    </button>
+
+                    <div class="toggle-container">
+                        <button class="track-nav-toggle-button active">Direct</button>
+                        <button class="track-nav-toggle-button">Regular</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collapsible Scheme Container -->
+            <div class="scheme-container">
+                <div class="scheme-header">
+                    <span class="scheme-title">Canara Robeco Liquid Fund</span>
+                    <button class="expand-btn">+</button>
+                </div>                 
+                <div class="scheme-content">
+                    <div class="card-divider"></div>
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Scheme</th>
+                                <th>Nav Date</th>
+                                <th>NAV (₹) per unit</th>
+                                <th>Action</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;">Unclaimed Redemption And Dividend Plan -direct Growth Option</td>
+                                <td>10 Aug 2024</td>
+                                <td>
+                                    <div class="nav-value-container">
+                                        <span class="nav-value">1619.286</span>
+                                        <span class="nav-change positive">↑ 0.32(0.01%)</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#" class="compare-link">
+                                        <img src="/assets/images/compare-logo.svg" alt="Compare" style="width: 24px; height: 24px; margin-right: 4px;">
+                                        Compare
+                                    </a>
+                                </td>
+                                <td>
+                                    <button class="invest-btn">Invest Now</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Unclaimed Redemption And Dividend Plan -direct Growth Option</td>
+                                <td>29 Dec 2024</td>
+                                <td>
+                                    <div class="nav-value-container">
+                                        <span class="nav-value">1663.4105</span>
+                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#" class="compare-link">
+                                        <img src="/assets/images/compare-logo.svg" alt="Compare" style="width: 24px; height: 24px; margin-right: 4px;">
+                                        Compare
+                                    </a>
+                                </td>
+                                <td>
+                                    <button class="invest-btn">Invest Now</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Regular Plan - Weekly Idcw (payout/reinvestment)</td>
+                                <td>10 Aug 2024</td>
+                                <td>
+                                    <div class="nav-value-container">
+                                        <span class="nav-value">1663.4105</span>
+                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#" class="compare-link">
+                                        <img src="/assets/images/compare-logo.svg" alt="Compare" style="width: 24px; height: 24px; margin-right: 4px;">
+                                        Compare
+                                    </a>
+                                </td>
+                                <td>
+                                    <button class="invest-btn">Invest Now</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Regular Plan - Weekly Idcw (payout/reinvestment)</td>
+                                <td>29 Dec 2024</td>
+                                <td>
+                                    <div class="nav-value-container">
+                                        <span class="nav-value">1663.4105</span>
+                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#" class="compare-link">
+                                        <img src="/assets/images/compare-logo.svg" alt="Compare" style="width: 24px; height: 24px; margin-right: 4px;">
+                                        Compare
+                                    </a>
+                                </td>
+                                <td>
+                                    <button class="invest-btn">Invest Now</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Regular Plan - Monthly Idcw (payout/reinvestment)</td>
+                                <td>10 Aug 2024</td>
+                                <td>
+                                    <div class="nav-value-container">
+                                        <span class="nav-value">1663.4105</span>
+                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#" class="compare-link">
+                                        <img src="/assets/images/compare-logo.svg" alt="Compare" style="width: 24px; height: 24px; margin-right: 4px;">
+                                        Compare
+                                    </a>
+                                </td>
+                                <td>
+                                    <button class="invest-btn">Invest Now</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Regular Plan - Monthly Idcw (payout/reinvestment)</td>
+                                <td>29 Dec 2024</td>
+                                <td>
+                                    <div class="nav-value-container">
+                                        <span class="nav-value">1663.4105</span>
+                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#" class="compare-link">
+                                        <img src="/assets/images/compare-logo.svg" alt="Compare" style="width: 24px; height: 24px; margin-right: 4px;">
+                                        Compare
+                                    </a>
+                                </td>
+                                <td>
+                                    <button class="invest-btn">Invest Now</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Regular Plan - Growth Option</td>
+                                <td>29 Dec 2024</td>
+                                <td>
+                                    <div class="nav-value-container">
+                                        <span class="nav-value">1663.4105</span>
+                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#" class="compare-link">
+                                        <img src="/assets/images/compare-logo.svg" alt="Compare" style="width: 24px; height: 24px; margin-right: 4px;">
+                                        Compare
+                                    </a>
+                                </td>
+                                <td>
+                                    <button class="invest-btn">Invest Now</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left;">Regular Plan - Growth Option</td>
+                                <td>10 Aug 2024</td>
+                                <td>
+                                    <div class="nav-value-container">
+                                        <span class="nav-value">1663.4105</span>
+                                        <span class="nav-change positive">↑ 0.33(0.02%)</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#" class="compare-link">
+                                        <img src="/assets/images/compare-logo.svg" alt="Compare" style="width: 24px; height: 24px; margin-right: 4px;">
+                                        Compare
+                                    </a>
+                                </td>
+                                <td>
+                                    <button class="invest-btn">Invest Now</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- New Collapsible Scheme Container for Canara Robeco Overnight Fund -->
+            <div class="scheme-container">
+                <div class="scheme-header">
+                    <span class="scheme-title">Canara Robeco Overnight Fund</span>
+                    <button class="expand-btn">+</button>
+                </div>
+                <div class="scheme-content">
+                    <div class="card-divider"></div>
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Scheme</th>
+                                <th>Nav Date</th>
+                                <th>NAV (₹) per unit</th>
+                                <th>Action</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="text-align: left;">Overnight Fund - Direct Growth Option</td>
+                                <td>10 Aug 2024</td>
+                                <td>
+                                    <div class="nav-value-container">
+                                        <span class="nav-value">1000.000</span>
+                                        <span class="nav-change positive">↑ 0.10(0.01%)</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <a href="#" class="compare-link">
+                                        <img src="compare-logo.svg" alt="Compare" style="width: 24px; height: 24px; margin-right: 4px;">
+                                        Compare
+                                    </a>
+                                </td>
+                                <td>
+                                    <button class="invest-btn">Invest Now</button>
+                                </td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- IDCW Details Container -->
+        <div class="idcw-details-container" id="idcw-details" style="display: none;">
+            <!-- Add your IDCW Details content here -->
+            <h2>IDCW Details Content</h2>
+            <!-- Add more content as needed -->
+        </div>
+    </div>
+
+    <script>
+        // Toggle buttons functionality
+        const toggleButtons = document.querySelectorAll('.track-nav-toggle-button');
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                toggleButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+
+        // Collapsible container functionality
+        const schemeHeaders = document.querySelectorAll('.scheme-header');
+        schemeHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const expandBtn = header.querySelector('.expand-btn');
+                content.classList.toggle('active');
+                expandBtn.textContent = content.classList.contains('active') ? '−' : '+';
+            });
+        });
+
+        // Navigation functionality
+        const trackNavSection = document.getElementById('track-nav');
+        const idcwDetailsSection = document.getElementById('idcw-details');
+
+        document.getElementById('track-nav-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('page-title').innerText = 'TRACK NAV';
+            document.getElementById('breadcrumb-title').innerText = 'Track NAV';
+            document.getElementById('idcw-details-link').classList.remove('active');
+            this.classList.add('active');
+            
+            // Show Track NAV section and hide IDCW Details
+            trackNavSection.style.display = 'block';
+            idcwDetailsSection.style.display = 'none';
+            
+            trackNavSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.getElementById('idcw-details-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('page-title').innerText = 'IDCW DETAILS';
+            document.getElementById('breadcrumb-title').innerText = 'IDCW Details';
+            document.getElementById('track-nav-link').classList.remove('active');
+            this.classList.add('active');
+            
+            // Show IDCW Details section and hide Track NAV
+            trackNavSection.style.display = 'none';
+            idcwDetailsSection.style.display = 'block';
+            
+            idcwDetailsSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Toggle option dropdown
+        document.querySelector('.option-button').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('optionDropdown').classList.toggle('show');
+        });
+
+        // Select option
+        function selectOption(option) {
+            document.getElementById('selectedOption').textContent = option;
+            document.getElementById('optionDropdown').classList.remove('show');
+        }
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.option-button') && !event.target.matches('#selectedOption')) {
+                const dropdowns = document.getElementsByClassName('dropdown-content');
+                for (const dropdown of dropdowns) {
+                    if (dropdown.classList.contains('show')) {
+                        dropdown.classList.remove('show');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

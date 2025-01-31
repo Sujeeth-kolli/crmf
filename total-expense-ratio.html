@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Expense Ratio</title>
+    <link rel="stylesheet" href="long-tenure.css">
+</head>
+<body>
+    <div class="max-width">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#" class="breadcrumb-link">Home</a>
+            <a href="#" class="breadcrumb-link">Investor Corner</a>
+            <span class="breadcrumb-current">Total Expense Ratio</span>
+        </div>
+
+        <!-- Page Title -->
+        <h1 class="ncd-heading">TOTAL EXPENSE RATIO</h1>
+        
+        <!-- Navigation Tabs -->
+        <div class="nav-section">
+            <a href="#" class="nav-link active" onclick="showSection('ter-section')">Total Expense Ratio</a>
+            <a href="#" class="nav-link" onclick="showSection('notice-section')">Notice of Change in Base TER</a>
+        </div>
+
+        <!-- Total Expense Ratio Section -->
+        <div id="ter-section" class="section" style="display: block;">
+            <!-- Search Form -->
+            <div class="form-grid">
+                <div class="field1">
+                    <label>From Date</label>
+                    <input type="text" placeholder="DD/MM/YYYY">
+                </div>
+                <div class="field1">
+                    <label>To Date</label>
+                    <input type="text" placeholder="DD/MM/YYYY">
+                </div>
+                <div class="input-container">
+                    <input type="text" placeholder="Enter Scheme Name">
+                </div>
+            </div>
+            <!-- Table -->        
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2" class="header-cell">Scheme Name</th>
+                        <th rowspan="2" class="header-cell">Date</th>
+                        <th colspan="5" class="header-cell">Regular Plan</th>
+                        <th colspan="5" class="header-cell">Direct Plan</th>
+                    </tr>
+                    <tr>
+                        <th class="header-cell">Base TER(%)</th>
+                        <th class="header-cell">Additional Expense As Per Regulation 52(6a)(b)(%)</th>
+                        <th class="header-cell">Additional Expense As Per Regulation 52(6a)(c)(%)</th>
+                        <th class="header-cell">GST(%)</th>
+                        <th class="header-cell">Total TER(%)</th>
+                        <th class="header-cell">Base TER(%)</th>
+                        <th class="header-cell">Additional Expense As Per Regulation 52(6a)(b)(%)</th>
+                        <th class="header-cell">Additional Expense As Per Regulation 52(6a)(c)(%)</th>
+                        <th class="header-cell">GST(%)</th>
+                        <th class="header-cell">Total TER(%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Canara Robeco Liquid Fund</td>
+                        <td>22/12/2024</td>
+                        <td>0.18</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.01</td>
+                        <td>0.19</td>
+                        <td>0.18</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.01</td>
+                        <td>0.19</td>
+                    </tr>
+                    <tr>
+                        <td>Canara Robeco Overnight Fund</td>
+                        <td>22/12/2024</td>
+                        <td>0.11</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.11</td>
+                        <td>0.11</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.11</td>
+                    </tr>
+                </tbody>
+            </table>  
+            <div class="disclosure-section">
+                <h2 class="disclosure-title">Format for disclosure of TER of mutual fund schemes</h2>
+                <ul class="disclosure-list">
+                    <li>Base TER excludes additional expenses provided in Regulation 52(6A)(b) and 52(6A)(c) of SEBI (Mutual Funds) Regulations, 1996 and goods & services tax on investment and advisory fees.</li>
+                    <li>Additional Expenses not exceeding 0.30% in terms of Regulation 52(6A)(b) of SEBI (Mutual Funds) Regulations, 1996.</li>
+                    <li>Additional Expenses not exceeding 0.05% in terms of Regulation 52(6A)(c) of SEBI (Mutual Funds) Regulations, 1996.</li>
+                    <li>Present GST rate is 18%.</li>
+                    <li>Percentages mentioned above are annualized.</li>
+                    <li>Base TER of direct plan shall have a lower expense ratio excluding distribution expenses, commission, etc., and no commission shall be paid from such plans.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Notice of Change Section -->
+        <div id="notice-section" class="section" style="display: none;">
+            <div class="card-container">
+                <div class="updates-header">
+                    <div class="search-container">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 21L16.65 16.65" stroke="#979591" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="text" placeholder="Search here..." class="search-input">
+                    </div>
+                    <div class="year-filter">
+                        <span class="year-label">Year : </span>
+                        <div class="option-selector">
+                            <button class="option-button" onclick="toggleOptionDropdown()">
+                                <span id="selectedOption">2023-24</span>
+                                <svg class="dropdown-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="#54ABBF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <div class="dropdown-content" id="optionDropdown">
+                                <div class="dropdown-item" onclick="selectOption('2024-25')">2024-25</div>
+                                <div class="dropdown-item" onclick="selectOption('2023-24')">2023-24</div>
+                                <div class="dropdown-item" onclick="selectOption('2022-23')">2022-23</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notice List -->
+                <div class="outlook-list">
+                    <div class="outlook-item"> 
+                        <div class="outlook-left">
+                            <div class="outlook-title-row">
+                                <div class="title-with-icon">
+                                    <img src="assets/images/pdf-icon.svg" alt="PDF" class="pdf-icon">
+                                    <div class="title-meta-container">
+                                        <a href="#" class="outlook-title">Notice- Change in TER w.e.f 10th Jan 2025</a>
+                                        <div class="outlook-meta">
+                                            <span>19 Nov 2024</span>
+                                            <span>67kb</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="outlook-actions">
+                                    <a href="#" class="outlook-action">
+                                        <img src="assets/images/Download-arrow.svg" alt="Download">
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="outlook-item">
+                        <div class="outlook-left">
+                            <div class="outlook-title-row">
+                                <div class="title-with-icon">
+                                    <img src="assets/images/pdf-icon.svg" alt="PDF" class="pdf-icon">
+                                    <div class="title-meta-container">
+                                        <a href="#" class="outlook-title">Notice- Change in TER w.e.f 12th Dec 2024</a>
+                                        <div class="outlook-meta">
+                                            <span>19 Nov 2024</span>
+                                            <span>67kb</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="outlook-actions">
+                                    <a href="#" class="outlook-action">
+                                        <img src="assets/images/Download-arrow.svg" alt="Download">
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="outlook-item">
+                        <div class="outlook-left">
+                            <div class="outlook-title-row">
+                                <div class="title-with-icon">
+                                    <img src="assets/images/pdf-icon.svg" alt="PDF" class="pdf-icon">
+                                    <div class="title-meta-container">
+                                        <a href="#" class="outlook-title">Notice- Change in TER w.e.f 11th Nov 2024</a>
+                                        <div class="outlook-meta">
+                                            <span>19 Nov 2024</span>
+                                            <span>67kb</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="outlook-actions">
+                                    <a href="#" class="outlook-action">
+                                        <img src="assets/images/Download-arrow.svg" alt="Download">
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="outlook-item">
+                        <div class="outlook-left">
+                            <div class="outlook-title-row">
+                                <div class="title-with-icon">
+                                    <img src="assets/images/pdf-icon.svg" alt="PDF" class="pdf-icon">
+                                    <div class="title-meta-container">
+                                        <a href="#" class="outlook-title">Notice- Change in TER w.e.f 14th Oct 2024</a>
+                                        <div class="outlook-meta">
+                                            <span>19 Nov 2024</span>
+                                            <span>67kb</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="outlook-actions">
+                                    <a href="#" class="outlook-action">
+                                        <img src="assets/images/Download-arrow.svg" alt="Download">
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="outlook-item">
+                        <div class="outlook-left">
+                            <div class="outlook-title-row">
+                                <div class="title-with-icon">
+                                    <img src="assets/images/pdf-icon.svg" alt="PDF" class="pdf-icon">
+                                    <div class="title-meta-container">
+                                        <a href="#" class="outlook-title">Notice- Change in TER w.e.f 13th Sept 2024</a>
+                                        <div class="outlook-meta">
+                                            <span>19 Nov 2024</span>
+                                            <span>67kb</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="outlook-actions">
+                                    <a href="#" class="outlook-action">
+                                        <img src="assets/images/Download-arrow.svg" alt="Download">
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="outlook-item">
+                        <div class="outlook-left">
+                            <div class="outlook-title-row">
+                                <div class="title-with-icon">
+                                    <img src="assets/images/pdf-icon.svg" alt="PDF" class="pdf-icon">
+                                    <div class="title-meta-container">
+                                        <a href="#" class="outlook-title">Notice- Change in TER w.e.f 12th August 2024</a>
+                                        <div class="outlook-meta">
+                                            <span>19 Nov 2024</span>
+                                            <span>67kb</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="outlook-actions">
+                                    <a href="#" class="outlook-action">
+                                        <img src="assets/images/Download-arrow.svg" alt="Download">
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="outlook-item">
+                        <div class="outlook-left">
+                            <div class="outlook-title-row">
+                                <div class="title-with-icon">
+                                    <img src="assets/images/pdf-icon.svg" alt="PDF" class="pdf-icon">
+                                    <div class="title-meta-container">
+                                        <a href="#" class="outlook-title">Notice- Change in TER w.e.f 11th July 2024</a>
+                                        <div class="outlook-meta">
+                                            <span>19 Nov 2024</span>
+                                            <span>67kb</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="outlook-actions">
+                                    <a href="#" class="outlook-action">
+                                        <img src="assets/images/Download-arrow.svg" alt="Download">
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="outlook-item">
+                        <div class="outlook-left">
+                            <div class="outlook-title-row">
+                                <div class="title-with-icon">
+                                    <img src="assets/images/pdf-icon.svg" alt="PDF" class="pdf-icon">
+                                    <div class="title-meta-container">
+                                        <a href="#" class="outlook-title">Notice- Change in TER w.e.f 11th June 2024</a>
+                                        <div class="outlook-meta">
+                                            <span>19 Nov 2024</span>
+                                            <span>67kb</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="outlook-actions">
+                                    <a href="#" class="outlook-action">
+                                        <img src="assets/images/Download-arrow.svg" alt="Download">
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="outlook-item">
+                        <div class="outlook-left">
+                            <div class="outlook-title-row">
+                                <div class="title-with-icon">
+                                    <img src="assets/images/pdf-icon.svg" alt="PDF" class="pdf-icon">
+                                    <div class="title-meta-container">
+                                        <a href="#" class="outlook-title">Notice- Change in TER w.e.f 13th May 2024</a>
+                                        <div class="outlook-meta">
+                                            <span>19 Nov 2024</span>
+                                            <span>67kb</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="outlook-actions">
+                                    <a href="#" class="outlook-action">
+                                        <img src="assets/images/Download-arrow.svg" alt="Download">
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="outlook-item">
+                        <div class="outlook-left">
+                            <div class="outlook-title-row">
+                                <div class="title-with-icon">
+                                    <img src="assets/images/pdf-icon.svg" alt="PDF" class="pdf-icon">
+                                    <div class="title-meta-container">
+                                        <a href="#" class="outlook-title">Notice- Change in TER w.e.f 15th April 2024</a>
+                                        <div class="outlook-meta">
+                                            <span>19 Nov 2024</span>
+                                            <span>67kb</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="outlook-actions">
+                                    <a href="#" class="outlook-action">
+                                        <img src="assets/images/Download-arrow.svg" alt="Download">
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // Show selected section
+        document.getElementById(sectionId).style.display = 'block';
+        
+        // Update nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+        });
+        event.target.classList.add('active');
+    }
+
+    function toggleOptionDropdown() {
+        document.getElementById('optionDropdown').classList.toggle('show');
+    }
+
+    function selectOption(option) {
+        document.getElementById('selectedOption').textContent = option;
+        document.getElementById('optionDropdown').classList.remove('show');
+    }
+    </script>
+</body>
+</html> 
